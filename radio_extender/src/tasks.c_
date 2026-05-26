@@ -1,0 +1,141 @@
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "uart.h"
+#include "cc1101.h"
+#include "protocol.h"
+#include "bat_brd.h"
+#include "printk.h"
+
+static QueueHandle_t q_rf_tx;
+static volatile uint8_t g_link_status = 0; // 0=OFF, 1=RED (Lost), 2=GREEN (OK)
+
+void task_uart_rx(void *pvParameters) {
+
+    uint8_t buf[PROTO_MAX_PACKET];
+    uint8_t idx = 0;
+    for (;;) {
+        if (UART_PC_Available()) {
+            uint8_t b = UART_PC_ReadByte();
+            if (idx == 0) {
+                if (b > 0 && b <= PROTO_MAX_PACKET - 5) 
+                  buf[idx++] = b;
+            } else {
+                buf[idx++] = b;
+                if (idx >= buf[0] + 2) {
+                    uint8_t data[PROTO_MAX_PACKET], out_len, id_p, type_p;
+                    if (Protocol_ParsePacket(buf, idx, &id_p, &type_p, data, &out_len)) {
+                        if (type_p == PROTO_TYPE_DATA) 
+                          xQueueSend(q_rf_tx, buf, 0);
+                    }
+                    idx = 0;
+                }
+            }
+        }
+        vTaskDelay(1);
+    }
+}
+
+
+void task_rf_send(void *pvParameters) {
+
+    uint8_t pkt[PROTO_MAX_PACKET];
+    for (;;) {
+        if (xQueueReceive(q_rf_tx, pkt, portMAX_DELAY)) {
+            CC1101_SendCmd(CC1101_CMD_SIDLE);
+            CC1101_WriteBurst(CC1101_REG_FIFO, pkt, pkt[0] + 2);
+            CC1101_SendCmd(CC1101_CMD_STX);
+            vTaskDelay(10);
+            CC1101_SendCmd(CC1101_CMD_SRX);
+        }
+    }
+}
+
+ uint8_t missed_pings = 0;
+
+void task_heartbeat(void *pvParameters) {
+  uint8_t pkt[10];
+  missed_pings = 0;
+      for (;;) {
+        vTaskDelay(5000);
+        uint8_t len = Protocol_BuildPacket(0, PROTO_TYPE_PING, NULL, 0, pkt);
+        CC1101_SendCmd(CC1101_CMD_SIDLE);
+        CC1101_WriteBurst(CC1101_REG_FIFO, pkt, len);
+        CC1101_SendCmd(CC1101_CMD_STX);
+        CC1101_SendCmd(CC1101_CMD_SRX);
+        missed_pings++;
+        if (missed_pings > 3) 
+          g_link_status = LED_RED; //
+    }
+}
+
+
+
+void task_rf_receive(void *pvParameters) {
+
+    uint8_t pkt[PROTO_MAX_PACKET];
+    uint8_t  data[PROTO_MAX_PACKET];
+    uint8_t  id;
+    uint8_t type;
+    uint8_t len;
+
+    for (;;) {
+        if (CC1101_ReadReg(CC1101_REG_RXBYTES) > 0) {
+            uint8_t rx_len = CC1101_ReadReg(CC1101_REG_RXBYTES);
+            CC1101_ReadBurst(CC1101_REG_FIFO, pkt, rx_len);
+            if (Protocol_ParsePacket(pkt, rx_len, &id, &type, data, &len)) {
+                if (type == PROTO_TYPE_PING) {
+                    uint8_t resp[10];
+                    g_link_status = LED_GREEN; 
+                    missed_pings = 0; //reset cnt
+                   
+                    uint8_t rlen = Protocol_BuildPacket(0, PROTO_TYPE_PONG, NULL, 0, resp);
+                    CC1101_SendCmd(CC1101_CMD_SIDLE);
+                    CC1101_WriteBurst(CC1101_REG_FIFO, resp, rlen);
+                    CC1101_SendCmd(CC1101_CMD_STX);
+                    CC1101_SendCmd(CC1101_CMD_SRX);
+                } else if (type == PROTO_TYPE_DATA) {
+
+                    UART_PC_WriteBuffer(data, len);
+                }
+            }
+        }
+        vTaskDelay(5);
+    }
+}
+void vApplicationIdleHook(void) {
+    static uint32_t counter = 0;
+    if (++counter >= 500000) { 
+        counter = 0;
+        put_led(g_link_status);
+     }
+}
+
+
+
+void tasks_init(void) {
+   int tst=0;
+    q_rf_tx = xQueueCreate(8, PROTO_MAX_PACKET);
+    tst=xTaskCreate(task_uart_rx, "UART_RX", 512, NULL, 2, NULL);
+    if(tst<=0){
+       printk("\n\r error task_uart_rx create");
+       return;
+    }
+    tst=xTaskCreate(task_rf_send, "RF_SEND", 512, NULL, 3, NULL);
+    if(tst<=0){
+       printk("\n\r error task_rf_send create");
+       return;
+    }
+   tst=xTaskCreate(task_rf_receive, "RF_RECV", 512, NULL, 3, NULL);
+   if(tst<=0){
+       printk("\n\r error task_rf_receive create");
+        return;
+  }
+   tst=xTaskCreate(task_heartbeat, "HB", 128, NULL, 1, NULL);
+   if(tst<=0){
+       printk("\n\r error task_heartbeat create");
+       return;
+   }
+  printk("\n\r OK task create");
+}
+

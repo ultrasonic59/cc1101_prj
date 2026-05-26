@@ -1,0 +1,1374 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  26/May/2026  20:52:59
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Exe\emul_line.out
+#    Map file     =
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\List\emul_line.map
+#    Command line =
+#        -f
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Exe\emul_line.out.rsp
+#        (D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_adc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_can.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\at32f415_clock.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_cmp.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_crc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_crm.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_debug.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_dma.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_ertc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_exint.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_flash.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_gpio.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_i2c.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\at32f415_int.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_misc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_pwc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_sdio.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_spi.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_tmr.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_usart.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_usb.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_wdt.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware\at32f415_wwdt.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\bsp\bat_brd.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\cc1101.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_class\cdc_class.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_class\cdc_desc.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\main.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\my_tasks.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\protocol.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\bsp\retarget.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\cmsis\startup_at32f415.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\cmsis\system_at32f415.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\tx_application.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_allocate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_pool_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_block_release.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_allocate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_pool_search.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_byte_release.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_set.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_event_flags_set_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_iar.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_initialize_high_level.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_initialize_kernel_enter.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_initialize_kernel_setup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_initialize_low_level.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_misra.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_priority_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_mutex_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_flush.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_front_send.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_receive.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_send.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_queue_send_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_ceiling_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_cleanup.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_semaphore_put_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\tx_systick_config.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_context_restore.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_context_save.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_entry_exit_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_identify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_interrupt_control.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_interrupt_disable.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_interrupt_restore.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_preemption_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_priority_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_relinquish.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_reset.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_resume.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_schedule.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_shell_entry.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_sleep.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_stack_analyze.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_stack_build.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_stack_error_handler.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_stack_error_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_suspend.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_system_preempt_check.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_system_resume.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_system_return.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_system_suspend.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_terminate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_time_slice.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_time_slice_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_timeout.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_thread_wait_abort.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_time_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_time_set.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_activate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_deactivate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_expiration_process.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_interrupt.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_performance_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_performance_system_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_system_activate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_system_deactivate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_timer_thread_entry.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_buffer_full_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_disable.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_enable.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_event_filter.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_event_unfilter.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_initialize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_interrupt_control.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_isr_enter_insert.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_isr_exit_insert.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_object_register.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_object_unregister.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\tx_trace_user_event_insert.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_allocate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_pool_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_pool_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_pool_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_pool_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_block_release.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_allocate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_pool_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_pool_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_pool_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_pool_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_byte_release.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_set.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_event_flags_set_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_mutex_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_flush.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_front_send.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_receive.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_send.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_queue_send_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_ceiling_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_prioritize.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_put.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_semaphore_put_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_entry_exit_notify.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_preemption_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_priority_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_relinquish.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_reset.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_resume.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_suspend.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_terminate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_time_slice_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_thread_wait_abort.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_activate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_change.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_create.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_deactivate.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_delete.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx\txe_timer_info_get.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\bsp\uart.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver\usb_core.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user\usb_thr.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver\usbd_core.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver\usbd_int.o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver\usbd_sdr.o
+#        --no_out_extension -o
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\Exe\emul_line.out
+#        --map
+#        D:\proj\cc1101_prj\radio_extender\radio_extender\List\emul_line.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.1\arm/config/linker/ArteryTek/AT32F415xC.icf" --entry
+#        __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=None)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x803'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x170
+  .intvec            ro code   0x800'0000   0x170  startup_at32f415.o [2]
+                             - 0x800'0170   0x170
+
+"P1":                                      0x6c24
+  .text              ro code   0x800'0170   0x8bc  my_tasks.o [7]
+  .text              ro code   0x800'0a2c    0x7c  txe_mutex_get.o [4]
+  .text              ro code   0x800'0aa8    0x4c  txe_mutex_put.o [4]
+  .text              ro code   0x800'0af4   0x648  cc1101.o [7]
+  .text              ro code   0x800'113c    0x28  printf.o [8]
+  .text              ro code   0x800'1164    0xa6  ABImemcpy.o [9]
+  .text              ro code   0x800'120a    0x7e  lz77_init_single.o [9]
+  .text              ro code   0x800'1288   0x3c8  bat_brd.o [1]
+  .text              ro code   0x800'1650   0x130  protocol.o [7]
+  .text              ro code   0x800'1780    0x60  txe_queue_send.o [4]
+  .text              ro code   0x800'17e0    0x14  tx_time_get.o [4]
+  .text              ro code   0x800'17f4   0x230  uart.o [1]
+  .text              ro code   0x800'1a24   0x16c  usb_thr.o [7]
+  .text              ro code   0x800'1b90    0x90  tx_thread_sleep.o [4]
+  .text              ro code   0x800'1c20    0x60  txe_queue_receive.o [4]
+  .text              ro code   0x800'1c80    0xcc  txe_mutex_create.o [4]
+  .text              ro code   0x800'1d4c    0xf0  txe_queue_create.o [4]
+  .text              ro code   0x800'1e3c   0x15c  txe_thread_create.o [4]
+  .text              ro code   0x800'1f98   0x118  tx_mutex_get.o [4]
+  .text              ro code   0x800'20b0   0x220  tx_mutex_put.o [4]
+  .text              ro code   0x800'22d0   0x190  at32f415_spi.o [3]
+  .text              ro code   0x800'2460   0x14c  at32f415_gpio.o [3]
+  .text              ro code   0x800'25ac   0x4e5  xprintfsmall_nomb.o [8]
+  .text              ro code   0x800'2a94   0x468  at32f415_crm.o [3]
+  .text              ro code   0x800'2efc   0x10c  at32f415_misc.o [3]
+  .text              ro code   0x800'3008    0x70  at32f415_clock.o [7]
+  .text              ro code   0x800'3078   0x134  tx_queue_send.o [4]
+  .text              ro code   0x800'31ac   0x154  at32f415_usart.o [3]
+  .text              ro code   0x800'3300   0x2b2  cdc_class.o [5]
+  .text              ro code   0x800'35b2    0x9a  usb_core.o [6]
+  .text              ro code   0x800'364c   0x780  usbd_core.o [6]
+  .text              ro code   0x800'3dcc   0x4ca  usbd_int.o [6]
+  .text              ro code   0x800'4298   0x144  tx_thread_system_suspend.o [4]
+  .text              ro code   0x800'43dc   0x1ec  tx_queue_receive.o [4]
+  .text              ro code   0x800'45c8    0x40  tx_thread_system_preempt_check.o [4]
+  .text              ro code   0x800'4608    0x6c  tx_mutex_create.o [4]
+  .text              ro code   0x800'4674    0x84  tx_queue_create.o [4]
+  .text              ro code   0x800'46f8   0x154  tx_thread_create.o [4]
+  .text              ro code   0x800'484c    0xd8  tx_mutex_priority_change.o [4]
+  .text              ro code   0x800'4924    0xb0  tx_mutex_prioritize.o [4]
+  .text              ro code   0x800'49d4   0x128  tx_thread_system_resume.o [4]
+  .text              ro code   0x800'4afc    0x16  strchr.o [9]
+  .text              ro code   0x800'4b14    0x40  xfail_s.o [8]
+  .text              ro code   0x800'4b54    0x36  strlen.o [9]
+  .text              ro code   0x800'4b8c    0x58  memchr.o [9]
+  .text              ro code   0x800'4be4   0x230  I64DivMod.o [9]
+  .text              ro code   0x800'4e14   0x1c8  system_at32f415.o [2]
+  .text              ro code   0x800'4fdc   0x5be  at32f415_usb.o [3]
+  .text              ro code   0x800'559c   0x546  usbd_sdr.o [6]
+  .text              ro code   0x800'5ae4    0x64  tx_timer_system_activate.o [4]
+  .text              ro code   0x800'5b48    0x66  ABImemset.o [9]
+  .text              ro code   0x800'5bb0    0x44  tx_thread_stack_build.o [4]
+  .text              ro code   0x800'5bf4    0x2e  tx_timer_system_deactivate.o [4]
+  .text              ro code   0x800'5c22     0x6  abort.o [8]
+  .text              ro code   0x800'5c28     0x2  I64DivZer.o [9]
+  .text              ro code   0x800'5c2c     0xc  XXexit.o [9]
+  .text              ro code   0x800'5c38   0x164  cdc_desc.o [5]
+  .text              ro code   0x800'5d9c   0x130  tx_timer_thread_entry.o [4]
+  .text              ro code   0x800'5ecc    0xc8  tx_mutex_cleanup.o [4]
+  .text              ro code   0x800'5f94    0xb8  tx_timer_interrupt.o [4]
+  .text              ro code   0x800'604c    0x24  tx_timer_expiration_process.o [4]
+  .text              ro code   0x800'6070    0x68  tx_thread_time_slice.o [4]
+  .text              ro code   0x800'60d8    0xa0  tx_thread_schedule.o [4]
+  .text              ro code   0x800'6178    0x94  main.o [7]
+  .text              ro code   0x800'620c    0x38  tx_systick_config.o [7]
+  .text              ro code   0x800'6244    0x48  tx_initialize_kernel_enter.o [4]
+  .text              ro code   0x800'628c    0x64  tx_initialize_low_level.o [4]
+  .text              ro code   0x800'62f0     0xc  tx_initialize_high_level.o [4]
+  .text              ro code   0x800'62fc     0x8  tx_application.o [7]
+  .text              ro code   0x800'6304    0x1c  tx_thread_initialize.o [4]
+  .text              ro code   0x800'6320    0x8c  tx_timer_initialize.o [4]
+  .text              ro code   0x800'63ac    0x94  tx_queue_cleanup.o [4]
+  .rodata            const     0x800'6440    0x50  cc1101.o [7]
+  .text              ro code   0x800'6490    0x4c  tx_thread_shell_entry.o [4]
+  .rodata            const     0x800'64dc    0x48  cc1101.o [7]
+  .text              ro code   0x800'6524    0x48  at32f415_int.o [7]
+  .text              ro code   0x800'656c    0x18  at32f415_tmr.o [3]
+  .text              ro code   0x800'6584    0x1a  at32f415_adc.o [3]
+  .text              ro code   0x800'65a0    0x44  putchar.o [8]
+  .text              ro code   0x800'65e4    0x1c  retarget.o [1]
+  .rodata            const     0x800'6600    0x40  cc1101.o [7]
+  .text              ro code   0x800'6640    0x38  tx_thread_timeout.o [4]
+  .text              ro code   0x800'6678    0x38  zero_init3.o [9]
+  .rodata            const     0x800'66b0    0x34  cc1101.o [7]
+  .rodata            const     0x800'66e4    0x34  cc1101.o [7]
+  .rodata            const     0x800'6718    0x28  cc1101.o [7]
+  .rodata            const     0x800'6740    0x28  main.o [7]
+  .rodata            const     0x800'6768    0x28  main.o [7]
+  .text              ro code   0x800'6790    0x28  data_init.o [9]
+  .iar.init_table    const     0x800'67b8    0x20  - Linker created -
+  .rodata            const     0x800'67d8    0x20  cc1101.o [7]
+  .rodata            const     0x800'67f8    0x20  my_tasks.o [7]
+  .rodata            const     0x800'6818    0x20  my_tasks.o [7]
+  .rodata            const     0x800'6838    0x20  my_tasks.o [7]
+  .rodata            const     0x800'6858    0x20  my_tasks.o [7]
+  .rodata            const     0x800'6878    0x20  my_tasks.o [7]
+  .rodata            const     0x800'6898    0x20  my_tasks.o [7]
+  .text              ro code   0x800'68b8    0x1e  cmain.o [9]
+  .text              ro code   0x800'68d6     0x4  low_level_init.o [8]
+  .text              ro code   0x800'68da     0x4  exit.o [8]
+  .text              ro code   0x800'68e0     0xa  cexit.o [9]
+  .rodata            const     0x800'68ec    0x1c  cdc_desc.o [5]
+  .rodata            const     0x800'6908    0x1c  main.o [7]
+  .rodata            const     0x800'6924    0x1c  my_tasks.o [7]
+  .rodata            const     0x800'6940    0x1c  my_tasks.o [7]
+  .rodata            const     0x800'695c    0x1c  my_tasks.o [7]
+  .rodata            const     0x800'6978    0x1c  my_tasks.o [7]
+  .text              ro code   0x800'6994    0x1c  cstartup_M.o [9]
+  .rodata            const     0x800'69b0    0x18  cdc_desc.o [5]
+  .rodata            const     0x800'69c8    0x18  cdc_desc.o [5]
+  .rodata            const     0x800'69e0    0x18  main.o [7]
+  .rodata            const     0x800'69f8    0x18  my_tasks.o [7]
+  .rodata            const     0x800'6a10    0x18  my_tasks.o [7]
+  .text              ro code   0x800'6a28    0x16  xprout.o [8]
+  .rodata            const     0x800'6a40    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6a54    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6a68    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6a7c    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6a90    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6aa4    0x14  my_tasks.o [7]
+  .rodata            const     0x800'6ab8    0x14  tx_timer_initialize.o [4]
+  .rodata            const     0x800'6acc    0x10  at32f415_crm.o [3]
+  .rodata            const     0x800'6adc    0x10  my_tasks.o [7]
+  .rodata            const     0x800'6aec    0x10  my_tasks.o [7]
+  .rodata            const     0x800'6afc    0x10  my_tasks.o [7]
+  .rodata            const     0x800'6b0c    0x10  system_at32f415.o [2]
+  .text              ro code   0x800'6b1c    0x10  startup_at32f415.o [2]
+  .rodata            const     0x800'6b2c     0xc  cc1101.o [7]
+  .rodata            const     0x800'6b38     0xc  cc1101.o [7]
+  .rodata            const     0x800'6b44     0xc  cc1101.o [7]
+  .rodata            const     0x800'6b50     0xc  cc1101.o [7]
+  .rodata            const     0x800'6b5c     0x8  at32f415_crm.o [3]
+  .rodata            const     0x800'6b64     0x8  at32f415_crm.o [3]
+  .rodata            const     0x800'6b6c     0x8  at32f415_crm.o [3]
+  .rodata            const     0x800'6b74     0x8  cc1101.o [7]
+  .rodata            const     0x800'6b7c     0x8  cc1101.o [7]
+  .rodata            const     0x800'6b84     0x8  cdc_desc.o [5]
+  .rodata            const     0x800'6b8c     0x8  my_tasks.o [7]
+  .rodata            const     0x800'6b94     0x8  my_tasks.o [7]
+  .rodata            const     0x800'6b9c     0x8  my_tasks.o [7]
+  .rodata            const     0x800'6ba4     0x8  my_tasks.o [7]
+  .rodata            const     0x800'6bac     0x8  my_tasks.o [7]
+  .rodata            const     0x800'6bb4     0x4  cc1101.o [7]
+  .rodata            const     0x800'6bb8     0x4  cc1101.o [7]
+  .rodata            const     0x800'6bbc     0x4  cc1101.o [7]
+  .rodata            const     0x800'6bc0     0x4  cc1101.o [7]
+  .text              ro code   0x800'6bc4     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bc8     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bcc     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bd0     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bd4     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bd8     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bdc     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6be0     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6be4     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6be8     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bec     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bf0     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bf4     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bf8     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6bfc     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c00     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c04     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c08     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c0c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c10     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c14     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c18     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c1c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c20     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c24     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c28     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c2c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c30     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c34     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c38     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c3c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c40     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c44     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c48     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c4c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c50     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c54     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c58     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c5c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c60     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c64     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c68     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c6c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c70     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c74     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c78     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c7c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c80     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c84     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c88     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c8c     0x4  startup_at32f415.o [2]
+  .text              ro code   0x800'6c90     0x4  startup_at32f415.o [2]
+  .rodata            const     0x800'6c94     0x0  zero_init3.o [9]
+  .rodata            const     0x800'6c94     0x0  lz77_init_single.o [9]
+  Initializer bytes  const     0x800'6c94   0x100  <for P2-1>
+                             - 0x800'6d94  0x6c24
+
+"P2", part 1 of 3:                          0x153
+  P2-1                        0x2000'0000   0x153  <Init block>
+    .data            inited   0x2000'0000    0x10  cc1101.o [7]
+    .data            inited   0x2000'0010     0x8  cdc_class.o [5]
+    .data            inited   0x2000'0018    0x28  cdc_class.o [5]
+    .data            inited   0x2000'0040    0x28  cdc_desc.o [5]
+    .data            inited   0x2000'0068    0x14  cdc_desc.o [5]
+    .data            inited   0x2000'007c    0x44  cdc_desc.o [5]
+    .data            inited   0x2000'00c0     0x4  cdc_desc.o [5]
+    .data            inited   0x2000'00c4    0x1c  cdc_desc.o [5]
+    .data            inited   0x2000'00e0     0x8  cdc_desc.o [5]
+    .data            inited   0x2000'00e8     0x8  cdc_desc.o [5]
+    .data            inited   0x2000'00f0     0x8  cdc_desc.o [5]
+    .data            inited   0x2000'00f8     0x8  cdc_desc.o [5]
+    .data            inited   0x2000'0100     0x4  system_at32f415.o [2]
+    .data            inited   0x2000'0104     0x4  tx_thread_initialize.o [4]
+    .data            inited   0x2000'0108    0x48  xfiles.o [8]
+    .data            inited   0x2000'0150     0x1  cc1101.o [7]
+    .data            inited   0x2000'0151     0x1  cc1101.o [7]
+    .data            inited   0x2000'0152     0x1  my_tasks.o [7]
+                            - 0x2000'0153   0x153
+
+"P2", part 2 of 3:                         0x36d0
+  .bss               zero     0x2000'0154   0x800  my_tasks.o [7]
+  .bss               zero     0x2000'0954   0x800  my_tasks.o [7]
+  .bss               zero     0x2000'1154   0x800  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'1954   0x600  my_tasks.o [7]
+  .bss               zero     0x2000'1f54   0x600  my_tasks.o [7]
+  .bss               zero     0x2000'2554   0x400  my_tasks.o [7]
+  .bss               zero     0x2000'2954   0x200  my_tasks.o [7]
+  .bss               zero     0x2000'2b54   0x1a4  usb_thr.o [7]
+  .bss               zero     0x2000'2cf8   0x100  cdc_desc.o [5]
+  .bss               zero     0x2000'2df8   0x100  usb_thr.o [7]
+  .bss               zero     0x2000'2ef8    0xb0  my_tasks.o [7]
+  .bss               zero     0x2000'2fa8    0xb0  my_tasks.o [7]
+  .bss               zero     0x2000'3058    0xb0  my_tasks.o [7]
+  .bss               zero     0x2000'3108    0xb0  my_tasks.o [7]
+  .bss               zero     0x2000'31b8    0xb0  my_tasks.o [7]
+  .bss               zero     0x2000'3268    0xb0  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'3318    0x80  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'3398    0x80  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'3418    0x80  uart.o [1]
+  .bss               zero     0x2000'3498    0x80  uart.o [1]
+  .bss               zero     0x2000'3518    0x5c  cdc_class.o [5]
+  .bss               zero     0x2000'3574    0x50  xfiles.o [8]
+  .bss               zero     0x2000'35c4    0x40  my_tasks.o [7]
+  .bss               zero     0x2000'3604    0x40  my_tasks.o [7]
+  .bss               zero     0x2000'3644    0x40  my_tasks.o [7]
+  .bss               zero     0x2000'3684    0x40  my_tasks.o [7]
+  .bss               zero     0x2000'36c4    0x40  my_tasks.o [7]
+  .bss               zero     0x2000'3704    0x38  my_tasks.o [7]
+  .bss               zero     0x2000'373c    0x34  my_tasks.o [7]
+  FREE_MEM           zero     0x2000'3770    0x10  tx_initialize_low_level.o [4]
+  .bss               zero     0x2000'3780     0x8  cdc_desc.o [5]
+  .bss               zero     0x2000'3788     0x4  bat_brd.o [1]
+  .bss               zero     0x2000'378c     0x4  bat_brd.o [1]
+  .bss               zero     0x2000'3790     0x4  my_tasks.o [7]
+  .bss               zero     0x2000'3794     0x4  my_tasks.o [7]
+  .bss               zero     0x2000'3798     0x4  my_tasks.o [7]
+  .bss               zero     0x2000'379c     0x4  tx_initialize_high_level.o [4]
+  .bss               zero     0x2000'37a0     0x4  tx_initialize_high_level.o [4]
+  .bss               zero     0x2000'37a4     0x4  tx_initialize_high_level.o [4]
+  .bss               zero     0x2000'37a8     0x4  tx_initialize_high_level.o [4]
+  .bss               zero     0x2000'37ac     0x4  tx_initialize_high_level.o [4]
+  .bss               zero     0x2000'37b0     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37b4     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37b8     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37bc     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37c0     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37c4     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37c8     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37cc     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37d0     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37d4     0x4  tx_thread_initialize.o [4]
+  .bss               zero     0x2000'37d8     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37dc     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37e0     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37e4     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37e8     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37ec     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37f0     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37f4     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37f8     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'37fc     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'3800     0x4  tx_timer_initialize.o [4]
+  .bss               zero     0x2000'3804     0x4  usb_thr.o [7]
+  .bss               zero     0x2000'3808     0x4  xfail_s.o [8]
+  .bss               zero     0x2000'380c     0x2  uart.o [1]
+  .bss               zero     0x2000'380e     0x2  uart.o [1]
+  .bss               zero     0x2000'3810     0x2  uart.o [1]
+  .bss               zero     0x2000'3812     0x2  uart.o [1]
+  .bss               zero     0x2000'3814     0x1  cc1101.o [7]
+  .bss               zero     0x2000'3815     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3816     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3817     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3818     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3819     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381a     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381b     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381c     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381d     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381e     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'381f     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3820     0x1  my_tasks.o [7]
+  .bss               zero     0x2000'3821     0x1  uart.o [1]
+  .bss               zero     0x2000'3822     0x1  usb_thr.o [7]
+  .bss               zero     0x2000'3823     0x1  usbd_sdr.o [6]
+                            - 0x2000'3824  0x36d0
+
+"P2", part 3 of 3:                         0x1000
+  CSTACK                      0x2000'3828  0x1000  <Block>
+    CSTACK           uninit   0x2000'3828  0x1000  <Block tail>
+                            - 0x2000'4828  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'6d94   0x803'ffff  0x3'926c
+  0x2000'0153  0x2000'0153       0x1
+  0x2000'3824  0x2000'3827       0x4
+  0x2000'4828  0x2000'7fff    0x37d8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x36d0:
+          0x2000'0154  0x36d0
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x100 (75% of destination):
+           0x800'6c94   0x100
+    1 destination range, total size 0x153:
+          0x2000'0000   0x153
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                            ro code  ro data  rw data
+    ------                            -------  -------  -------
+command line/config:
+    -----------------------------------------------------------
+    Total:
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\bsp: [1]
+    bat_brd.o                             968                 8
+    retarget.o                             28
+    uart.o                                560               265
+    -----------------------------------------------------------
+    Total:                              1'556               273
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\cmsis: [2]
+    startup_at32f415.o                    592
+    system_at32f415.o                     456       19        4
+    -----------------------------------------------------------
+    Total:                              1'048       19        4
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware: [3]
+    at32f415_adc.o                         26
+    at32f415_crm.o                      1'128       40
+    at32f415_gpio.o                       332
+    at32f415_misc.o                       268
+    at32f415_spi.o                        400
+    at32f415_tmr.o                         24
+    at32f415_usart.o                      340
+    at32f415_usb.o                      1'470
+    -----------------------------------------------------------
+    Total:                              3'988       40
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx: [4]
+    tx_initialize_high_level.o             12                20
+    tx_initialize_kernel_enter.o           72
+    tx_initialize_low_level.o             100                16
+    tx_mutex_cleanup.o                    200
+    tx_mutex_create.o                     108
+    tx_mutex_get.o                        280
+    tx_mutex_prioritize.o                 176
+    tx_mutex_priority_change.o            216
+    tx_mutex_put.o                        544
+    tx_queue_cleanup.o                    148
+    tx_queue_create.o                     132
+    tx_queue_receive.o                    492
+    tx_queue_send.o                       308
+    tx_thread_create.o                    340
+    tx_thread_initialize.o                 28        3      172
+    tx_thread_schedule.o                  160
+    tx_thread_shell_entry.o                76
+    tx_thread_sleep.o                     144
+    tx_thread_stack_build.o                68
+    tx_thread_system_preempt_check.o       64
+    tx_thread_system_resume.o             296
+    tx_thread_system_suspend.o            324
+    tx_thread_time_slice.o                104
+    tx_thread_timeout.o                    56
+    tx_time_get.o                          20
+    tx_timer_expiration_process.o          36
+    tx_timer_initialize.o                 140       20    2'396
+    tx_timer_interrupt.o                  184
+    tx_timer_system_activate.o            100
+    tx_timer_system_deactivate.o           46
+    tx_timer_thread_entry.o               304
+    txe_mutex_create.o                    204
+    txe_mutex_get.o                       124
+    txe_mutex_put.o                        76
+    txe_queue_create.o                    240
+    txe_queue_receive.o                    96
+    txe_queue_send.o                       96
+    txe_thread_create.o                   348
+    -----------------------------------------------------------
+    Total:                              6'462       23    2'604
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_class: [5]
+    cdc_class.o                           690       36      140
+    cdc_desc.o                            356      229      456
+    -----------------------------------------------------------
+    Total:                              1'046      265      596
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver: [6]
+    usb_core.o                            154
+    usbd_core.o                         1'920
+    usbd_int.o                          1'226
+    usbd_sdr.o                          1'350                 1
+    -----------------------------------------------------------
+    Total:                              4'650                 1
+
+D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user: [7]
+    at32f415_clock.o                      112
+    at32f415_int.o                         72
+    cc1101.o                            1'608      486       19
+    main.o                                148      132
+    my_tasks.o                          2'236      561   10'037
+    protocol.o                            304
+    tx_application.o                        8
+    tx_systick_config.o                    56
+    usb_thr.o                             364               681
+    -----------------------------------------------------------
+    Total:                              4'908    1'179   10'737
+
+dl7M_tlf.a: [8]
+    abort.o                                 6
+    exit.o                                  4
+    low_level_init.o                        4
+    printf.o                               40
+    putchar.o                              68
+    xfail_s.o                              64                 4
+    xfiles.o                                        54      152
+    xprintfsmall_nomb.o                 1'253
+    xprout.o                               22
+    -----------------------------------------------------------
+    Total:                              1'461       54      156
+
+rt7M_tl.a: [9]
+    ABImemcpy.o                           166
+    ABImemset.o                           102
+    I64DivMod.o                           560
+    I64DivZer.o                             2
+    XXexit.o                               12
+    cexit.o                                10
+    cmain.o                                30
+    cstartup_M.o                           28
+    data_init.o                            40
+    lz77_init_single.o                    126
+    memchr.o                               88
+    strchr.o                               22
+    strlen.o                               54
+    zero_init3.o                           56
+    -----------------------------------------------------------
+    Total:                              1'296
+
+    Gaps                                   21        4
+    Linker created                                  32    4'096
+---------------------------------------------------------------
+    Grand Total:                       26'436    1'616   18'467
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'67b8          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'67d8          --   Gb  - Linker created -
+?main                    0x800'68b9         Code  Gb  cmain.o [9]
+ADC1_IRQHandler          0x800'654b   0x1a  Code  Gb  at32f415_int.o [7]
+BusFault_Handler         0x800'652b    0x2  Code  Gb  at32f415_int.o [7]
+CAN1_RX0_IRQHandler      0x800'6c15         Code  Wk  startup_at32f415.o [2]
+CAN1_RX1_IRQHandler      0x800'6c19         Code  Wk  startup_at32f415.o [2]
+CAN1_SE_IRQHandler       0x800'6c1d         Code  Wk  startup_at32f415.o [2]
+CAN1_TX_IRQHandler       0x800'6c11         Code  Wk  startup_at32f415.o [2]
+CC1101_ApplyVariablePacketMode
+                         0x800'0e55   0x1c  Code  Gb  cc1101.o [7]
+CC1101_CheckConnection   0x800'1135    0x8  Code  Gb  cc1101.o [7]
+CC1101_EnterRx           0x800'0e9b   0x24  Code  Gb  cc1101.o [7]
+CC1101_FlushRxFifo       0x800'0ebf   0x1e  Code  Gb  cc1101.o [7]
+CC1101_Init              0x800'0edd   0xb6  Code  Gb  cc1101.o [7]
+CC1101_ListenAfterTx     0x800'0e71   0x18  Code  Gb  cc1101.o [7]
+CC1101_ProbeSpi          0x800'0bb9  0x19c  Code  Gb  cc1101.o [7]
+CC1101_ReadBurst         0x800'1087   0x4a  Code  Gb  cc1101.o [7]
+CC1101_ReadReg           0x800'100b   0x34  Code  Gb  cc1101.o [7]
+CC1101_ReapplyRadio      0x800'0de7   0x6e  Code  Gb  cc1101.o [7]
+CC1101_SendCmd           0x800'10d1   0x24  Code  Gb  cc1101.o [7]
+CC1101_StrobeRx          0x800'0e89   0x12  Code  Gb  cc1101.o [7]
+CC1101_VerifySpi         0x800'0f93   0x4a  Code  Gb  cc1101.o [7]
+CC1101_WaitReady         0x800'0b2b   0x2a  Code  Lc  cc1101.o [7]
+CC1101_WriteBurst        0x800'103f   0x48  Code  Gb  cc1101.o [7]
+CC1101_WriteReg          0x800'0fdd   0x2e  Code  Gb  cc1101.o [7]
+CMP1_IRQHandler          0x800'6c89         Code  Wk  startup_at32f415.o [2]
+CMP2_IRQHandler          0x800'6c8d         Code  Wk  startup_at32f415.o [2]
+CRM_IRQHandler           0x800'6bdd         Code  Wk  startup_at32f415.o [2]
+CSTACK$$Base            0x2000'3828          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'4828          --   Gb  - Linker created -
+DMA1_Channel1_IRQHandler
+                         0x800'6bf5         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel2_IRQHandler
+                         0x800'6bf9         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel3_IRQHandler
+                         0x800'6bfd         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel4_IRQHandler
+                         0x800'6c01         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel5_IRQHandler
+                         0x800'6c05         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel6_IRQHandler
+                         0x800'6c09         Code  Wk  startup_at32f415.o [2]
+DMA1_Channel7_IRQHandler
+                         0x800'6c0d         Code  Wk  startup_at32f415.o [2]
+DMA2_Channel1_IRQHandler
+                         0x800'6c79         Code  Wk  startup_at32f415.o [2]
+DMA2_Channel2_IRQHandler
+                         0x800'6c7d         Code  Wk  startup_at32f415.o [2]
+DMA2_Channel3_IRQHandler
+                         0x800'6c81         Code  Wk  startup_at32f415.o [2]
+DMA2_Channel4_5_IRQHandler
+                         0x800'6c85         Code  Wk  startup_at32f415.o [2]
+DMA2_Channel6_7_IRQHandler
+                         0x800'6c91         Code  Wk  startup_at32f415.o [2]
+DebugMon_Handler         0x800'652f    0x2  Code  Gb  at32f415_int.o [7]
+ERTCAlarm_IRQHandler     0x800'6c61         Code  Wk  startup_at32f415.o [2]
+ERTC_IRQHandler          0x800'6bd5         Code  Wk  startup_at32f415.o [2]
+EXINT0_IRQHandler        0x800'6be1         Code  Wk  startup_at32f415.o [2]
+EXINT15_10_IRQHandler    0x800'6c5d         Code  Wk  startup_at32f415.o [2]
+EXINT1_IRQHandler        0x800'6be5         Code  Wk  startup_at32f415.o [2]
+EXINT2_IRQHandler        0x800'6be9         Code  Wk  startup_at32f415.o [2]
+EXINT3_IRQHandler        0x800'6bed         Code  Wk  startup_at32f415.o [2]
+EXINT4_IRQHandler        0x800'6bf1         Code  Wk  startup_at32f415.o [2]
+EXINT9_5_IRQHandler      0x800'6c21         Code  Wk  startup_at32f415.o [2]
+FLASH_IRQHandler         0x800'6bd9         Code  Wk  startup_at32f415.o [2]
+HardFault_Handler        0x800'6527    0x2  Code  Gb  at32f415_int.o [7]
+I2C1_ERR_IRQHandler      0x800'6c41         Code  Wk  startup_at32f415.o [2]
+I2C1_EVT_IRQHandler      0x800'6c3d         Code  Wk  startup_at32f415.o [2]
+I2C2_ERR_IRQHandler      0x800'6c49         Code  Wk  startup_at32f415.o [2]
+I2C2_EVT_IRQHandler      0x800'6c45         Code  Wk  startup_at32f415.o [2]
+MemManage_Handler        0x800'6529    0x2  Code  Gb  at32f415_int.o [7]
+NMI_Handler              0x800'6525    0x2  Code  Gb  at32f415_int.o [7]
+NVIC_EncodePriority      0x800'2f61   0x3c  Code  Lc  at32f415_misc.o [3]
+OTGFS1_IRQHandler        0x800'1b49    0xa  Code  Gb  usb_thr.o [7]
+OTGFS1_WKUP_IRQHandler   0x800'6c65         Code  Wk  startup_at32f415.o [2]
+PVM_IRQHandler           0x800'6bcd         Code  Wk  startup_at32f415.o [2]
+PendSV_Handler           0x800'60f9         Code  Gb  tx_thread_schedule.o [4]
+Protocol_BuildPacket     0x800'169d   0x62  Code  Gb  protocol.o [7]
+Protocol_CalcCRC         0x800'1651   0x4c  Code  Gb  protocol.o [7]
+Protocol_ParsePacket     0x800'16ff   0x82  Code  Gb  protocol.o [7]
+Region$$Table$$Base      0x800'67b8          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'67d8          --   Gb  - Linker created -
+Reset_Handler            0x800'6b1d         Code  Wk  startup_at32f415.o [2]
+SDIO1_IRQHandler         0x800'6c69         Code  Wk  startup_at32f415.o [2]
+SPI1_IRQHandler          0x800'6c4d         Code  Wk  startup_at32f415.o [2]
+SPI2_IRQHandler          0x800'6c51         Code  Wk  startup_at32f415.o [2]
+SPI_RF_Transfer          0x800'0af5   0x36  Code  Lc  cc1101.o [7]
+SVC_Handler              0x800'6bc5         Code  Wk  startup_at32f415.o [2]
+SysTick_Handler          0x800'62c9         Code  Gb  tx_initialize_low_level.o [4]
+SystemInit               0x800'4e15   0x72  Code  Gb  system_at32f415.o [2]
+TAMPER_IRQHandler        0x800'6bd1         Code  Wk  startup_at32f415.o [2]
+TMR1_BRK_TMR9_IRQHandler
+                         0x800'6c25         Code  Wk  startup_at32f415.o [2]
+TMR1_CH_IRQHandler       0x800'6c31         Code  Wk  startup_at32f415.o [2]
+TMR1_OVF_TMR10_IRQHandler
+                         0x800'6c29         Code  Wk  startup_at32f415.o [2]
+TMR1_TRG_HALL_TMR11_IRQHandler
+                         0x800'6c2d         Code  Wk  startup_at32f415.o [2]
+TMR2_GLOBAL_IRQHandler   0x800'6c35         Code  Wk  startup_at32f415.o [2]
+TMR3_GLOBAL_IRQHandler   0x800'6c39         Code  Wk  startup_at32f415.o [2]
+TMR4_GLOBAL_IRQHandler   0x800'6531   0x1a  Code  Gb  at32f415_int.o [7]
+TMR5_GLOBAL_IRQHandler   0x800'6c6d         Code  Wk  startup_at32f415.o [2]
+UART4_IRQHandler         0x800'6c71         Code  Wk  startup_at32f415.o [2]
+UART5_IRQHandler         0x800'6c75         Code  Wk  startup_at32f415.o [2]
+UART_DBG_Init            0x800'199d   0x3c  Code  Gb  uart.o [1]
+UART_PC_Available        0x800'1913   0x26  Code  Gb  uart.o [1]
+UART_PC_Init             0x800'17fb   0x56  Code  Gb  uart.o [1]
+UART_PC_IsReady          0x800'17f5    0x6  Code  Gb  uart.o [1]
+UART_PC_ReadByte         0x800'18dd   0x36  Code  Gb  uart.o [1]
+UART_PC_WriteBuffer      0x800'1979   0x24  Code  Gb  uart.o [1]
+UART_PC_WriteByte        0x800'1939   0x40  Code  Gb  uart.o [1]
+USART1_IRQHandler        0x800'1851   0x8c  Code  Gb  uart.o [1]
+USART2_IRQHandler        0x800'6c55         Code  Wk  startup_at32f415.o [2]
+USART3_IRQHandler        0x800'6c59         Code  Wk  startup_at32f415.o [2]
+UsageFault_Handler       0x800'652d    0x2  Code  Gb  at32f415_int.o [7]
+WWDT_IRQHandler          0x800'6bc9         Code  Wk  startup_at32f415.o [2]
+_LC                      0x800'25ad    0x6  Code  Lc  xprintfsmall_nomb.o [8]
+_LitobSmallNoMb          0x800'296f   0xd0  Code  Lc  xprintfsmall_nomb.o [8]
+_PrintfSmallNoMb         0x800'25b3  0x3b0  Code  Gb  xprintfsmall_nomb.o [8]
+_Prout                   0x800'6a29   0x16  Code  Gb  xprout.o [8]
+_PutcharsSmallNoMb       0x800'2a3f   0x2e  Code  Lc  xprintfsmall_nomb.o [8]
+__NVIC_EnableIRQ         0x800'2f21   0x1c  Code  Lc  at32f415_misc.o [3]
+__NVIC_GetPriorityGrouping
+                         0x800'2f17    0xa  Code  Lc  at32f415_misc.o [3]
+__NVIC_SetPriority       0x800'2f3d   0x24  Code  Lc  at32f415_misc.o [3]
+__NVIC_SetPriorityGrouping
+                         0x800'2efd   0x1a  Code  Lc  at32f415_misc.o [3]
+__aeabi_ldiv0            0x800'5c29         Code  Gb  I64DivZer.o [9]
+__aeabi_memcpy           0x800'1165         Code  Gb  ABImemcpy.o [9]
+__aeabi_memcpy4          0x800'1185         Code  Gb  ABImemcpy.o [9]
+__aeabi_memcpy8          0x800'1185         Code  Gb  ABImemcpy.o [9]
+__aeabi_memset           0x800'5b49         Code  Gb  ABImemset.o [9]
+__aeabi_uldivmod         0x800'4be5         Code  Gb  I64DivMod.o [9]
+__cmain                  0x800'68b9         Code  Gb  cmain.o [9]
+__exit                   0x800'5c2d         Code  Gb  XXexit.o [9]
+__iar_Fail_s             0x800'4b15   0x1c  Code  Gb  xfail_s.o [8]
+__iar_Memchr             0x800'4b8d         Code  Gb  memchr.o [9]
+__iar_Memset             0x800'5b49         Code  Gb  ABImemset.o [9]
+__iar_Memset_word        0x800'5b51         Code  Gb  ABImemset.o [9]
+__iar_Stdout            0x2000'0108   0x48  Data  Gb  xfiles.o [8]
+__iar_Strchr             0x800'4afd         Code  Gb  strchr.o [9]
+__iar_data_init3         0x800'6791   0x28  Code  Gb  data_init.o [9]
+__iar_lz77_init_single3
+                         0x800'120b   0x7e  Code  Gb  lz77_init_single.o [9]
+__iar_program_start      0x800'6995         Code  Gb  cstartup_M.o [9]
+__iar_zero_init3         0x800'6679   0x38  Code  Gb  zero_init3.o [9]
+__low_level_init         0x800'68d7    0x4  Code  Gb  low_level_init.o [8]
+__tx_PendSVHandler       0x800'60f9         Code  Gb  tx_thread_schedule.o [4]
+__tx_SysTickHandler      0x800'62c9         Code  Gb  tx_initialize_low_level.o [4]
+__tx_free_memory_start  0x2000'3770         Data  Gb  tx_initialize_low_level.o [4]
+__vector_table           0x800'0000         Data  Gb  startup_at32f415.o [2]
+__write                  0x800'65e5   0x1c  Code  Gb  retarget.o [1]
+_call_main               0x800'68c5         Code  Gb  cmain.o [9]
+_exit                    0x800'68e1         Code  Gb  cexit.o [9]
+_tx_build_options       0x2000'37d4    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_initialize_high_level
+                         0x800'62f1    0xc  Code  Gb  tx_initialize_high_level.o [4]
+_tx_initialize_kernel_enter
+                         0x800'6245   0x48  Code  Gb  tx_initialize_kernel_enter.o [4]
+_tx_initialize_low_level
+                         0x800'628d         Code  Gb  tx_initialize_low_level.o [4]
+_tx_initialize_unused_memory
+                        0x2000'37ac    0x4  Data  Gb  tx_initialize_high_level.o [4]
+_tx_mutex_cleanup        0x800'5ecd   0x7a  Code  Gb  tx_mutex_cleanup.o [4]
+_tx_mutex_create         0x800'4609   0x6c  Code  Gb  tx_mutex_create.o [4]
+_tx_mutex_created_count
+                        0x2000'37a8    0x4  Data  Gb  tx_initialize_high_level.o [4]
+_tx_mutex_created_ptr   0x2000'37a4    0x4  Data  Gb  tx_initialize_high_level.o [4]
+_tx_mutex_get            0x800'1f99  0x118  Code  Gb  tx_mutex_get.o [4]
+_tx_mutex_prioritize     0x800'4925   0xb0  Code  Gb  tx_mutex_prioritize.o [4]
+_tx_mutex_priority_change
+                         0x800'484d   0xd8  Code  Gb  tx_mutex_priority_change.o [4]
+_tx_mutex_put            0x800'20b1  0x220  Code  Gb  tx_mutex_put.o [4]
+_tx_mutex_thread_release
+                         0x800'5f49   0x40  Code  Gb  tx_mutex_cleanup.o [4]
+_tx_queue_cleanup        0x800'63ad   0x94  Code  Gb  tx_queue_cleanup.o [4]
+_tx_queue_create         0x800'4675   0x84  Code  Gb  tx_queue_create.o [4]
+_tx_queue_created_count
+                        0x2000'37a0    0x4  Data  Gb  tx_initialize_high_level.o [4]
+_tx_queue_created_ptr   0x2000'379c    0x4  Data  Gb  tx_initialize_high_level.o [4]
+_tx_queue_receive        0x800'43dd  0x1ec  Code  Gb  tx_queue_receive.o [4]
+_tx_queue_send           0x800'3079  0x134  Code  Gb  tx_queue_send.o [4]
+_tx_thread_create        0x800'46f9  0x154  Code  Gb  tx_thread_create.o [4]
+_tx_thread_created_count
+                        0x2000'37c0    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_created_ptr  0x2000'37bc    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_current_ptr  0x2000'37b4    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_execute_ptr  0x2000'37b8    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_highest_priority
+                        0x2000'37c8    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_initialize    0x800'6305   0x1c  Code  Gb  tx_thread_initialize.o [4]
+_tx_thread_mutex_release
+                        0x2000'37d0    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_preempt_disable
+                        0x2000'37cc    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_priority_list
+                        0x2000'3318   0x80  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_priority_maps
+                        0x2000'37c4    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_schedule      0x800'60d9         Code  Gb  tx_thread_schedule.o [4]
+_tx_thread_shell_entry   0x800'6491   0x4c  Code  Gb  tx_thread_shell_entry.o [4]
+_tx_thread_sleep         0x800'1b91   0x90  Code  Gb  tx_thread_sleep.o [4]
+_tx_thread_stack_build   0x800'5bb1         Code  Gb  tx_thread_stack_build.o [4]
+_tx_thread_system_preempt_check
+                         0x800'45c9   0x40  Code  Gb  tx_thread_system_preempt_check.o [4]
+_tx_thread_system_resume
+                         0x800'49d5  0x128  Code  Gb  tx_thread_system_resume.o [4]
+_tx_thread_system_stack_ptr
+                        0x2000'37b0    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_system_state
+                        0x2000'0104    0x4  Data  Gb  tx_thread_initialize.o [4]
+_tx_thread_system_suspend
+                         0x800'4299  0x144  Code  Gb  tx_thread_system_suspend.o [4]
+_tx_thread_time_slice    0x800'6071   0x68  Code  Gb  tx_thread_time_slice.o [4]
+_tx_thread_timeout       0x800'6641   0x38  Code  Gb  tx_thread_timeout.o [4]
+_tx_time_get             0x800'17e1   0x14  Code  Gb  tx_time_get.o [4]
+_tx_timer_current_ptr   0x2000'37e8    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_expiration_process
+                         0x800'604d   0x24  Code  Gb  tx_timer_expiration_process.o [4]
+_tx_timer_expired       0x2000'37ec    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_expired_time_slice
+                        0x2000'37dc    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_expired_timer_ptr
+                        0x2000'37f0    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_initialize     0x800'6321   0x8c  Code  Gb  tx_timer_initialize.o [4]
+_tx_timer_interrupt      0x800'5f95         Code  Gb  tx_timer_interrupt.o [4]
+_tx_timer_list          0x2000'3398   0x80  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_list_end      0x2000'37e4    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_list_start    0x2000'37e0    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_priority      0x2000'37fc    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_stack_size    0x2000'37f8    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_stack_start   0x2000'37f4    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_system_activate
+                         0x800'5ae5   0x64  Code  Gb  tx_timer_system_activate.o [4]
+_tx_timer_system_clock  0x2000'37d8    0x4  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_system_deactivate
+                         0x800'5bf5   0x2e  Code  Gb  tx_timer_system_deactivate.o [4]
+_tx_timer_thread        0x2000'3268   0xb0  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_thread_entry   0x800'5d9d  0x130  Code  Gb  tx_timer_thread_entry.o [4]
+_tx_timer_thread_stack_area
+                        0x2000'1154  0x800  Data  Gb  tx_timer_initialize.o [4]
+_tx_timer_time_slice    0x2000'3800    0x4  Data  Gb  tx_timer_initialize.o [4]
+_txe_mutex_create        0x800'1c81   0xcc  Code  Gb  txe_mutex_create.o [4]
+_txe_mutex_get           0x800'0a2d   0x7c  Code  Gb  txe_mutex_get.o [4]
+_txe_mutex_put           0x800'0aa9   0x4c  Code  Gb  txe_mutex_put.o [4]
+_txe_queue_create        0x800'1d4d   0xf0  Code  Gb  txe_queue_create.o [4]
+_txe_queue_receive       0x800'1c21   0x60  Code  Gb  txe_queue_receive.o [4]
+_txe_queue_send          0x800'1781   0x60  Code  Gb  txe_queue_send.o [4]
+_txe_thread_create       0x800'1e3d  0x15c  Code  Gb  txe_thread_create.o [4]
+abort                    0x800'5c23    0x6  Code  Gb  abort.o [8]
+adc_flag_clear           0x800'6599    0x6  Code  Gb  at32f415_adc.o [3]
+adc_flag_get             0x800'6585   0x14  Code  Gb  at32f415_adc.o [3]
+cc1101_gdo0_pkt_ready    0x800'02a7    0x8  Code  Lc  my_tasks.o [7]
+cc1101_lock              0x800'01d5   0x10  Code  Lc  my_tasks.o [7]
+cc1101_mutex            0x2000'373c   0x34  Data  Lc  my_tasks.o [7]
+cc1101_poll_and_handle_rx
+                         0x800'051f   0xa0  Code  Lc  my_tasks.o [7]
+cc1101_process_rx_frame
+                         0x800'039f  0x180  Code  Lc  my_tasks.o [7]
+cc1101_recover_rx        0x800'01f9   0x2c  Code  Lc  my_tasks.o [7]
+cc1101_recover_rx::ovf_log_count
+                        0x2000'3820    0x1  Data  Lc  my_tasks.o [7]
+cc1101_rf_to_rx          0x800'01f1    0x8  Code  Lc  my_tasks.o [7]
+cc1101_send_packet       0x800'0231   0x76  Code  Lc  my_tasks.o [7]
+cc1101_spi_score         0x800'0b55   0x64  Code  Lc  cc1101.o [7]
+cc1101_unlock            0x800'01e5    0xc  Code  Lc  my_tasks.o [7]
+cc1101_wait_tx_done      0x800'0225    0xc  Code  Lc  my_tasks.o [7]
+cc1101_write_radio_block
+                         0x800'0d55   0x92  Code  Lc  cc1101.o [7]
+cdc_class_handler       0x2000'0018   0x28  Data  Gb  cdc_class.o [5]
+cdc_desc_handler        0x2000'0040   0x28  Data  Gb  cdc_desc.o [5]
+cdc_send_frame           0x800'1a25   0x16  Code  Gb  usb_thr.o [7]
+cdc_struct              0x2000'3518   0x5c  Data  Gb  cdc_class.o [5]
+cdc_struct_init          0x800'349f   0x2c  Code  Lc  cdc_class.o [5]
+class_clear_handler      0x800'3347   0x24  Code  Lc  cdc_class.o [5]
+class_ept0_rx_handler    0x800'3407   0x32  Code  Lc  cdc_class.o [5]
+class_ept0_tx_handler    0x800'3401    0x6  Code  Lc  cdc_class.o [5]
+class_event_handler      0x800'3477   0x28  Code  Lc  cdc_class.o [5]
+class_in_handler         0x800'3439   0x1a  Code  Lc  cdc_class.o [5]
+class_init_handler       0x800'3301   0x46  Code  Lc  cdc_class.o [5]
+class_out_handler        0x800'3453   0x1e  Code  Lc  cdc_class.o [5]
+class_setup_handler      0x800'336b   0x96  Code  Lc  cdc_class.o [5]
+class_sof_handler        0x800'3471    0x6  Code  Lc  cdc_class.o [5]
+config_descriptor       0x2000'00e8    0x8  Data  Lc  cdc_desc.o [5]
+crm_ahb_div_set          0x800'2bf3    0xe  Code  Gb  at32f415_crm.o [3]
+crm_apb1_div_set         0x800'2c01    0xe  Code  Gb  at32f415_crm.o [3]
+crm_apb2_div_set         0x800'2c0f    0xe  Code  Gb  at32f415_crm.o [3]
+crm_auto_step_mode_enable
+                         0x800'2e6d   0x1e  Code  Gb  at32f415_crm.o [3]
+crm_clock_source_enable
+                         0x800'2b8d   0x66  Code  Gb  at32f415_crm.o [3]
+crm_clocks_freq_get      0x800'2d27  0x146  Code  Gb  at32f415_crm.o [3]
+crm_clocks_freq_get::adc_div_table
+                         0x800'6b6c    0x8  Data  Lc  at32f415_crm.o [3]
+crm_clocks_freq_get::ahb_apb1_div_table
+                         0x800'6b5c    0x8  Data  Lc  at32f415_crm.o [3]
+crm_clocks_freq_get::ahb_apb2_div_table
+                         0x800'6b64    0x8  Data  Lc  at32f415_crm.o [3]
+crm_clocks_freq_get::sclk_ahb_div_table
+                         0x800'6acc   0x10  Data  Lc  at32f415_crm.o [3]
+crm_flag_get             0x800'2aef   0x2e  Code  Gb  at32f415_crm.o [3]
+crm_hext_stable_wait     0x800'2b1d   0x2e  Code  Gb  at32f415_crm.o [3]
+crm_periph_clock_enable
+                         0x800'2b4b   0x42  Code  Gb  at32f415_crm.o [3]
+crm_pll_config           0x800'2c3d   0xd2  Code  Gb  at32f415_crm.o [3]
+crm_reset                0x800'2a95   0x5a  Code  Gb  at32f415_crm.o [3]
+crm_sysclk_switch        0x800'2d0f    0xc  Code  Gb  at32f415_crm.o [3]
+crm_sysclk_switch_status_get
+                         0x800'2d1b    0xc  Code  Gb  at32f415_crm.o [3]
+crm_usb_clock_div_set    0x800'2c1d   0x20  Code  Gb  at32f415_crm.o [3]
+cycle_got_expected_pong
+                        0x2000'381f    0x1  Data  Lc  my_tasks.o [7]
+delay_init               0x800'1573   0x24  Code  Gb  bat_brd.o [1]
+delay_ms                 0x800'15bd   0x2e  Code  Gb  bat_brd.o [1]
+delay_us                 0x800'1597   0x26  Code  Gb  bat_brd.o [1]
+device_descriptor       0x2000'00e0    0x8  Data  Lc  cdc_desc.o [5]
+exit                     0x800'68db    0x4  Code  Gb  exit.o [8]
+expect_pong_id          0x2000'3816    0x1  Data  Lc  my_tasks.o [7]
+fac_ms                  0x2000'378c    0x4  Data  Lc  bat_brd.o [1]
+fac_us                  0x2000'3788    0x4  Data  Lc  bat_brd.o [1]
+g_link_status           0x2000'0152    0x1  Data  Lc  my_tasks.o [7]
+g_string_lang_id        0x2000'00c0    0x4  Data  Lc  cdc_desc.o [5]
+g_string_serial         0x2000'00c4   0x1c  Data  Lc  cdc_desc.o [5]
+g_usbd_configuration    0x2000'007c   0x44  Data  Lc  cdc_desc.o [5]
+g_usbd_desc_buffer      0x2000'2cf8  0x100  Data  Lc  cdc_desc.o [5]
+g_usbd_descriptor       0x2000'0068   0x14  Data  Lc  cdc_desc.o [5]
+get_device_config_string
+                         0x800'5d4d   0x16  Code  Lc  cdc_desc.o [5]
+get_device_configuration
+                         0x800'5cf5    0x4  Code  Lc  cdc_desc.o [5]
+get_device_descriptor    0x800'5ced    0x4  Code  Lc  cdc_desc.o [5]
+get_device_interface_string
+                         0x800'5d37   0x16  Code  Lc  cdc_desc.o [5]
+get_device_lang_id       0x800'5cfd    0x4  Code  Lc  cdc_desc.o [5]
+get_device_manufacturer_string
+                         0x800'5d01   0x16  Code  Lc  cdc_desc.o [5]
+get_device_other_speed   0x800'5cf9    0x4  Code  Lc  cdc_desc.o [5]
+get_device_product_string
+                         0x800'5d17   0x16  Code  Lc  cdc_desc.o [5]
+get_device_qualifier     0x800'5cf1    0x4  Code  Lc  cdc_desc.o [5]
+get_device_serial_string
+                         0x800'5d2d    0xa  Code  Lc  cdc_desc.o [5]
+get_gdo0                 0x800'155d   0x16  Code  Gb  bat_brd.o [1]
+get_serial_num           0x800'5cc1   0x2c  Code  Lc  cdc_desc.o [5]
+gpio_bits_reset          0x800'255b    0x6  Code  Gb  at32f415_gpio.o [3]
+gpio_bits_set            0x800'2555    0x6  Code  Gb  at32f415_gpio.o [3]
+gpio_default_para_init   0x800'2523   0x18  Code  Gb  at32f415_gpio.o [3]
+gpio_init                0x800'2461   0xc2  Code  Gb  at32f415_gpio.o [3]
+gpio_input_data_bit_read
+                         0x800'253b   0x1a  Code  Gb  at32f415_gpio.o [3]
+gpio_pin_remap_config    0x800'2561   0x46  Code  Gb  at32f415_gpio.o [3]
+hw_board_init            0x800'15eb   0x18  Code  Gb  bat_brd.o [1]
+init_gpio                0x800'1289  0x14c  Code  Gb  bat_brd.o [1]
+langid_descriptor       0x2000'00f0    0x8  Data  Lc  cdc_desc.o [5]
+last_own_ping_tx_id     0x2000'3818    0x1  Data  Lc  my_tasks.o [7]
+last_own_ping_tx_ms     0x2000'3790    0x4  Data  Lc  my_tasks.o [7]
+last_own_pong_tx_id     0x2000'381b    0x1  Data  Lc  my_tasks.o [7]
+last_own_pong_tx_ms     0x2000'3798    0x4  Data  Lc  my_tasks.o [7]
+last_peer_ping_id       0x2000'381a    0x1  Data  Lc  my_tasks.o [7]
+last_pong_for_ping_id   0x2000'3819    0x1  Data  Lc  my_tasks.o [7]
+last_pong_tx_ms         0x2000'3794    0x4  Data  Lc  my_tasks.o [7]
+linecoding              0x2000'0010    0x8  Data  Gb  cdc_class.o [5]
+link_liveness           0x2000'381d    0x1  Data  Lc  my_tasks.o [7]
+link_mark_lost           0x800'0367   0x38  Code  Lc  my_tasks.o [7]
+link_mark_ok             0x800'033b   0x2c  Code  Lc  my_tasks.o [7]
+link_refresh             0x800'02af   0x12  Code  Lc  my_tasks.o [7]
+link_refresh_tick       0x2000'381e    0x1  Data  Lc  my_tasks.o [7]
+main                     0x800'6179   0x94  Code  Gb  main.o [7]
+memchr                   0x800'4b8d         Code  Gb  memchr.o [9]
+missed_pings            0x2000'3815    0x1  Data  Lc  my_tasks.o [7]
+nvic_irq_enable          0x800'2f9d   0x2a  Code  Gb  at32f415_misc.o [3]
+nvic_priority_group_config
+                         0x800'2fc7    0xa  Code  Gb  at32f415_misc.o [3]
+obuf                    0x2000'3574   0x50  Data  Lc  xfiles.o [8]
+otg_core_struct         0x2000'2b54  0x1a4  Data  Gb  usb_thr.o [7]
+ping_id_is_newer         0x800'0171   0x12  Code  Lc  my_tasks.o [7]
+ping_seq                0x2000'3817    0x1  Data  Lc  my_tasks.o [7]
+pong_ok_streak          0x2000'381c    0x1  Data  Lc  my_tasks.o [7]
+printf                   0x800'113d   0x28  Code  Gb  printf.o [8]
+put_led                  0x800'13d5   0x2e  Code  Gb  bat_brd.o [1]
+putchar                  0x800'65a1   0x44  Code  Gb  putchar.o [8]
+q_rf_tx                 0x2000'3704   0x38  Data  Gb  my_tasks.o [7]
+rf_busy_wait_us          0x800'0183   0x34  Code  Lc  my_tasks.o [7]
+rf_link_build            0x800'02c1   0x12  Code  Lc  my_tasks.o [7]
+rf_ping_phase_ms         0x800'01b7   0x1e  Code  Lc  my_tasks.o [7]
+rf_receive_data         0x2000'36c4   0x40  Data  Gb  my_tasks.o [7]
+rf_receive_pkt          0x2000'3684   0x40  Data  Gb  my_tasks.o [7]
+rf_send_pkt             0x2000'3644   0x40  Data  Gb  my_tasks.o [7]
+rf_tx_enqueue            0x800'02d3   0x44  Code  Lc  my_tasks.o [7]
+rf_tx_enqueue_link       0x800'0317   0x24  Code  Lc  my_tasks.o [7]
+rf_tx_queue_buffer      0x2000'2954  0x200  Data  Lc  my_tasks.o [7]
+rx_buffer               0x2000'3418   0x80  Data  Lc  uart.o [1]
+rx_head                 0x2000'380c    0x2  Data  Lc  uart.o [1]
+rx_tail                 0x2000'380e    0x2  Data  Lc  uart.o [1]
+sec_hand                0x2000'3808    0x4  Data  Lc  xfail_s.o [8]
+send_char_dbg            0x800'19d9   0x12  Code  Gb  uart.o [1]
+serial_descriptor       0x2000'00f8    0x8  Data  Lc  cdc_desc.o [5]
+spi_default_para_init    0x800'22d1   0x22  Code  Gb  at32f415_spi.o [3]
+spi_enable               0x800'2437    0xc  Code  Gb  at32f415_spi.o [3]
+spi_i2s_data_receive     0x800'2449    0x6  Code  Gb  at32f415_spi.o [3]
+spi_i2s_data_transmit    0x800'2443    0x6  Code  Gb  at32f415_spi.o [3]
+spi_i2s_flag_get         0x800'244f   0x12  Code  Gb  at32f415_spi.o [3]
+spi_init                 0x800'22f3  0x144  Code  Gb  at32f415_spi.o [3]
+spi_rf_configure         0x800'14f1   0x6c  Code  Gb  bat_brd.o [1]
+spi_rf_div_tags         0x2000'0000   0x10  Data  Lc  cc1101.o [7]
+spi_rf_divs              0x800'6bc0    0x4  Data  Lc  cc1101.o [7]
+spi_rf_init              0x800'1403   0xee  Code  Gb  bat_brd.o [1]
+spi_rf_modes             0x800'67d8   0x20  Data  Lc  cc1101.o [7]
+spi_rf_sel_cpha2        0x2000'0150    0x1  Data  Lc  cc1101.o [7]
+spi_rf_sel_div          0x2000'0151    0x1  Data  Lc  cc1101.o [7]
+spi_rf_sel_msb          0x2000'3814    0x1  Data  Lc  cc1101.o [7]
+stack_heartbeat_mem     0x2000'2554  0x400  Data  Lc  my_tasks.o [7]
+stack_rf_receive_mem    0x2000'0154  0x800  Data  Lc  my_tasks.o [7]
+stack_rf_send_mem       0x2000'1f54  0x600  Data  Lc  my_tasks.o [7]
+stack_uart_rx_mem       0x2000'1954  0x600  Data  Lc  my_tasks.o [7]
+stack_usb_mem           0x2000'0954  0x800  Data  Lc  my_tasks.o [7]
+strchr                   0x800'4afd         Code  Gb  strchr.o [9]
+strlen                   0x800'4b55         Code  Gb  strlen.o [9]
+system_clock_config      0x800'3009   0x70  Code  Gb  at32f415_clock.o [7]
+system_core_clock       0x2000'0100    0x4  Data  Gb  system_at32f415.o [2]
+system_core_clock_update
+                         0x800'4e87  0x11a  Code  Gb  system_at32f415.o [2]
+system_core_clock_update::sys_ahb_div_table
+                         0x800'6b0c   0x10  Data  Lc  system_at32f415.o [2]
+systick_clock_source_config
+                         0x800'2fd1   0x1e  Code  Gb  at32f415_misc.o [3]
+task_heartbeat           0x800'069f   0xc8  Code  Gb  my_tasks.o [7]
+task_rf_receive          0x800'0767   0x30  Code  Gb  my_tasks.o [7]
+task_rf_send             0x800'0655   0x4a  Code  Gb  my_tasks.o [7]
+task_uart_rx             0x800'05bf   0x96  Code  Gb  my_tasks.o [7]
+tasks_init               0x800'0797  0x17e  Code  Gb  my_tasks.o [7]
+thread_heartbeat        0x2000'3058   0xb0  Data  Lc  my_tasks.o [7]
+thread_rf_receive       0x2000'2fa8   0xb0  Data  Lc  my_tasks.o [7]
+thread_rf_send          0x2000'2ef8   0xb0  Data  Lc  my_tasks.o [7]
+thread_uart_rx          0x2000'3108   0xb0  Data  Lc  my_tasks.o [7]
+thread_usb              0x2000'31b8   0xb0  Data  Lc  my_tasks.o [7]
+tmr_flag_clear           0x800'657f    0x6  Code  Gb  at32f415_tmr.o [3]
+tmr_flag_get             0x800'656d   0x12  Code  Gb  at32f415_tmr.o [3]
+tx_application_define    0x800'62fd    0x8  Code  Gb  tx_application.o [7]
+tx_buffer               0x2000'3498   0x80  Data  Lc  uart.o [1]
+tx_head                 0x2000'3810    0x2  Data  Lc  uart.o [1]
+tx_systick_config        0x800'620d   0x38  Code  Gb  tx_systick_config.o [7]
+tx_tail                 0x2000'3812    0x2  Data  Lc  uart.o [1]
+uart_pc_init_deferred    0x800'1ae5   0x48  Code  Lc  usb_thr.o [7]
+uart_pc_init_deferred::done
+                        0x2000'3822    0x1  Data  Lc  usb_thr.o [7]
+uart_pc_init_deferred::wait_ms
+                        0x2000'3804    0x4  Data  Lc  usb_thr.o [7]
+uart_pc_ready           0x2000'3821    0x1  Data  Lc  uart.o [1]
+uart_rx_buf             0x2000'35c4   0x40  Data  Gb  my_tasks.o [7]
+uart_rx_data            0x2000'3604   0x40  Data  Gb  my_tasks.o [7]
+usart_data_receive       0x800'32ed    0x6  Code  Gb  at32f415_usart.o [3]
+usart_data_transmit      0x800'32e3    0xa  Code  Gb  at32f415_usart.o [3]
+usart_enable             0x800'327f    0xe  Code  Gb  at32f415_usart.o [3]
+usart_flag_get           0x800'32f3    0xe  Code  Gb  at32f415_usart.o [3]
+usart_init               0x800'31ad   0x6e  Code  Gb  at32f415_usart.o [3]
+usart_interrupt_enable   0x800'32a9   0x3a  Code  Gb  at32f415_usart.o [3]
+usart_parity_selection_config
+                         0x800'3221   0x5e  Code  Gb  at32f415_usart.o [3]
+usart_receiver_enable    0x800'329b    0xe  Code  Gb  at32f415_usart.o [3]
+usart_transmitter_enable
+                         0x800'328d    0xe  Code  Gb  at32f415_usart.o [3]
+usb_buffer_rx           0x2000'2df8  0x100  Data  Gb  usb_thr.o [7]
+usb_clock48m_select      0x800'1a65   0x50  Code  Gb  usb_thr.o [7]
+usb_connect              0x800'556f   0x10  Code  Gb  at32f415_usb.o [3]
+usb_core_config          0x800'35b3   0x3e  Code  Gb  usb_core.o [6]
+usb_device_init          0x800'1ab5   0x30  Code  Gb  usb_thr.o [7]
+usb_disconnect           0x800'557f   0x10  Code  Gb  at32f415_usb.o [3]
+usb_ept0_setup           0x800'5553   0x1c  Code  Gb  at32f415_usb.o [3]
+usb_ept0_start           0x800'5523   0x30  Code  Gb  at32f415_usb.o [3]
+usb_ept_clear_stall      0x800'5431   0x6a  Code  Gb  at32f415_usb.o [3]
+usb_ept_close            0x800'535b   0x60  Code  Gb  at32f415_usb.o [3]
+usb_ept_default_init     0x800'397b   0xc0  Code  Gb  usbd_core.o [6]
+usb_ept_in_clear         0x800'5509    0xc  Code  Gb  at32f415_usb.o [3]
+usb_ept_in_interrupt     0x800'54d9   0x24  Code  Gb  at32f415_usb.o [3]
+usb_ept_open             0x800'5209  0x152  Code  Gb  at32f415_usb.o [3]
+usb_ept_out_clear        0x800'54fd    0xc  Code  Gb  at32f415_usb.o [3]
+usb_ept_out_interrupt    0x800'54c3   0x16  Code  Gb  at32f415_usb.o [3]
+usb_ept_stall            0x800'53bb   0x76  Code  Gb  at32f415_usb.o [3]
+usb_flush_rx_fifo        0x800'507d   0x24  Code  Gb  at32f415_usb.o [3]
+usb_flush_tx_fifo        0x800'5049   0x34  Code  Gb  at32f415_usb.o [3]
+usb_get_all_in_interrupt
+                         0x800'54af   0x14  Code  Gb  at32f415_usb.o [3]
+usb_get_all_out_interrupt
+                         0x800'549b   0x14  Code  Gb  at32f415_usb.o [3]
+usb_global_clear_interrupt
+                         0x800'50cb    0x4  Code  Gb  at32f415_usb.o [3]
+usb_global_get_all_interrupt
+                         0x800'50c1    0xa  Code  Gb  at32f415_usb.o [3]
+usb_global_init          0x800'5013   0x30  Code  Gb  at32f415_usb.o [3]
+usb_global_interrupt_enable
+                         0x800'50a5   0x1c  Code  Gb  at32f415_usb.o [3]
+usb_global_reset         0x800'4fdd   0x36  Code  Gb  at32f415_usb.o [3]
+usb_global_select_core   0x800'5043    0x6  Code  Gb  at32f415_usb.o [3]
+usb_global_set_mode      0x800'5145   0x54  Code  Gb  at32f415_usb.o [3]
+usb_gpio_config          0x800'1a3b   0x2a  Code  Gb  usb_thr.o [7]
+usb_interrupt_disable    0x800'50db    0xc  Code  Gb  at32f415_usb.o [3]
+usb_interrupt_enable     0x800'50cf    0xc  Code  Gb  at32f415_usb.o [3]
+usb_open_phy_clk         0x800'51a7    0xe  Code  Gb  at32f415_usb.o [3]
+usb_read_packet          0x800'51e3   0x26  Code  Gb  at32f415_usb.o [3]
+usb_set_address          0x800'5515    0xe  Code  Gb  at32f415_usb.o [3]
+usb_set_rx_fifo          0x800'50e7    0x6  Code  Gb  at32f415_usb.o [3]
+usb_set_tx_fifo          0x800'50ed   0x58  Code  Gb  at32f415_usb.o [3]
+usb_stop_phy_clk         0x800'5199    0xe  Code  Gb  at32f415_usb.o [3]
+usb_suspend_status_get   0x800'558f    0xc  Code  Gb  at32f415_usb.o [3]
+usb_task                 0x800'1b2d   0x1c  Code  Gb  usb_thr.o [7]
+usb_vcp_cmd_process      0x800'354d   0x66  Code  Lc  cdc_class.o [5]
+usb_vcp_get_rxdata       0x800'34d1   0x50  Code  Gb  cdc_class.o [5]
+usb_vcp_send_data        0x800'3521   0x2c  Code  Gb  cdc_class.o [5]
+usb_write_empty_txfifo   0x800'3e97   0x9c  Code  Gb  usbd_int.o [6]
+usb_write_packet         0x800'51b5   0x2e  Code  Gb  at32f415_usb.o [3]
+usbd_clear_feature       0x800'5747   0x4c  Code  Lc  usbd_sdr.o [6]
+usbd_clear_stall         0x800'3863   0x38  Code  Gb  usbd_core.o [6]
+usbd_connect             0x800'3967    0xa  Code  Gb  usbd_core.o [6]
+usbd_connect_state_get   0x800'3c25    0x6  Code  Gb  usbd_core.o [6]
+usbd_core_in_handler     0x800'364d   0xce  Code  Gb  usbd_core.o [6]
+usbd_core_init           0x800'3c8d  0x13a  Code  Gb  usbd_core.o [6]
+usbd_core_out_handler    0x800'371b   0x88  Code  Gb  usbd_core.o [6]
+usbd_core_setup_handler
+                         0x800'37a3   0x4c  Code  Gb  usbd_core.o [6]
+usbd_ctrl_recv           0x800'3815   0x26  Code  Gb  usbd_core.o [6]
+usbd_ctrl_recv_status    0x800'384f   0x14  Code  Gb  usbd_core.o [6]
+usbd_ctrl_send           0x800'37ef   0x26  Code  Gb  usbd_core.o [6]
+usbd_ctrl_send_status    0x800'383b   0x14  Code  Gb  usbd_core.o [6]
+usbd_ctrl_unsupport      0x800'38d3   0x16  Code  Gb  usbd_core.o [6]
+usbd_device_request      0x800'58c9   0x76  Code  Gb  usbd_sdr.o [6]
+usbd_disconnect          0x800'3971    0xa  Code  Gb  usbd_core.o [6]
+usbd_endpoint_request    0x800'5977  0x16c  Code  Gb  usbd_sdr.o [6]
+usbd_enter_suspend       0x800'3c2b   0x16  Code  Gb  usbd_core.o [6]
+usbd_enumdone_handler    0x800'406d   0x4a  Code  Gb  usbd_int.o [6]
+usbd_ept_close           0x800'393b   0x2c  Code  Gb  usbd_core.o [6]
+usbd_ept_open            0x800'38fb   0x40  Code  Gb  usbd_core.o [6]
+usbd_ept_recv            0x800'3b61   0xc4  Code  Gb  usbd_core.o [6]
+usbd_ept_send            0x800'3a3b  0x126  Code  Gb  usbd_core.o [6]
+usbd_fifo_alloc          0x800'3c51   0x3c  Code  Gb  usbd_core.o [6]
+usbd_flush_tx_fifo       0x800'3c41   0x10  Code  Gb  usbd_core.o [6]
+usbd_get_configuration   0x800'57c1   0x4a  Code  Lc  usbd_sdr.o [6]
+usbd_get_descriptor      0x800'55c5   0xfa  Code  Lc  usbd_sdr.o [6]
+usbd_get_recv_len        0x800'38e9   0x12  Code  Gb  usbd_core.o [6]
+usbd_get_status          0x800'570f   0x38  Code  Lc  usbd_sdr.o [6]
+usbd_incomisioin_handler
+                         0x800'4143   0x14  Code  Gb  usbd_int.o [6]
+usbd_incomisoout_handler
+                         0x800'412f   0x14  Code  Gb  usbd_int.o [6]
+usbd_inept_handler       0x800'3f33   0xa8  Code  Gb  usbd_int.o [6]
+usbd_init                0x800'35f1   0x5c  Code  Gb  usb_core.o [6]
+usbd_int_to_unicode      0x800'5c73   0x4e  Code  Lc  cdc_desc.o [5]
+usbd_interface_request   0x800'593f   0x38  Code  Gb  usbd_sdr.o [6]
+usbd_irq_handler         0x800'3dcd   0xca  Code  Gb  usbd_int.o [6]
+usbd_outept_handler      0x800'3fdb   0x92  Code  Gb  usbd_int.o [6]
+usbd_reset_handler       0x800'4157   0xc0  Code  Gb  usbd_int.o [6]
+usbd_rxflvl_handler      0x800'40b7   0x78  Code  Gb  usbd_int.o [6]
+usbd_set_address         0x800'56bf   0x50  Code  Lc  usbd_sdr.o [6]
+usbd_set_configuration   0x800'580b   0xba  Code  Lc  usbd_sdr.o [6]
+usbd_set_configuration::config_value
+                        0x2000'3823    0x1  Data  Lc  usbd_sdr.o [6]
+usbd_set_feature         0x800'5793   0x2e  Code  Lc  usbd_sdr.o [6]
+usbd_set_stall           0x800'389b   0x38  Code  Gb  usbd_core.o [6]
+usbd_setup_request_parse
+                         0x800'559d   0x28  Code  Gb  usbd_sdr.o [6]
+usbd_sof_handler         0x800'4217   0x12  Code  Gb  usbd_int.o [6]
+usbd_suspend_handler     0x800'4229   0x38  Code  Gb  usbd_int.o [6]
+usbd_unicode_convert     0x800'5c39   0x3a  Code  Lc  cdc_desc.o [5]
+usbd_wakeup_handler      0x800'4261   0x36  Code  Gb  usbd_int.o [6]
+vp_desc                 0x2000'3780    0x8  Data  Lc  cdc_desc.o [5]
+
+
+[1] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\bsp
+[2] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\cmsis
+[3] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\firmware
+[4] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\threadx
+[5] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_class
+[6] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\usbd_driver
+[7] = D:\proj\cc1101_prj\radio_extender\radio_extender\Obj\user
+[8] = dl7M_tlf.a
+[9] = rt7M_tl.a
+
+  26'436 bytes of readonly  code memory
+   1'616 bytes of readonly  data memory
+  18'467 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
