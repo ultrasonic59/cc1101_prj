@@ -215,7 +215,10 @@ void CC1101_ApplyVariablePacketMode(void)
 
 void CC1101_ApplyLinkPacketMode(void)
 {
-    CC1101_ApplyVariablePacketMode();
+    /* PING/PONG: 5 байт в FIFO без байта длины CC1101 ([LEN][ID][TYPE][CRC][CRC]) */
+    CC1101_WriteReg(CC1101_REG_PKTCTRL1, 0x00);
+    CC1101_WriteReg(CC1101_REG_PKTCTRL0, 0x00);
+    CC1101_WriteReg(CC1101_REG_PKTLEN, CC1101_LINK_PKTLEN);
 }
 
 void CC1101_ClearRxFifo(void)

@@ -135,7 +135,8 @@ static void cc1101_wait_tx_done(void)
 
 static void cc1101_send_packet(const uint8_t *pkt, uint8_t len)
 {
-    if (pkt == NULL || len < RF_LINK_PKT_LEN || len > PROTO_MAX_PACKET) {
+    if (pkt == NULL || len < RF_LINK_PKT_LEN || len > PROTO_MAX_PACKET ||
+        pkt[0] + 2u != len) {
         return;
     }
 
@@ -144,10 +145,13 @@ static void cc1101_send_packet(const uint8_t *pkt, uint8_t len)
     rf_busy_wait_us(150);
     CC1101_SendCmd(CC1101_CMD_SFRX);
     CC1101_SendCmd(CC1101_CMD_SFTX);
-    CC1101_ApplyVariablePacketMode();
-    {
+    if (len == RF_LINK_PKT_LEN) {
+        CC1101_ApplyLinkPacketMode();
+        CC1101_WriteBurst(CC1101_REG_FIFO, pkt, len);
+    } else {
         uint8_t fifo_buf[PROTO_MAX_PACKET + 1U];
 
+        CC1101_ApplyVariablePacketMode();
         fifo_buf[0] = len;
         memcpy(&fifo_buf[1], pkt, len);
         CC1101_WriteBurst(CC1101_REG_FIFO, fifo_buf, (uint8_t)(len + 1U));
@@ -231,6 +235,10 @@ static void cc1101_process_rx_frame(uint8_t pkt_len)
 
     if (pkt_len < RF_LINK_PKT_LEN || pkt_len > PROTO_MAX_PACKET ||
         rf_receive_pkt[0] + 2u != pkt_len) {
+        printk("\n\r RF pkt reject plen=%u LEN=%u need=%u",
+               (unsigned)pkt_len,
+               (unsigned)rf_receive_pkt[0],
+               (unsigned)(rf_receive_pkt[0] + 2u));
         return;
     }
 
@@ -292,18 +300,49 @@ static void cc1101_process_rx_frame(uint8_t pkt_len)
     }
 }
 
+/* Один кадр из RX FIFO → rf_receive_pkt, *pkt_len_out. 0 = ошибка/мусор. */
+static uint8_t cc1101_rx_pull_frame(uint8_t fifo_bytes, uint8_t *pkt_len_out)
+{
+    uint8_t b0;
+
+    if (pkt_len_out == NULL || fifo_bytes < RF_LINK_PKT_LEN) {
+        return 0;
+    }
+
+    CC1101_ReadBurst(CC1101_REG_FIFO, &b0, 1);
+
+    /* [L=5][03][ID][TYPE][CRC][CRC] — переменная длина CC1101 */
+    if (b0 >= RF_LINK_PKT_LEN && b0 <= PROTO_MAX_PACKET &&
+        fifo_bytes >= (uint8_t)(b0 + 1U)) {
+        *pkt_len_out = b0;
+        CC1101_ReadBurst(CC1101_REG_FIFO, rf_receive_pkt, b0);
+        return 1;
+    }
+
+    /* [03][ID][TYPE][CRC][CRC] — фикс. PKTLEN=5, без байта L CC1101 */
+    if (b0 >= 3U && (uint8_t)(b0 + 2U) <= PROTO_MAX_PACKET &&
+        fifo_bytes >= (uint8_t)(b0 + 2U)) {
+        *pkt_len_out = (uint8_t)(b0 + 2U);
+        rf_receive_pkt[0] = b0;
+        CC1101_ReadBurst(CC1101_REG_FIFO, &rf_receive_pkt[1], (uint8_t)(*pkt_len_out - 1U));
+        return 1;
+    }
+
+    printk("\n\r RF bad hdr=%02X rxbytes=%u", (unsigned)b0, (unsigned)fifo_bytes);
+    return 0;
+}
+
 /* 1 = обработан хотя бы один кадр. Вызывать без удержания mutex. */
 static uint8_t cc1101_poll_and_handle_rx(void)
 {
     uint8_t rxb;
     uint8_t n;
-    uint8_t plen;
+    uint8_t pkt_len;
     uint8_t handled;
 
     handled = 0;
 
     cc1101_lock();
-    CC1101_ApplyVariablePacketMode();
 
     for (;;) {
         rxb = CC1101_ReadReg(CC1101_REG_RXBYTES);
@@ -312,23 +351,18 @@ static uint8_t cc1101_poll_and_handle_rx(void)
             break;
         }
         n = rxb & 0x7Fu;
-        if (n < (RF_LINK_PKT_LEN + 1U)) {
+        if (n < RF_LINK_PKT_LEN) {
             break;
         }
-        CC1101_ReadBurst(CC1101_REG_FIFO, &plen, 1);
-        if (plen < RF_LINK_PKT_LEN || plen > PROTO_MAX_PACKET) {
+
+        if (!cc1101_rx_pull_frame(n, &pkt_len)) {
             cc1101_recover_rx(0);
             break;
         }
-        if (n < (uint8_t)(plen + 1U)) {
-            break;
-        }
-        CC1101_ReadBurst(CC1101_REG_FIFO, rf_receive_pkt, plen);
+
         cc1101_unlock();
-
         handled = 1;
-        cc1101_process_rx_frame(plen);
-
+        cc1101_process_rx_frame(pkt_len);
         cc1101_lock();
     }
 
@@ -383,13 +417,12 @@ void task_rf_send(ULONG thread_input)
     printk("\n\r task_rf_send");
     for (;;) {
         if (tx_queue_receive(&q_rf_tx, rf_send_pkt, TX_WAIT_FOREVER) == TX_SUCCESS) {
-            uint8_t n = rf_send_pkt[0];
             uint8_t tx_len;
 
-            if (n == 0U || (uint16_t)n + 2u > PROTO_MAX_PACKET) {
+            if (rf_send_pkt[0] < 3U || (uint16_t)rf_send_pkt[0] + 2u > PROTO_MAX_PACKET) {
                 continue;
             }
-            tx_len = (uint8_t)(n + 2u);
+            tx_len = (uint8_t)(rf_send_pkt[0] + 2u);
             cc1101_send_packet(rf_send_pkt, tx_len);
             printk("\n\r RF tx id=%u type=%02X", (unsigned)rf_send_pkt[1],
                    (unsigned)rf_send_pkt[2]);
