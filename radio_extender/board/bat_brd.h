@@ -21,6 +21,10 @@
 #define TST_TASK_PRIORITY		5
 
 #include "at32f415_clock.h"
+#include "at32f415_spi.h"
+
+/* CC1101 SPI2: MSB, CPOL=Low, CPHA=1Edge, prescaler 32 (≈2.25 МГц при APB1=72 МГц) */
+#define SPI_RF_MCLK_DIV         SPI_MCLK_DIV_128 ///SPI_MCLK_DIV_32
 
 #define DBG_BR      115200
 ////=============RLED==================================

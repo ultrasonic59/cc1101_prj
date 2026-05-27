@@ -3,12 +3,32 @@
 /**************************************************************************/
 
 #include "ux_api.h"
+#include "ux_system.h"
 #include "ux_dcd_at32.h"
 #include "ux_device_stack.h"
 #include "ux_utility.h"
 #include "usb_std.h"
+#include "usb_core.h"
 
 static UX_DCD_AT32 *g_dcd_at32;
+
+static VOID at32_ep0_bind(void)
+{
+    UX_SLAVE_DEVICE *device;
+    UX_SLAVE_ENDPOINT *ep0;
+
+    if (g_dcd_at32 == UX_NULL)
+        return;
+
+    device = &_ux_system_slave->ux_system_slave_device;
+    ep0 = &device->ux_slave_device_control_endpoint;
+
+    g_dcd_at32->ux_dcd_at32_ed[0].ux_dcd_at32_ed_endpoint = ep0;
+    g_dcd_at32->ux_dcd_at32_ed[0].ux_dcd_at32_ed_status |= UX_DCD_AT32_ED_STATUS_USED;
+    g_dcd_at32->ux_dcd_at32_ed[0].ux_dcd_at32_ed_index = 0;
+    g_dcd_at32->ux_dcd_at32_ed[0].ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_IDLE;
+    ep0->ux_slave_endpoint_ed = &g_dcd_at32->ux_dcd_at32_ed[0];
+}
 
 usbd_core_type *ux_dcd_at32_udev_get(void)
 {
@@ -59,25 +79,87 @@ static VOID at32_setup_out(UX_DCD_AT32_ED *ed, UX_SLAVE_TRANSFER *transfer_reque
 static VOID at32_setup_status(UX_DCD_AT32_ED *ed, UX_SLAVE_TRANSFER *transfer_request,
                               usbd_core_type *udev)
 {
+    usb_setup_type *setup = &udev->setup;
+
     ed->ux_dcd_at32_ed_direction = UX_ENDPOINT_IN;
 
     if (_ux_device_stack_control_request_process(transfer_request) == UX_SUCCESS)
     {
+        /* Artery usbd_core: bulk IN/OUT IRQ только при CONFIGURED. */
+        if (setup->bRequest == USB_STD_REQ_SET_CONFIGURATION && setup->wLength == 0)
+        {
+            udev->dev_config = (uint8_t)(setup->wValue & 0xFF);
+            if (udev->dev_config != 0)
+                udev->conn_state = USB_CONN_STATE_CONFIGURED;
+            else
+                udev->conn_state = USB_CONN_STATE_ADDRESSED;
+        }
+
         ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_STATUS_RX;
         usbd_ctrl_send_status(udev);
     }
+}
+
+UINT ux_dcd_at32_initialize_complete(void)
+{
+    UX_SLAVE_DEVICE   *device;
+    UX_SLAVE_TRANSFER *transfer_request;
+    UCHAR             *device_framework;
+
+    if (g_dcd_at32 == UX_NULL)
+        return UX_ERROR;
+
+    device = &_ux_system_slave->ux_system_slave_device;
+
+    _ux_system_slave->ux_system_slave_speed = UX_FULL_SPEED_DEVICE;
+    _ux_system_slave->ux_system_slave_device_framework =
+        _ux_system_slave->ux_system_slave_device_framework_full_speed;
+    _ux_system_slave->ux_system_slave_device_framework_length =
+        _ux_system_slave->ux_system_slave_device_framework_length_full_speed;
+
+    device_framework = _ux_system_slave->ux_system_slave_device_framework;
+    _ux_utility_descriptor_parse(device_framework,
+                                 _ux_system_device_descriptor_structure,
+                                 UX_DEVICE_DESCRIPTOR_ENTRIES,
+                                 (UCHAR *)&device->ux_slave_device_descriptor);
+
+    transfer_request = &device->ux_slave_device_control_endpoint.ux_slave_endpoint_transfer_request;
+    transfer_request->ux_slave_transfer_request_timeout = UX_MS_TO_TICK(UX_CONTROL_TRANSFER_TIMEOUT);
+    transfer_request->ux_slave_transfer_request_current_data_pointer =
+        transfer_request->ux_slave_transfer_request_data_pointer;
+    transfer_request->ux_slave_transfer_request_endpoint =
+        &device->ux_slave_device_control_endpoint;
+    transfer_request->ux_slave_transfer_request_endpoint->ux_slave_endpoint_descriptor.wMaxPacketSize =
+        device->ux_slave_device_descriptor.bMaxPacketSize0;
+    transfer_request->ux_slave_transfer_request_requested_length =
+        device->ux_slave_device_descriptor.bMaxPacketSize0;
+    transfer_request->ux_slave_transfer_request_type = UX_TRANSFER_PHASE_SETUP;
+    transfer_request->ux_slave_transfer_request_status = UX_TRANSFER_STATUS_PENDING;
+    transfer_request->ux_slave_transfer_request_actual_length = 0;
+    device->ux_slave_device_control_endpoint.ux_slave_endpoint_state = UX_ENDPOINT_RESET;
+
+    device->ux_slave_device_control_endpoint.ux_slave_endpoint_descriptor.bEndpointAddress = 0;
+    device->ux_slave_device_control_endpoint.ux_slave_endpoint_descriptor.bmAttributes =
+        UX_CONTROL_ENDPOINT;
+
+    at32_ep0_bind();
+    return UX_SUCCESS;
 }
 
 void ux_dcd_at32_setup_handler(usbd_core_type *udev)
 {
     UX_DCD_AT32_ED       *ed;
     UX_SLAVE_TRANSFER    *transfer_request;
-    usb_setup_type       *setup = &udev->setup;
+    usb_setup_type       *setup;
 
     if (g_dcd_at32 == UX_NULL)
         return;
 
     ed = &g_dcd_at32->ux_dcd_at32_ed[0];
+    if (ed->ux_dcd_at32_ed_endpoint == UX_NULL)
+        return;
+
+    setup = &udev->setup;
     transfer_request = &ed->ux_dcd_at32_ed_endpoint->ux_slave_endpoint_transfer_request;
 
     transfer_request->ux_slave_transfer_request_setup[0] = setup->bmRequestType;
@@ -131,11 +213,13 @@ void ux_dcd_at32_ep0_tx_complete(usbd_core_type *udev)
     switch (ed->ux_dcd_at32_ed_state)
     {
     case UX_DCD_AT32_ED_STATE_DATA_TX:
+        /* Status OUT принимает usbd_core_in_handler после этого callback. */
         at32_transfer_notify(transfer_request, transfer_request->ux_slave_transfer_request_requested_length);
         ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_IDLE;
         break;
 
     case UX_DCD_AT32_ED_STATE_STATUS_TX:
+    case UX_DCD_AT32_ED_STATE_STATUS_RX:
         at32_transfer_notify(transfer_request, 0);
         ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_IDLE;
         break;
@@ -261,6 +345,17 @@ static UINT at32_endpoint_create(UX_DCD_AT32 *dcd_at32, UX_SLAVE_ENDPOINT *endpo
     if (index >= UX_DCD_AT32_MAX_ED)
         return UX_NO_ED_AVAILABLE;
 
+    /* EP0: только связь с USBX; железо — usb_ept0_start() в Artery. */
+    if (index == 0)
+    {
+        ed = &dcd_at32->ux_dcd_at32_ed[0];
+        ed->ux_dcd_at32_ed_status |= UX_DCD_AT32_ED_STATUS_USED;
+        ed->ux_dcd_at32_ed_index = 0;
+        ed->ux_dcd_at32_ed_endpoint = endpoint;
+        endpoint->ux_slave_endpoint_ed = ed;
+        return UX_SUCCESS;
+    }
+
     ed = &dcd_at32->ux_dcd_at32_ed[index];
     if (ed->ux_dcd_at32_ed_status & UX_DCD_AT32_ED_STATUS_USED)
         return UX_ERROR;
@@ -294,13 +389,19 @@ static UINT at32_endpoint_create(UX_DCD_AT32 *dcd_at32, UX_SLAVE_ENDPOINT *endpo
 static UINT at32_endpoint_destroy(UX_DCD_AT32 *dcd_at32, UX_SLAVE_ENDPOINT *endpoint)
 {
     UX_DCD_AT32_ED *ed = (UX_DCD_AT32_ED *)endpoint->ux_slave_endpoint_ed;
+    UCHAR           addr;
 
     if (ed == UX_NULL)
         return UX_ERROR;
 
-    usbd_ept_close(dcd_at32->ux_dcd_at32_udev,
-                   endpoint->ux_slave_endpoint_descriptor.bEndpointAddress);
+    addr = endpoint->ux_slave_endpoint_descriptor.bEndpointAddress;
+    if ((addr & 0x7Fu) != 0)
+    {
+        usbd_ept_close(dcd_at32->ux_dcd_at32_udev, addr);
+    }
+
     ed->ux_dcd_at32_ed_status = UX_DCD_AT32_ED_STATUS_UNUSED;
+    ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_IDLE;
     endpoint->ux_slave_endpoint_ed = UX_NULL;
     return UX_SUCCESS;
 }
@@ -324,23 +425,38 @@ static UINT at32_transfer_request(UX_DCD_AT32 *dcd_at32, UX_SLAVE_TRANSFER *tran
     if (transfer_request->ux_slave_transfer_request_phase == UX_TRANSFER_PHASE_DATA_OUT)
     {
         if ((addr & 0x7Fu) == 0)
+        {
             ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_DATA_TX;
-
-        usbd_ept_send(dcd_at32->ux_dcd_at32_udev, addr,
-                      transfer_request->ux_slave_transfer_request_data_pointer,
-                      (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+            usbd_ctrl_send(dcd_at32->ux_dcd_at32_udev,
+                           transfer_request->ux_slave_transfer_request_data_pointer,
+                           (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+        }
+        else
+        {
+            usbd_ept_send(dcd_at32->ux_dcd_at32_udev, addr,
+                          transfer_request->ux_slave_transfer_request_data_pointer,
+                          (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+        }
     }
     else
     {
         if ((addr & 0x7Fu) == 0)
+        {
             ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_DATA_RX;
-
-        usbd_ept_recv(dcd_at32->ux_dcd_at32_udev, addr,
-                      transfer_request->ux_slave_transfer_request_data_pointer,
-                      (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+            usbd_ctrl_recv(dcd_at32->ux_dcd_at32_udev,
+                           transfer_request->ux_slave_transfer_request_data_pointer,
+                           (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+        }
+        else
+        {
+            usbd_ept_recv(dcd_at32->ux_dcd_at32_udev, addr,
+                          transfer_request->ux_slave_transfer_request_data_pointer,
+                          (uint16_t)transfer_request->ux_slave_transfer_request_requested_length);
+        }
     }
 
-    if ((addr & 0x7Fu) != 0)
+    /* EP0: не ждать в потоке — завершение только из IRQ (иначе зависание IAR/ThreadX). */
+    if ((addr & 0x7Fu) == 0)
         return UX_SUCCESS;
 
     status = _ux_utility_semaphore_get(&transfer_request->ux_slave_transfer_request_semaphore,
@@ -364,7 +480,18 @@ UINT _ux_dcd_at32_function(UX_SLAVE_DCD *dcd, UINT function, VOID *parameter)
     case UX_DCD_RESET_ENDPOINT:
     case UX_DCD_ENDPOINT_STATUS:
     case UX_DCD_SET_DEVICE_ADDRESS:
-        return UX_FUNCTION_NOT_SUPPORTED;
+    {
+        usbd_core_type *udev = dcd_at32->ux_dcd_at32_udev;
+        uint8_t         addr = (uint8_t)((ULONG)parameter & 0x7Fu);
+
+        /* Artery: адрес в регистр — после SETUP в usbd_int, не сразу. */
+        udev->device_addr = addr;
+        if (addr != 0)
+            udev->conn_state = USB_CONN_STATE_ADDRESSED;
+        else
+            udev->conn_state = USB_CONN_STATE_DEFAULT;
+        return UX_SUCCESS;
+    }
 
     case UX_DCD_CREATE_ENDPOINT:
         return at32_endpoint_create(dcd_at32, (UX_SLAVE_ENDPOINT *)parameter);

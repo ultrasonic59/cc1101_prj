@@ -1,0 +1,67 @@
+D:\proj\cc1101_prj\radio_extender\radio_extender\BrowseInfo\usbx\usbx_app.pbi: \
+  D:\proj\cc1101_prj\radio_extender\src\usbx\usbx_app.c \
+  D:\proj\cc1101_prj\radio_extender\src\usbx\usbx_app.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_api.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\ports\cortex_m4\iar\inc\ux_port.h \
+  D:\proj\cc1101_prj\radio_extender\src\usbx\ux_user.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Config_Full.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\common\inc\tx_api.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\ports\cortex_m3\iar\inc\tx_port.h \
+  D:\proj\cc1101_prj\radio_extender\src\tx_user.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\intrinsics.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iar_intrinsics_common.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_utility.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_system.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\usbx_device_classes\inc\ux_device_class_cdc_acm.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usb_drivers\inc\usb_core.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usb_drivers\inc\usb_std.h \
+  D:\proj\cc1101_prj\radio_extender\src\usb_conf.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_usb.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\device_support\at32f415.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\core_cm4.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdint.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_version.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_compiler.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_iccarm.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\mpu_armv7.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\device_support\system_at32f415.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_def.h \
+  D:\proj\cc1101_prj\radio_extender\src\at32f415_conf.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_crm.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_cmp.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_tmr.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_ertc.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_gpio.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_i2c.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_usart.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_pwc.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_can.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_adc.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_spi.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_dma.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_debug.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_flash.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_crc.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_wwdt.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_wdt.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_exint.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_sdio.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_misc.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usb_drivers\inc\usbd_core.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_device_stack.h \
+  D:\proj\cc1101_prj\radio_extender\src\usbx\ux_dcd_at32.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usb_drivers\inc\usbd_core.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usbd_class\cdc\cdc_desc.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usbd_class\cdc\cdc_class.h \
+  D:\proj\cc1101_prj\radio_extender\usb\usb_drivers\inc\usb_std.h

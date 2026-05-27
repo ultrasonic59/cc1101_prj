@@ -2,11 +2,13 @@
 #include "uart.h"
 #include "cc1101.h"
 #include "protocol.h"
+#include "cobs.h"
 #include "bat_brd.h"
 #include "printk.h"
 #include "my_tasks.h"
 #include "usb_thr.h"
 #include "system_at32f415.h"
+#include <stddef.h>
 #include <string.h>
 
 #define RF_TX_QUEUE_DEPTH       8
@@ -27,6 +29,9 @@
 #define MCU_UID_BASE            0x1FFFF7E8U
 #define RF_LINK_PKT_LEN         5U
 #define RF_LINK_LIVE_CYCLES     3U
+#define RF_COBS_ENC_MAX         COBS_ENCODED_MAX(PROTO_MAX_PACKET)
+/* COBS(5-байт PING/PONG) = 6; меньше — не наш кадр */
+#define RF_COBS_WIRE_MIN        6U
 
 static TX_THREAD thread_rf_send;
 static TX_THREAD thread_rf_receive;
@@ -55,17 +60,24 @@ static volatile uint8_t last_own_ping_tx_id = 0;
 static ULONG last_pong_tx_ms = 0;
 static uint8_t last_pong_for_ping_id = 0;
 static uint8_t last_peer_ping_id = 0;
-static ULONG last_own_pong_tx_ms = 0;
-static uint8_t last_own_pong_tx_id = 0;
 static uint8_t pong_ok_streak = 0;
 static uint8_t link_liveness = 0;
 static volatile uint8_t link_refresh_tick = 0;
 static volatile uint8_t cycle_got_expected_pong = 0;
+static volatile uint8_t rf_payload_pending = 0;
+static volatile uint8_t rf_payload_waiting_ack = 0;
+static volatile ULONG rf_payload_ack_deadline = 0;
+static uint8_t hb_ping_outstanding = 0;
 
+static uint8_t host_cobs_acc[RF_COBS_ENC_MAX];
+static cobs_decoder_t host_cobs_dec;
+
+#define RF_LINK_CHECK_MS          100U
+#define RF_LINK_MISS_LIMIT        3U
 #define RF_PING_DEDUPE_MS         800U
-#define RF_OWN_PONG_IGNORE_MS     800U
 #define RF_OWN_PING_ECHO_MS       25U
 #define RF_PONG_OK_CYCLES         3U
+#define RF_PAYLOAD_ACK_MS         100U
 
 /* id считается «новее» prev (учёт переполнения uint8). */
 static uint8_t ping_id_is_newer(uint8_t id, uint8_t prev)
@@ -78,6 +90,7 @@ uint8_t uart_rx_data[PROTO_MAX_PACKET];
 uint8_t rf_send_pkt[PROTO_MAX_PACKET];
 uint8_t rf_receive_pkt[PROTO_MAX_PACKET];
 uint8_t rf_receive_data[PROTO_MAX_PACKET];
+
 
 static void rf_busy_wait_us(uint32_t us)
 {
@@ -135,27 +148,31 @@ static void cc1101_wait_tx_done(void)
 
 static void cc1101_send_packet(const uint8_t *pkt, uint8_t len)
 {
+    uint8_t wire_buf[RF_COBS_ENC_MAX + 1U];
+    uint8_t fifo_buf[RF_COBS_ENC_MAX + 2U];
+    size_t enc;
+    uint8_t wire_len;
+
     if (pkt == NULL || len < RF_LINK_PKT_LEN || len > PROTO_MAX_PACKET ||
         pkt[0] + 2u != len) {
         return;
     }
 
+    enc = cobs_encode(pkt, len, wire_buf);
+    if (enc == 0U || enc >= RF_COBS_ENC_MAX) {
+        return;
+    }
+    /* На RF длину задаёт CC1101; 0x00-разделитель только для UART */
+    wire_len = (uint8_t)enc;
+
     cc1101_lock();
     CC1101_SendCmd(CC1101_CMD_SIDLE);
     rf_busy_wait_us(150);
-    CC1101_SendCmd(CC1101_CMD_SFRX);
     CC1101_SendCmd(CC1101_CMD_SFTX);
-    if (len == RF_LINK_PKT_LEN) {
-        CC1101_ApplyLinkPacketMode();
-        CC1101_WriteBurst(CC1101_REG_FIFO, pkt, len);
-    } else {
-        uint8_t fifo_buf[PROTO_MAX_PACKET + 1U];
-
-        CC1101_ApplyVariablePacketMode();
-        fifo_buf[0] = len;
-        memcpy(&fifo_buf[1], pkt, len);
-        CC1101_WriteBurst(CC1101_REG_FIFO, fifo_buf, (uint8_t)(len + 1U));
-    }
+    CC1101_ApplyVariablePacketMode();
+    fifo_buf[0] = wire_len;
+    memcpy(&fifo_buf[1], wire_buf, wire_len);
+    CC1101_WriteBurst(CC1101_REG_FIFO, fifo_buf, (uint8_t)(wire_len + 1U));
     CC1101_SendCmd(CC1101_CMD_STX);
     cc1101_wait_tx_done();
     CC1101_ListenAfterTx();
@@ -209,9 +226,50 @@ static void link_mark_ok(void)
     if (g_link_status != LED_GREEN) {
         g_link_status = LED_GREEN;
         put_led(LED_GREEN);
-        printk("\n\r RF link OK");
     }
     missed_pings = 0;
+}
+
+static void link_on_traffic(void)
+{
+    cycle_got_expected_pong = 1;
+    rf_payload_pending = 0;
+    rf_payload_waiting_ack = 0;
+    rf_payload_ack_deadline = 0;
+    hb_ping_outstanding = 0;
+    missed_pings = 0;
+}
+
+static uint8_t rf_tx_queue_has_messages(void)
+{
+    ULONG enqueued = 0;
+    ULONG available = 0;
+    ULONG suspended_count = 0;
+    TX_THREAD *first_suspended = TX_NULL;
+    TX_QUEUE *next_queue = TX_NULL;
+    CHAR *name = TX_NULL;
+
+    if (tx_queue_info_get(&q_rf_tx, &name, &enqueued, &available,
+                          &first_suspended, &suspended_count, &next_queue) != TX_SUCCESS) {
+        return 0;
+    }
+    return (enqueued > 0U) ? 1U : 0U;
+}
+
+static void bridge_send_to_host(const uint8_t *pkt, uint8_t pkt_len)
+{
+    uint8_t wire[RF_COBS_ENC_MAX + 1U];
+    size_t enc;
+
+    if (pkt == NULL || pkt_len < RF_LINK_PKT_LEN) {
+        return;
+    }
+    enc = cobs_encode(pkt, pkt_len, wire);
+    if (enc == 0U || enc >= RF_COBS_ENC_MAX) {
+        return;
+    }
+    wire[enc++] = 0;
+    (void)cdc_send_frame(wire, (uint16_t)enc);
 }
 
 static void link_mark_lost(void)
@@ -270,66 +328,96 @@ static void cc1101_process_rx_frame(uint8_t pkt_len)
                 last_peer_ping_id = id;
                 last_pong_for_ping_id = id;
                 last_pong_tx_ms = now;
-                last_own_pong_tx_id = id;
-                last_own_pong_tx_ms = now;
-                if (rf_tx_enqueue(resp, rlen)) {
-                    printk("\n\r RF rx PING id=%u -> PONG q", (unsigned)id);
-                }
+                (void)rf_tx_enqueue(resp, rlen);
             }
         } else if (type == PROTO_TYPE_PONG) {
             if (pkt_len != RF_LINK_PKT_LEN) {
                 return;
             }
-            if (id == expect_pong_id) {
-                ULONG now = tx_time_get();
-
-                if (id == last_own_pong_tx_id &&
-                    (now - last_own_pong_tx_ms) < RF_OWN_PONG_IGNORE_MS) {
-                    return;
-                }
-                cycle_got_expected_pong = 1;
-                printk("\n\r RF rx PONG id=%u", (unsigned)id);
+            if (id != expect_pong_id) {
+                return;
             }
+            /* id общий у PING/PONG: не отбрасывать ожидаемый PONG из-за своего PONG с тем же id */
+            link_on_traffic();
         } else if (type == PROTO_TYPE_DATA) {
             if (pkt_len <= RF_LINK_PKT_LEN) {
                 return;
             }
+            link_on_traffic();
             UART_PC_WriteBuffer(rf_receive_data, len);
-            cdc_send_frame(rf_receive_pkt, pkt_len);
+            bridge_send_to_host(rf_receive_pkt, pkt_len);
         }
     }
 }
 
-/* Один кадр из RX FIFO → rf_receive_pkt, *pkt_len_out. 0 = ошибка/мусор. */
-static uint8_t cc1101_rx_pull_frame(uint8_t fifo_bytes, uint8_t *pkt_len_out)
+/* COBS-блок из FIFO CC1101 (без 0x00 на хвосте). 0 = ошибка. */
+static uint8_t rf_wire_decode(const uint8_t *wire, uint8_t wire_len,
+                              uint8_t *pkt, uint8_t *pkt_len_out)
 {
-    uint8_t b0;
+    size_t raw_len;
+    size_t cobs_len;
 
-    if (pkt_len_out == NULL || fifo_bytes < RF_LINK_PKT_LEN) {
+    if (wire == NULL || pkt == NULL || pkt_len_out == NULL || wire_len < 2U) {
         return 0;
     }
 
-    CC1101_ReadBurst(CC1101_REG_FIFO, &b0, 1);
-
-    /* [L=5][03][ID][TYPE][CRC][CRC] — переменная длина CC1101 */
-    if (b0 >= RF_LINK_PKT_LEN && b0 <= PROTO_MAX_PACKET &&
-        fifo_bytes >= (uint8_t)(b0 + 1U)) {
-        *pkt_len_out = b0;
-        CC1101_ReadBurst(CC1101_REG_FIFO, rf_receive_pkt, b0);
-        return 1;
+    cobs_len = wire_len;
+    if (wire[wire_len - 1U] == 0U) {
+        cobs_len = (size_t)(wire_len - 1U);
     }
 
-    /* [03][ID][TYPE][CRC][CRC] — фикс. PKTLEN=5, без байта L CC1101 */
-    if (b0 >= 3U && (uint8_t)(b0 + 2U) <= PROTO_MAX_PACKET &&
-        fifo_bytes >= (uint8_t)(b0 + 2U)) {
-        *pkt_len_out = (uint8_t)(b0 + 2U);
-        rf_receive_pkt[0] = b0;
-        CC1101_ReadBurst(CC1101_REG_FIFO, &rf_receive_pkt[1], (uint8_t)(*pkt_len_out - 1U));
-        return 1;
+    raw_len = cobs_decode(wire, cobs_len, pkt);
+    if (raw_len < RF_LINK_PKT_LEN || raw_len > PROTO_MAX_PACKET) {
+        return 0;
     }
+    *pkt_len_out = (uint8_t)raw_len;
+    return 1;
+}
 
-    printk("\n\r RF bad hdr=%02X rxbytes=%u", (unsigned)b0, (unsigned)fifo_bytes);
-    return 0;
+static void host_cobs_frame_cb(const uint8_t *frame, size_t len, void *ctx)
+{
+    uint8_t id_p;
+    uint8_t type_p;
+    uint8_t out_len;
+
+    (void)ctx;
+
+    if (len > PROTO_MAX_PACKET || len < RF_LINK_PKT_LEN) {
+        return;
+    }
+    memcpy(uart_rx_buf, frame, len);
+    if (!Protocol_ParsePacket(uart_rx_buf, (uint8_t)len, &id_p, &type_p, uart_rx_data, &out_len)) {
+        return;
+    }
+    if (type_p != PROTO_TYPE_DATA) {
+        return;
+    }
+    rf_payload_pending = 1;
+    if (tx_queue_send(&q_rf_tx, uart_rx_buf, TX_NO_WAIT) != TX_SUCCESS) {
+        printk("\n\r RF tx queue full (host)");
+    }
+}
+
+void bridge_host_rx_bytes(const uint8_t *data, size_t len)
+{
+    if (data != NULL && len > 0U) {
+        cobs_decoder_feed(&host_cobs_dec, data, len);
+    }
+}
+
+/* Сырой кадр [LEN][ID][TYPE][CRC][CRC] в FIFO (CC1101 len=5). */
+static uint8_t rf_try_raw_link_frame(const uint8_t *wire, uint8_t wire_len,
+                                     uint8_t *pkt_len_out)
+{
+    if (wire == NULL || pkt_len_out == NULL || wire_len != RF_LINK_PKT_LEN) {
+        return 0;
+    }
+    if (wire[0] + 2u != RF_LINK_PKT_LEN) {
+        return 0;
+    }
+    memcpy(rf_receive_pkt, wire, RF_LINK_PKT_LEN);
+    *pkt_len_out = RF_LINK_PKT_LEN;
+    return 1;
 }
 
 /* 1 = обработан хотя бы один кадр. Вызывать без удержания mutex. */
@@ -337,12 +425,15 @@ static uint8_t cc1101_poll_and_handle_rx(void)
 {
     uint8_t rxb;
     uint8_t n;
+    uint8_t plen;
     uint8_t pkt_len;
+    uint8_t wire_buf[CC1101_MAX_PKTLEN];
     uint8_t handled;
 
     handled = 0;
 
     cc1101_lock();
+    CC1101_ApplyVariablePacketMode();
 
     for (;;) {
         rxb = CC1101_ReadReg(CC1101_REG_RXBYTES);
@@ -351,25 +442,51 @@ static uint8_t cc1101_poll_and_handle_rx(void)
             break;
         }
         n = rxb & 0x7Fu;
-        if (n < RF_LINK_PKT_LEN) {
+        if (n < 2U) {
             break;
         }
 
-        if (!cc1101_rx_pull_frame(n, &pkt_len)) {
+        CC1101_ReadBurst(CC1101_REG_FIFO, &plen, 1);
+        if (plen > CC1101_MAX_PKTLEN || n < (uint8_t)(plen + 1U)) {
             cc1101_recover_rx(0);
             break;
         }
+        /* plen=3 и b0=0x78 — мусор/обрыв COBS; не сбрасывать весь RX */
+        if (plen < RF_LINK_PKT_LEN) {
+            CC1101_ReadBurst(CC1101_REG_FIFO, wire_buf, plen);
+            continue;
+        }
 
+        CC1101_ReadBurst(CC1101_REG_FIFO, wire_buf, plen);
         cc1101_unlock();
+
         handled = 1;
-        cc1101_process_rx_frame(pkt_len);
+        pkt_len = 0;
+        if ((plen == RF_LINK_PKT_LEN && rf_try_raw_link_frame(wire_buf, plen, &pkt_len)) ||
+            (plen >= RF_COBS_WIRE_MIN &&
+             rf_wire_decode(wire_buf, plen, rf_receive_pkt, &pkt_len))) {
+            cc1101_process_rx_frame(pkt_len);
+        } else {
+            uint8_t id_raw;
+            uint8_t type_raw;
+            uint8_t data_len_raw;
+
+            if (plen >= RF_LINK_PKT_LEN &&
+                Protocol_ParsePacket(wire_buf, plen, &id_raw, &type_raw,
+                                     rf_receive_data, &data_len_raw)) {
+                memcpy(rf_receive_pkt, wire_buf, plen);
+                cc1101_process_rx_frame(plen);
+            } else if (plen < RF_COBS_WIRE_MIN) {
+                /* короткий блок — пропуск */
+            } else {
+                printk("\n\r RF decode fail plen=%u b0=%02X",
+                       (unsigned)plen, (unsigned)wire_buf[0]);
+            }
+        }
+
         cc1101_lock();
     }
 
-    rxb = CC1101_ReadReg(CC1101_REG_RXBYTES);
-    if ((rxb & 0x7Fu) > 0) {
-        CC1101_SendCmd(CC1101_CMD_SFRX);
-    }
     CC1101_StrobeRx();
     cc1101_unlock();
 
@@ -378,33 +495,14 @@ static uint8_t cc1101_poll_and_handle_rx(void)
 
 void task_uart_rx(ULONG thread_input)
 {
-    uint8_t idx = 0;
+    uint8_t b;
 
     (void)thread_input;
 
     for (;;) {
         if (UART_PC_Available()) {
-            uint8_t b = UART_PC_ReadByte();
-            if (idx == 0) {
-                if (b > 0 && b <= PROTO_MAX_PACKET - 5) {
-                    uart_rx_buf[idx++] = b;
-                }
-            } else {
-                if (idx >= PROTO_MAX_PACKET) {
-                    idx = 0;
-                    continue;
-                }
-                uart_rx_buf[idx++] = b;
-                if (idx >= uart_rx_buf[0] + 2) {
-                    uint8_t out_len, id_p, type_p;
-                    if (Protocol_ParsePacket(uart_rx_buf, idx, &id_p, &type_p, uart_rx_data, &out_len)) {
-                        if (type_p == PROTO_TYPE_DATA) {
-                            tx_queue_send(&q_rf_tx, uart_rx_buf, TX_NO_WAIT);
-                        }
-                    }
-                    idx = 0;
-                }
-            }
+            b = UART_PC_ReadByte();
+            bridge_host_rx_bytes(&b, 1);
         }
         tx_thread_sleep(1);
     }
@@ -414,7 +512,6 @@ void task_rf_send(ULONG thread_input)
 {
     (void)thread_input;
 
-    printk("\n\r task_rf_send");
     for (;;) {
         if (tx_queue_receive(&q_rf_tx, rf_send_pkt, TX_WAIT_FOREVER) == TX_SUCCESS) {
             uint8_t tx_len;
@@ -424,8 +521,11 @@ void task_rf_send(ULONG thread_input)
             }
             tx_len = (uint8_t)(rf_send_pkt[0] + 2u);
             cc1101_send_packet(rf_send_pkt, tx_len);
-            printk("\n\r RF tx id=%u type=%02X", (unsigned)rf_send_pkt[1],
-                   (unsigned)rf_send_pkt[2]);
+            if (rf_send_pkt[2] == PROTO_TYPE_DATA) {
+                rf_payload_pending = 0;
+                rf_payload_waiting_ack = 1;
+                rf_payload_ack_deadline = tx_time_get() + RF_PAYLOAD_ACK_MS;
+            }
         }
     }
 }
@@ -434,33 +534,53 @@ void task_heartbeat(ULONG thread_input)
 {
     (void)thread_input;
 
-    printk("\n\r task_heartbeat");
     put_led(LED_RED);
     tx_thread_sleep(rf_ping_phase_ms());
+    hb_ping_outstanding = 0;
 
     for (;;) {
-        {
-            ping_seq++;
-            expect_pong_id = ping_seq;
-            link_refresh_tick = 0;
-            cycle_got_expected_pong = 0;
-            last_own_ping_tx_id = expect_pong_id;
-            last_own_ping_tx_ms = tx_time_get();
-            if (rf_tx_enqueue_link(expect_pong_id, PROTO_TYPE_PING)) {
-                printk("\n\r RF PING q id=%u", (unsigned)expect_pong_id);
-            }
-            /* Весь приём — в task_rf_receive; здесь только ждём. */
-            tx_thread_sleep(1000);
+        ULONG now;
 
+        tx_thread_sleep(RF_LINK_CHECK_MS);
+        now = tx_time_get();
+
+        if (rf_payload_pending || rf_payload_waiting_ack || rf_tx_queue_has_messages()) {
+            if (rf_payload_waiting_ack && now >= rf_payload_ack_deadline &&
+                !cycle_got_expected_pong) {
+                missed_pings++;
+                rf_payload_waiting_ack = 0;
+                if (missed_pings >= RF_LINK_MISS_LIMIT) {
+                    link_mark_lost();
+                }
+            }
             if (cycle_got_expected_pong) {
-                link_refresh_tick = 1;
-                link_liveness = RF_LINK_LIVE_CYCLES;
+                cycle_got_expected_pong = 0;
                 missed_pings = 0;
                 if (pong_ok_streak < 255U) {
                     pong_ok_streak++;
                 }
                 if (pong_ok_streak >= RF_PONG_OK_CYCLES) {
                     link_mark_ok();
+                } else {
+                    link_refresh();
+                }
+            }
+            put_led(g_link_status);
+            continue;
+        }
+
+        if (hb_ping_outstanding) {
+            hb_ping_outstanding = 0;
+            if (cycle_got_expected_pong) {
+                cycle_got_expected_pong = 0;
+                missed_pings = 0;
+                if (pong_ok_streak < 255U) {
+                    pong_ok_streak++;
+                }
+                if (pong_ok_streak >= RF_PONG_OK_CYCLES) {
+                    link_mark_ok();
+                } else {
+                    link_refresh();
                 }
             } else if (link_liveness > 0U) {
                 link_liveness--;
@@ -469,12 +589,21 @@ void task_heartbeat(ULONG thread_input)
             } else {
                 pong_ok_streak = 0;
                 missed_pings++;
-                if (missed_pings >= 2U) {
+                if (missed_pings >= RF_LINK_MISS_LIMIT) {
                     link_mark_lost();
                 }
             }
-            put_led(g_link_status);
+        } else {
+            ping_seq++;
+            expect_pong_id = ping_seq;
+            last_own_ping_tx_id = expect_pong_id;
+            last_own_ping_tx_ms = now;
+            if (rf_tx_enqueue_link(expect_pong_id, PROTO_TYPE_PING)) {
+                hb_ping_outstanding = 1;
+            }
         }
+
+        put_led(g_link_status);
     }
 }
 
@@ -482,13 +611,19 @@ void task_rf_receive(ULONG thread_input)
 {
     (void)thread_input;
 
-    printk("\n\r task_rf_receive");
     cc1101_lock();
     cc1101_rf_to_rx();
     cc1101_unlock();
 
     for (;;) {
-        if (cc1101_gdo0_pkt_ready()) {
+        uint8_t poll;
+
+        cc1101_lock();
+        poll = cc1101_gdo0_pkt_ready() ||
+               ((CC1101_ReadReg(CC1101_REG_RXBYTES) & 0x7Fu) > 0U);
+        cc1101_unlock();
+
+        if (poll) {
             (void)cc1101_poll_and_handle_rx();
             tx_thread_sleep(1);
         } else {
@@ -513,7 +648,8 @@ void tasks_init(void)
     }
     cc1101_unlock();
 
-    printk("\n\r RF ping phase=%lu ms", (unsigned long)rf_ping_phase_ms());
+    cobs_decoder_init(&host_cobs_dec, host_cobs_acc, RF_COBS_ENC_MAX,
+                      host_cobs_frame_cb, NULL);
 
     status = tx_queue_create(&q_rf_tx, "rf_tx", RF_TX_MSG_ULONGS,
                              rf_tx_queue_buffer, sizeof(rf_tx_queue_buffer));
@@ -566,6 +702,5 @@ void tasks_init(void)
         return;
     }
 
-    printk("\n\r OK task create");
     put_led(LED_RED);
 }

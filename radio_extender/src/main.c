@@ -20,13 +20,10 @@ int main(void)
     nvic_priority_group_config(NVIC_PRIORITY_GROUP_4);
     hw_board_init();
 
-    printk("CC1101_Init (ThreadX)\n\r");
-
     if (!CC1101_ProbeSpi()) {
         put_led(LED_RED);
         delay_ms(800);
         put_led(LED_OFF);
-        printk("\n\r CC1101 SPI probe FAIL");
     }
 
     CC1101_Init();
@@ -40,7 +37,6 @@ int main(void)
         put_led(LED_GREEN);
         delay_ms(300);
         put_led(LED_RED);
-        printk("\n\r CC1101 OK, LED red = wait RF link");
     } else {
         put_led(LED_RED);
         delay_ms(800);

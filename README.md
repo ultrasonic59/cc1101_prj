@@ -37,6 +37,23 @@ pkt_len = LEN + 2        /* от 5 до PROTO_MAX_PACKET (64) */
 
 ---
 
+## COBS на эфире (RF и UART)
+
+Между кадром протокола и CC1101/FIFO — **COBS** + разделитель **`0x00`**:
+
+1. `cobs_encode([LEN][ID][TYPE]…[CRC])` → обычно **6 байт** для PING/PONG (5 байт протокола).
+2. В FIFO CC1101: **`[wire_len][COBS…]`**, `wire_len` = длина COBS (без `0x00` на хвосте).
+3. **`0x00`** — только на UART (потоковый разделитель); на RF длину задаёт байт CC1101.
+
+Приём: из FIFO читается один блок `wire_len`, байты подаются в `cobs_decoder_feed()`; по **`0x00`** декодируется кадр протокола. Несколько COBS-кадров в одном блоке разбираются по каждому `0x00`.
+
+Исходники: `src/cobs.c`, `src/cobs.h`.  
+**Важно:** оба узла должны прошиваться с COBS; старый формат без COBS несовместим.
+
+UART PC → устройство: тоже COBS + `0x00` (не сырой `[LEN]…`).
+
+---
+
 ## Передача по CC1101 (переменная длина)
 
 Режим чипа: **`CC1101_ApplyVariablePacketMode()`**
@@ -71,9 +88,23 @@ CRC по эфиру — только в `protocol.c` (модемный CRC вы�
 
 ---
 
-## Режим связи (PING / PONG)
+## Мост USB CDC / UART ↔ RF
 
-Кадр протокола **ровно 5 байт** (`RF_LINK_PKT_LEN`). На эфире в FIFO: **1 + 5 = 6 байт** (`CC1101 len = 5`).
+| Направление | Путь |
+|-------------|------|
+| Хост → эфир | USB bulk OUT / UART → **COBS + `0x00`** → `bridge_host_rx_bytes()` → кадр `TYPE=DATA` → `q_rf_tx` → RF |
+| Эфир → хост | RF `TYPE=DATA` → **COBS + `0x00`** → USB bulk IN (`cdc_send_frame`) |
+
+На хосте в COBS передаётся **полный кадр протокола** (`Protocol_BuildPacket`), не сырые байты payload.
+
+---
+
+## Режим связи (PING / PONG / DATA)
+
+**Проверка линка:** каждые **`RF_LINK_CHECK_MS` (100 ms)** — PING, если нет полезной нагрузки в очереди/эфире.  
+**При DATA:** PING не шлётся; подтверждение линка — ответ соседа (**DATA** или **PONG** в окне `RF_PAYLOAD_ACK_MS`).
+
+Кадр протокола **ровно 5 байт** (`RF_LINK_PKT_LEN`) для PING/PONG. На эфире: **`[wire_len][COBS…]`** (обычно `wire_len=6` для link).
 
 ### PING
 
@@ -91,8 +122,8 @@ CRC по эфиру — только в `protocol.c` (модемный CRC вы�
 ### Логика `id` и LED
 
 - Каждая плата: `ping_seq` 1…255 → **PING** с `id = N`, ожидается **PONG** с `id = N` (`expect_pong_id`).
-- **Зелёный LED:** 3 подряд цикла (~1 с) с `RF rx PONG id=N` (`RF_PONG_OK_CYCLES = 3`).
-- **Красный:** нет PONG в цикле → `missed_pings`; после 2 пропусков — `RF link lost`.
+- **Зелёный LED:** 3 подряд успешных проверки (`RF_PONG_OK_CYCLES = 3`).
+- **Красный:** нет ответа за `RF_LINK_MISS_LIMIT` интервалов по 100 ms (idle) или таймаут DATA.
 - Watchdog: `link_liveness` без подтверждённого PONG в цикле.
 
 ### Фильтры на PING (антиспам)
@@ -123,7 +154,7 @@ CRC по эфиру — только в `protocol.c` (модемный CRC вы�
 
 `pkt_len = 9`. В FIFO CC1101: `[09][07 00 00 41 42 43 44 CRC CRC]`.
 
-При приёме: `pkt_len > 5`, `TYPE == DATA` → payload в UART и USB CDC (`cdc_send_frame` с полным `pkt_len`).
+При приёме: `pkt_len > 5`, `TYPE == DATA` → payload в UART и USB CDC (кадр в COBS).
 
 ---
 
@@ -131,11 +162,11 @@ CRC по эфиру — только в `protocol.c` (модемный CRC вы�
 
 | Задача | Приоритет* | Роль |
 |--------|------------|------|
-| `task_heartbeat` | 6 | PING → `q_rf_tx`, LED, sleep 1 с |
+| `task_heartbeat` | 6 | PING каждые 100 ms (idle), LED |
 | `task_rf_send` | 7 | **Единственная** передача в CC1101 |
 | `task_rf_receive` | 9 | Приём FIFO, разбор кадров |
-| `task_uart_rx` | 10 | UART → `q_rf_tx` (только DATA) |
-| `usb_task` | см. `USB_PRIORITY` | USB CDC (USBX) |
+| `task_uart_rx` | 10 | UART → `bridge_host_rx_bytes()` |
+| `usb_task` | см. `USB_PRIORITY` | USB CDC RX → `bridge_host_rx_bytes()` |
 
 \*ThreadX: **меньшее число = выше приоритет**.
 

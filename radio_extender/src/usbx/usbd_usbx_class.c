@@ -81,10 +81,20 @@ static usb_sts_type usbx_sof(void *udev)
 
 static usb_sts_type usbx_event(void *udev, usbd_event_type event)
 {
-    (void)udev;
+    usbd_core_type *pudev = (usbd_core_type *)udev;
 
     if (event == USBD_RESET_EVENT)
-        _ux_device_stack_disconnect();
+    {
+        if (_ux_system_slave->ux_system_slave_device.ux_slave_device_state == UX_DEVICE_CONFIGURED)
+            _ux_device_stack_disconnect();
+
+        ux_dcd_at32_initialize_complete();
+        _ux_system_slave->ux_system_slave_device.ux_slave_device_state = UX_DEVICE_ATTACHED;
+
+        pudev->conn_state = USB_CONN_STATE_DEFAULT;
+        pudev->device_addr = 0;
+        pudev->dev_config = 0;
+    }
 
     return USB_OK;
 }

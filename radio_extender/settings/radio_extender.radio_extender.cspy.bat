@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.general.xcl" --backend -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.driver.xcl" 
+"C:\iar\ewarm-9.60.2\common\bin\cspybat" -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.general.xcl" --backend -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.general.xcl" "--debug_file=%~1" --backend -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.driver.xcl" 
+"C:\iar\ewarm-9.60.2\common\bin\cspybat" -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.general.xcl" "--debug_file=%~1" --backend -f "D:\proj\cc1101_prj\radio_extender\settings\radio_extender.radio_extender.driver.xcl" 
 
 @echo off 
 :end

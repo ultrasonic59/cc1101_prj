@@ -78,15 +78,31 @@ void usbd_core_in_handler(usbd_core_type *udev, uint8_t ept_addr)
       else
       {
 
+#ifdef UX_INCLUDE_USER_DEFINE_FILE
+        if(udev->class_handler->ept0_tx_handler != 0)
+        {
+          udev->class_handler->ept0_tx_handler(udev);
+        }
+#else
         if(udev->class_handler->ept0_tx_handler != 0 &&
             udev->conn_state == USB_CONN_STATE_CONFIGURED)
         {
           udev->class_handler->ept0_tx_handler(udev);
         }
+#endif
         usbd_ctrl_recv_status(udev);
 
       }
     }
+#ifdef UX_INCLUDE_USER_DEFINE_FILE
+    else if(udev->ept0_sts == USB_EPT0_STATUS_IN)
+    {
+      if(udev->class_handler->ept0_tx_handler != 0)
+      {
+        udev->class_handler->ept0_tx_handler(udev);
+      }
+    }
+#endif
   }
   else if(udev->class_handler->in_handler != 0 &&
           udev->conn_state == USB_CONN_STATE_CONFIGURED)
@@ -120,11 +136,18 @@ void usbd_core_out_handler(usbd_core_type *udev, uint8_t ept_addr)
       }
       else
       {
+#ifdef UX_INCLUDE_USER_DEFINE_FILE
+          if(udev->class_handler->ept0_rx_handler != 0)
+          {
+            udev->class_handler->ept0_rx_handler(udev);
+          }
+#else
           if(udev->class_handler->ept0_rx_handler != 0)
           {
             udev->class_handler->ept0_rx_handler(udev);
           }
           usbd_ctrl_send_status(udev);
+#endif
       }
     }
   }

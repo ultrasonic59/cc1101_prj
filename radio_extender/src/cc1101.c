@@ -11,9 +11,9 @@ void CC1101_WriteReg(uint8_t addr, uint8_t value);
 uint8_t CC1101_ReadReg(uint8_t addr);
 void CC1101_SendCmd(uint8_t cmd);
 
-static uint8_t spi_rf_sel_msb = 0;
-static uint8_t spi_rf_sel_cpha2 = 1;
-static uint8_t spi_rf_sel_div = SPI_MCLK_DIV_64;
+static uint8_t spi_rf_sel_msb = 1;
+static uint8_t spi_rf_sel_cpha2 = 0;
+static uint8_t spi_rf_sel_div = SPI_RF_MCLK_DIV;
 
 static uint8_t SPI_RF_Transfer(uint8_t data)
 {
@@ -40,117 +40,59 @@ static void CC1101_WaitReady(void)
     }
 }
 
-typedef struct {
-    uint8_t msb;
-    uint8_t cpha2;
-    const char *tag;
-} spi_rf_mode_t;
-
-static const spi_rf_mode_t spi_rf_modes[] = {
-    { 0, 1, "LSB/CPHA1" },
-    { 1, 0, "MSB/CPHA0" },
-    { 1, 1, "MSB/CPHA1" },
-    { 0, 0, "LSB/CPHA0" },
-};
-
-static const uint8_t spi_rf_divs[] = {
-    SPI_MCLK_DIV_64,
-    SPI_MCLK_DIV_128,
-    SPI_MCLK_DIV_32,
-    SPI_MCLK_DIV_256,
-};
-
-static const char *spi_rf_div_tags[] = { "/64", "/128", "/32", "/256" };
-
 static int cc1101_spi_score(uint8_t *partnum, uint8_t *version, uint8_t *rb)
 {
     int score = 0;
-
+uint8_t part;
+ uint8_t vers;
+uint8_t _rb;
     CC1101_SendCmd(CC1101_CMD_SRES);
     CC1101_WaitReady();
-    delay_us(150);
+    delay_us(500);
 
-    *partnum = CC1101_ReadReg(CC1101_REG_PARTNUM);
-    *version = CC1101_ReadReg(CC1101_REG_VERSION);
+    part = CC1101_ReadReg(CC1101_REG_PARTNUM);
+    vers = CC1101_ReadReg(CC1101_REG_VERSION);
 
     CC1101_WriteReg(CC1101_REG_CHANNR, 0xA5U);
-    *rb = CC1101_ReadReg(CC1101_REG_CHANNR);
+    _rb = CC1101_ReadReg(CC1101_REG_CHANNR);
     CC1101_WriteReg(CC1101_REG_CHANNR, 0x00U);
 
-    if (*partnum == 0x00U) {
+    if (part == 0x00U) {
         score += 10;
     }
-    if (*version != 0x00U && *version != 0xFFU) {
+    if (vers != 0x00U && vers != 0xFFU) {
         score += 5;
     }
-    if (*rb == 0xA5U) {
+    if (_rb == 0xA5U) {
         score += 20;
     }
+     *partnum = part;
+    *version = vers;
+   *rb=_rb;
     return score;
 }
 
 uint8_t CC1101_ProbeSpi(void)
 {
-    uint8_t partnum;
-    uint8_t version;
-    uint8_t rb;
+    uint8_t partnum = 0;
+    uint8_t version = 0;
+    uint8_t rb = 0;
     int score;
 
-    /* Быстрый путь: MSB/CPHA0/128 — проверено на плате */
-    spi_rf_configure(1, 0, SPI_MCLK_DIV_128);
-    score = cc1101_spi_score(&partnum, &version, &rb);
-    printk("\n\r CC1101 probe MSB/CPHA0/128: PARTNUM=0x%02X VERSION=0x%02X rb=0x%02X score=%d",
-           partnum, version, rb, score);
+    /* MSB, CPOL Low, CPHA 1Edge, prescaler /32 */
+    spi_rf_sel_msb = 1;
+    spi_rf_sel_cpha2 = 0;
+    spi_rf_sel_div = SPI_RF_MCLK_DIV;
+    spi_rf_configure(spi_rf_sel_msb, spi_rf_sel_cpha2, spi_rf_sel_div);
 
+    score = cc1101_spi_score(&partnum, &version, &rb);
     if (score >= 20) {
-        spi_rf_sel_msb = 1;
-        spi_rf_sel_cpha2 = 0;
-        spi_rf_sel_div = SPI_MCLK_DIV_128;
-        printk("\n\r CC1101 SPI selected: MSB/CPHA0/128 (score=%d)", score);
         return 1U;
     }
 
-    {
-        int best_score = score;
-        uint8_t best_i = 1;
-        uint8_t best_d = 1;
-        uint8_t i;
-        uint8_t d;
-
-        for (d = 0; d < (uint8_t)(sizeof(spi_rf_divs) / sizeof(spi_rf_divs[0])); d++) {
-            for (i = 0; i < (uint8_t)(sizeof(spi_rf_modes) / sizeof(spi_rf_modes[0])); i++) {
-                if (spi_rf_modes[i].msb == 1 && spi_rf_modes[i].cpha2 == 0 &&
-                    spi_rf_divs[d] == SPI_MCLK_DIV_128) {
-                    continue;
-                }
-                spi_rf_configure(spi_rf_modes[i].msb, spi_rf_modes[i].cpha2, spi_rf_divs[d]);
-                score = cc1101_spi_score(&partnum, &version, &rb);
-                printk("\n\r CC1101 probe %s%s: PARTNUM=0x%02X VERSION=0x%02X rb=0x%02X score=%d",
-                       spi_rf_modes[i].tag, spi_rf_div_tags[d],
-                       partnum, version, rb, score);
-
-                if (score > best_score) {
-                    best_score = score;
-                    best_i = i;
-                    best_d = d;
-                }
-            }
-        }
-
-        spi_rf_sel_msb = spi_rf_modes[best_i].msb;
-        spi_rf_sel_cpha2 = spi_rf_modes[best_i].cpha2;
-        spi_rf_sel_div = spi_rf_divs[best_d];
-        spi_rf_configure(spi_rf_sel_msb, spi_rf_sel_cpha2, spi_rf_sel_div);
-
-        CC1101_SendCmd(CC1101_CMD_SRES);
-        CC1101_WaitReady();
-        delay_us(150);
-
-        printk("\n\r CC1101 SPI selected: %s%s (score=%d)",
-               spi_rf_modes[best_i].tag, spi_rf_div_tags[best_d], best_score);
-
-        return (best_score >= 20) ? 1U : 0U;
-    }
+    printk("\n\r CC1101 SPI probe FAIL score=%d PN=%02X VER=%02X rb=%02X",
+           score, (unsigned)partnum, (unsigned)version, (unsigned)rb);
+    return 0U;
 }
 
 void CC1101_SendCmd(uint8_t cmd);
@@ -195,9 +137,6 @@ uint8_t CC1101_ReapplyRadio(void)
     f0 = CC1101_ReadReg(CC1101_REG_FREQ0);
     s1 = CC1101_ReadReg(CC1101_REG_SYNC1);
 
-    printk("\n\r CC1101 radio FREQ2/1/0=%02X %02X %02X SYNC1=%02X",
-           f2, f1, f0, s1);
-
     CC1101_ApplyVariablePacketMode();
     CC1101_SendCmd(CC1101_CMD_SFRX);
     CC1101_StrobeRx();
@@ -238,8 +177,7 @@ void CC1101_ClearRxFifo(void)
 
 void CC1101_ListenAfterTx(void)
 {
-    /* Без SIDLE после TX — как в старом _tasks.c: SFRX + SRX */
-    CC1101_SendCmd(CC1101_CMD_SFRX);
+    /* Не SFRX — иначе сбрасывается PONG, пришедший сразу после нашего PING/PONG */
     CC1101_SendCmd(CC1101_CMD_SRX);
     delay_us(500);
 }
@@ -313,9 +251,6 @@ uint8_t CC1101_VerifySpi(void)
     CC1101_WriteReg(CC1101_REG_CHANNR, 0xA5U);
     rb = CC1101_ReadReg(CC1101_REG_CHANNR);
     CC1101_WriteReg(CC1101_REG_CHANNR, 0x00U);
-
-    printk("\n\r CC1101 verify PARTNUM=0x%02X VERSION=0x%02X CHANNR rb=0x%02X",
-           partnum, version, rb);
 
     if (rb != 0xA5U) {
         return 0;

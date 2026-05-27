@@ -1,0 +1,26 @@
+D:\proj\cc1101_prj\radio_extender\radio_extender\BrowseInfo\usbx\ux_device_class_cdc_acm_control_request.pbi: \
+  D:\proj\cc1101_prj\common\usbx\common\usbx_device_classes\src\ux_device_class_cdc_acm_control_request.c \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_api.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\ports\cortex_m4\iar\inc\ux_port.h \
+  D:\proj\cc1101_prj\radio_extender\src\usbx\ux_user.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Config_Full.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\common\inc\tx_api.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\ports\cortex_m3\iar\inc\tx_port.h \
+  D:\proj\cc1101_prj\radio_extender\src\tx_user.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\intrinsics.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iar_intrinsics_common.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_utility.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_system.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\usbx_device_classes\inc\ux_device_class_cdc_acm.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc\ux_device_stack.h

@@ -4,9 +4,13 @@
 #include "usbx_cdc.h"
 #include "usbx_app.h"
 #include "usbd_usbx_class.h"
+#include "ux_api.h"
+#include "ux_dcd_at32.h"
+#include "ux_system.h"
 #include "cdc_desc.h"
 #include "bat_brd.h"
 #include "uart.h"
+#include "my_tasks.h"
 #include "at32f415.h"
 #include "system_at32f415.h"
 
@@ -43,6 +47,12 @@ void usb_gpio_config(void)
     gpio_init_struct.gpio_mode = GPIO_MODE_INPUT;
     gpio_init(OTG_PIN_GPIO, &gpio_init_struct);
 #endif
+
+    /* PA11/PA12 — OTGFS1 DM/DP (без MUX USB не отвечает на GET_DESCRIPTOR). */
+    gpio_init_struct.gpio_mode = GPIO_MODE_MUX;
+    gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+    gpio_init_struct.gpio_pins = GPIO_PINS_11 | GPIO_PINS_12;
+    gpio_init(GPIOA, &gpio_init_struct);
 }
 
 void usb_clock48m_select(usb_clk48_s clk_s)
@@ -91,7 +101,14 @@ void usb_device_init(void)
     usb_gpio_config();
     crm_periph_clock_enable(OTG_CLOCK, TRUE);
     usb_clock48m_select(USB_CLK_HEXT);
-    nvic_irq_enable(OTG_IRQ, 0, 0);
+    /* Приоритет ниже SysTick/ThreadX (0 = самый высокий) — иначе отладчик/IAR подвисает. */
+    nvic_irq_enable(OTG_IRQ, 5, 0);
+
+    /* DCD до usbd_init: SETUP/reset в IRQ не должны прийти с g_dcd_at32 == NULL. */
+    status = usbx_dcd_register(&otg_core_struct);
+    if (status != UX_SUCCESS) {
+        return;
+    }
 
     usbd_init(&otg_core_struct,
               USB_FULL_SPEED_CORE_ID,
@@ -99,8 +116,9 @@ void usb_device_init(void)
               &usbd_usbx_class_handler,
               &cdc_desc_handler);
 
-    status = usbx_dcd_register(&otg_core_struct);
-    (void)status;
+    _ux_system_slave->ux_system_slave_speed = UX_FULL_SPEED_DEVICE;
+    ux_dcd_at32_initialize_complete();
+    _ux_system_slave->ux_system_slave_device.ux_slave_device_state = UX_DEVICE_ATTACHED;
 }
 
 static void uart_pc_init_deferred(void)
@@ -136,7 +154,9 @@ void usb_task(ULONG thread_input)
         uart_pc_init_deferred();
 
         data_len = usbx_cdc_read(usb_buffer_rx, sizeof(usb_buffer_rx));
-        if (data_len == 0) {
+        if (data_len > 0U) {
+            bridge_host_rx_bytes(usb_buffer_rx, data_len);
+        } else {
             tx_thread_sleep(2);
         }
     }

@@ -51,6 +51,14 @@ D:\proj\cc1101_prj\radio_extender\..\common\circ_buf
 -I
 D:\proj\cc1101_prj\radio_extender\src
 -I
+D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\core\inc
+-I
+D:\proj\cc1101_prj\radio_extender\..\common\usbx\common\usbx_device_classes\inc
+-I
+D:\proj\cc1101_prj\radio_extender\..\common\usbx\ports\cortex_m4\iar\inc
+-I
+D:\proj\cc1101_prj\radio_extender\src\usbx
+-I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include\
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\aarch32
@@ -98,6 +106,14 @@ D:\proj\cc1101_prj\common\calc_crc
 D:\proj\cc1101_prj\common\circ_buf
 -I
 D:\proj\cc1101_prj\radio_extender\src
+-I
+D:\proj\cc1101_prj\common\usbx\common\core\inc
+-I
+D:\proj\cc1101_prj\common\usbx\common\usbx_device_classes\inc
+-I
+D:\proj\cc1101_prj\common\usbx\ports\cortex_m4\iar\inc
+-I
+D:\proj\cc1101_prj\radio_extender\src\usbx
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include
 -D__CHAR_BITS__=8
@@ -446,6 +462,7 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include
 -DTX_INCLUDE_USER_DEFINE_FILE=1
 -DAT_START_F415_V1=1
 -DAT32F415RCT7=1
+-DUX_INCLUDE_USER_DEFINE_FILE=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Full.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Config_Full.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM"

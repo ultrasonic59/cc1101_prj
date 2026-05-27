@@ -42,6 +42,7 @@ UINT  _ux_dcd_at32_initialize(ULONG dcd_io, ULONG parameter);
 UINT  _ux_dcd_at32_function(UX_SLAVE_DCD *dcd, UINT function, VOID *parameter);
 
 void  ux_dcd_at32_setup_handler(usbd_core_type *udev);
+UINT  ux_dcd_at32_initialize_complete(void);
 void  ux_dcd_at32_in_complete(usbd_core_type *udev, uint8_t ept_num);
 void  ux_dcd_at32_out_complete(usbd_core_type *udev, uint8_t ept_num);
 void  ux_dcd_at32_ep0_tx_complete(usbd_core_type *udev);

@@ -197,7 +197,7 @@ void spi_rf_init(void){
   spi_default_para_init(&spi_init_struct);
   spi_init_struct.transmission_mode = SPI_TRANSMIT_FULL_DUPLEX;
   spi_init_struct.master_slave_mode = SPI_MODE_MASTER;
-  spi_init_struct.mclk_freq_division = SPI_MCLK_DIV_128;
+  spi_init_struct.mclk_freq_division = SPI_RF_MCLK_DIV;
   spi_init_struct.first_bit_transmission = SPI_FIRST_BIT_MSB;
   spi_init_struct.frame_bit_num = SPI_FRAME_8BIT;
   spi_init_struct.clock_polarity = SPI_CLOCK_POLARITY_LOW;
