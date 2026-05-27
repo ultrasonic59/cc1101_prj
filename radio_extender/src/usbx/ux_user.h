@@ -4,7 +4,10 @@
 #ifndef UX_USER_H
 #define UX_USER_H
 
-#define UX_INCLUDE_USER_DEFINE_FILE
+/* UX_INCLUDE_USER_DEFINE_FILE — задан в настройках IAR (CCDefines) */
+
+/* Device-only build: no USB host stack / _ux_system_host */
+#define UX_DEVICE_SIDE_ONLY
 
 #define UX_MAX_SLAVE_INTERFACES                 2
 #define UX_MAX_SLAVE_CLASS_DRIVER               1

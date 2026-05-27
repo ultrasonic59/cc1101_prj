@@ -1,7 +1,6 @@
 /**************************************************************************/
 /* USBX DCD for AT32 — Artery usbd_core hardware layer                    */
 /**************************************************************************/
-#define UX_SOURCE_CODE
 
 #include "ux_api.h"
 #include "ux_dcd_at32.h"
@@ -81,7 +80,6 @@ void ux_dcd_at32_setup_handler(usbd_core_type *udev)
     ed = &g_dcd_at32->ux_dcd_at32_ed[0];
     transfer_request = &ed->ux_dcd_at32_ed_endpoint->ux_slave_endpoint_transfer_request;
 
-    _ux_utility_memory_set(transfer_request->ux_slave_transfer_request_setup, 0, UX_SETUP_SIZE);
     transfer_request->ux_slave_transfer_request_setup[0] = setup->bmRequestType;
     transfer_request->ux_slave_transfer_request_setup[1] = setup->bRequest;
     transfer_request->ux_slave_transfer_request_setup[2] = (UCHAR)(setup->wValue & 0xFF);
@@ -91,15 +89,9 @@ void ux_dcd_at32_setup_handler(usbd_core_type *udev)
     transfer_request->ux_slave_transfer_request_setup[6] = (UCHAR)(setup->wLength & 0xFF);
     transfer_request->ux_slave_transfer_request_setup[7] = (UCHAR)(setup->wLength >> 8);
 
-    transfer_request->ux_slave_transfer_request_type =
-        (setup->bmRequestType & USB_REQ_RECIPIENT_MASK) | (setup->bmRequestType & USB_REQ_TYPE_RESERVED);
-    transfer_request->ux_slave_transfer_request_function = setup->bRequest;
-    transfer_request->ux_slave_transfer_request_value = setup->wValue;
-    transfer_request->ux_slave_transfer_request_index = setup->wIndex;
-    transfer_request->ux_slave_transfer_request_request = setup->bRequest;
-
-    transfer_request->ux_slave_transfer_request_phase = UX_TRANSFER_PHASE_SETUP;
     transfer_request->ux_slave_transfer_request_actual_length = 0;
+    transfer_request->ux_slave_transfer_request_type = UX_TRANSFER_PHASE_SETUP;
+    transfer_request->ux_slave_transfer_request_completion_code = UX_SUCCESS;
 
     if (setup->bmRequestType & UX_REQUEST_IN)
     {
@@ -117,9 +109,9 @@ void ux_dcd_at32_setup_handler(usbd_core_type *udev)
             transfer_request->ux_slave_transfer_request_current_data_pointer =
                 transfer_request->ux_slave_transfer_request_data_pointer;
             ed->ux_dcd_at32_ed_state = UX_DCD_AT32_ED_STATE_DATA_RX;
-            usbd_ctrl_recv(udev, 0,
+            usbd_ctrl_recv(udev,
                              transfer_request->ux_slave_transfer_request_data_pointer,
-                             setup->wLength);
+                             (uint16_t)setup->wLength);
         }
     }
 }
@@ -178,7 +170,7 @@ void ux_dcd_at32_ep0_rx_complete(usbd_core_type *udev)
             len == endpoint->ux_slave_endpoint_descriptor.wMaxPacketSize)
         {
             transfer_request->ux_slave_transfer_request_current_data_pointer += len;
-            usbd_ctrl_recv(udev, 0,
+            usbd_ctrl_recv(udev,
                              transfer_request->ux_slave_transfer_request_current_data_pointer,
                              (uint16_t)(transfer_request->ux_slave_transfer_request_requested_length -
                                         transfer_request->ux_slave_transfer_request_actual_length));
@@ -368,19 +360,19 @@ UINT _ux_dcd_at32_function(UX_SLAVE_DCD *dcd, UINT function, VOID *parameter)
     switch (function)
     {
     case UX_DCD_GET_FRAME_NUMBER:
-    case UX_DCD_TRANSFER_RUN:
     case UX_DCD_TRANSFER_ABORT:
-    case UX_DCD_ENDPOINT_RESET:
+    case UX_DCD_RESET_ENDPOINT:
     case UX_DCD_ENDPOINT_STATUS:
+    case UX_DCD_SET_DEVICE_ADDRESS:
         return UX_FUNCTION_NOT_SUPPORTED;
 
-    case UX_DCD_ENDPOINT_CREATE:
+    case UX_DCD_CREATE_ENDPOINT:
         return at32_endpoint_create(dcd_at32, (UX_SLAVE_ENDPOINT *)parameter);
 
-    case UX_DCD_ENDPOINT_DESTROY:
+    case UX_DCD_DESTROY_ENDPOINT:
         return at32_endpoint_destroy(dcd_at32, (UX_SLAVE_ENDPOINT *)parameter);
 
-    case UX_DCD_ENDPOINT_STALL:
+    case UX_DCD_STALL_ENDPOINT:
     {
         UCHAR addr = ((UX_SLAVE_ENDPOINT *)parameter)->ux_slave_endpoint_descriptor.bEndpointAddress;
         usbd_set_stall(dcd_at32->ux_dcd_at32_udev, addr);

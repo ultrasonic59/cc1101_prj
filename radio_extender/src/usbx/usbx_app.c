@@ -1,7 +1,6 @@
 /**************************************************************************/
 /* USBX device stack init — CDC ACM on AT32 OTG FS                        */
 /**************************************************************************/
-#define UX_SOURCE_CODE
 
 #include "usbx_app.h"
 #include "ux_api.h"
@@ -52,10 +51,11 @@ UINT usbx_stack_init_pre_hw(void)
     df = usbx_device_framework_get(&df_len);
     lang = usbx_language_id_framework_get(&lang_len);
 
-    status = ux_device_stack_initialize(df, df_len,
-                                        df, df_len,
+    status = ux_device_stack_initialize((UCHAR *)df, df_len,
+                                        (UCHAR *)df, df_len,
                                         string_framework, sizeof(string_framework),
-                                        lang, lang_len);
+                                        (UCHAR *)lang, lang_len,
+                                        UX_NULL);
     if (status != UX_SUCCESS)
         return status;
 

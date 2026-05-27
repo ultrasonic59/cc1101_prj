@@ -1,6 +1,7 @@
-# radio_extender
+# cc1101_prj — radio_extender
 
-Прошивка моста **USB/UART ↔ CC1101 (433 МГц)** на AT32F415 + ThreadX.  
+Прошивка моста **USB/UART ↔ CC1101 (433 МГц)** на AT32F415RCT7 (144 MHz), **Azure RTOS ThreadX**, радиомодуль ~433 МГц.  
+Исходники приложения: каталог [`radio_extender/`](radio_extender/).  
 Один формат кадра протокола для всех типов; длина на эфире **переменная** (5…64 байта).
 
 ---
@@ -134,7 +135,7 @@ CRC по эфиру — только в `protocol.c` (модемный CRC вы�
 | `task_rf_send` | 7 | **Единственная** передача в CC1101 |
 | `task_rf_receive` | 9 | Приём FIFO, разбор кадров |
 | `task_uart_rx` | 10 | UART → `q_rf_tx` (только DATA) |
-| `usb_task` | — | USB CDC |
+| `usb_task` | см. `USB_PRIORITY` | USB CDC (USBX) |
 
 \*ThreadX: **меньшее число = выше приоритет**.
 
@@ -225,18 +226,61 @@ sequenceDiagram
 
 ---
 
+## USB CDC (Azure RTOS USBX) {#usb}
+
+Раньше — только стек Artery VCP; сейчас **USBX device + CDC ACM** с DCD под AT32 OTG FS.
+
+| Компонент | Путь (`radio_extender/`) |
+|-----------|--------------------------|
+| Стек USBX | `../common/usbx` (группа `usbx` в `.ewp`) |
+| DCD | `src/usbx/ux_dcd_at32.c` |
+| IRQ-обёртка | `src/usbx/usbd_usbx_class.c` |
+| Инициализация | `src/usbx/usbx_app.c`, `src/usb_thr.c` |
+| API | `usbx_cdc_read()` / `usbx_cdc_write()`, `cdc_send_frame()` |
+
+- Конфиг: `src/usbx/ux_user.h` (`UX_DEVICE_SIDE_ONLY`, пул **12 KiB** в `usbx_app.c`).
+- IAR **CCDefines**: `UX_INCLUDE_USER_DEFINE_FILE` (без `UX_SOURCE_CODE` в проекте).
+- SETUP: `usbd_core_setup_handler` → `ux_dcd_at32_setup_handler`.
+- `usb_device_init()` в `main.c` до `tx_kernel_enter()`.
+- PA11/PA12 — OTG FS; `USB_VBUS_IGNORE` в `src/usb_conf.h` при **PA9 = USART1 TX** (MCU rev **C**).
+- После USB enum — опционально `UART_PC_Init()` (`uart_pc_init_deferred` в `usb_thr.c`).
+- Дополнение `.ewp`: `radio_extender/tools/patch_ewp_usbx.py`.
+
+---
+
 ## Радио
 
 - **433 МГц** (`FREQ2/1/0`, `SYNC1` в `cc1101.c`).
 - SPI: MSB/CPHA0, делитель /128 (автопоиск).
 - После TX: `SFRX` + `SRX` (`CC1101_ListenAfterTx`).
-- Лог UART **115200**.
+- Лог отладки: USART **PA2**, 115200 (`printk`).
 
 ---
 
 ## Сборка
 
-IAR: `radio_extender.ewp`. Обе платы — **одна сборка**.
+1. IAR EWARM 9.x: `radio_extender/radio_extender.eww`.
+2. Junction: `common/threadx`, `common/usbx`.
+3. **Rebuild All** (`radio_extender.ewp`).
+
+Миграция FreeRTOS → ThreadX: [radio_extender/MIGRATION_THREADX.md](radio_extender/MIGRATION_THREADX.md).  
+Обе платы — **одна сборка**.
+
+---
+
+## Структура репозитория
+
+```
+cc1101_prj/
+  README.md           — этот файл
+  common/threadx
+  common/usbx
+  radio_extender/
+    src/              — приложение, USBX
+    board/            — UART, плата
+    usb/              — Artery USB drivers
+    linker/
+```
 
 ---
 

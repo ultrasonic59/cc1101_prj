@@ -6,6 +6,7 @@
 #include "usbd_usbx_class.h"
 #include "cdc_desc.h"
 #include "bat_brd.h"
+#include "uart.h"
 #include "at32f415.h"
 #include "system_at32f415.h"
 
