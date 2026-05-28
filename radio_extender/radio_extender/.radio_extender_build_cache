@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BuildDb>
-    <Tool>
-        <Name>linker</Name>
-        <Parent>
-            <Path>D:\proj\cc1101_prj\radio_extender\radio_extender\Exe\emul_line.out</Path>
-            <Output>
-                <Path>D:\proj\cc1101_prj\radio_extender\radio_extender\List\emul_line.map</Path>
-            </Output>
-        </Parent>
-    </Tool>
-</BuildDb>
+<BuildDb />

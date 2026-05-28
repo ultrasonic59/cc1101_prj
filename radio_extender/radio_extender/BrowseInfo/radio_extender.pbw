@@ -131411,7 +131411,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@751@macro@DBG_BR",
+    "ID": "c:bat_brd.h@750@macro@DBG_BR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DBG_BR",
@@ -131425,7 +131425,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@836@macro@RLED_PIN",
+    "ID": "c:bat_brd.h@835@macro@RLED_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RLED_PIN",
@@ -131439,7 +131439,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@874@macro@RLED_GPIO",
+    "ID": "c:bat_brd.h@873@macro@RLED_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RLED_GPIO",
@@ -131453,7 +131453,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@959@macro@GLED_PIN",
+    "ID": "c:bat_brd.h@958@macro@GLED_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GLED_PIN",
@@ -131467,7 +131467,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@997@macro@GLED_GPIO",
+    "ID": "c:bat_brd.h@996@macro@GLED_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GLED_GPIO",
@@ -131481,7 +131481,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1082@macro@GDO2_PIN",
+    "ID": "c:bat_brd.h@1081@macro@GDO2_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GDO2_PIN",
@@ -131495,7 +131495,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1120@macro@GDO2_GPIO",
+    "ID": "c:bat_brd.h@1119@macro@GDO2_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GDO2_GPIO",
@@ -131509,7 +131509,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1210@macro@GDO0_PIN",
+    "ID": "c:bat_brd.h@1209@macro@GDO0_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GDO0_PIN",
@@ -131523,7 +131523,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1248@macro@GDO0_GPIO",
+    "ID": "c:bat_brd.h@1247@macro@GDO0_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GDO0_GPIO",
@@ -131537,7 +131537,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1400@macro@MISO_RF_PIN",
+    "ID": "c:bat_brd.h@1399@macro@MISO_RF_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MISO_RF_PIN",
@@ -131551,7 +131551,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1441@macro@MISO_RF_GPIO",
+    "ID": "c:bat_brd.h@1440@macro@MISO_RF_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MISO_RF_GPIO",
@@ -131565,7 +131565,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1532@macro@MOSI_RF_PIN",
+    "ID": "c:bat_brd.h@1531@macro@MOSI_RF_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MOSI_RF_PIN",
@@ -131579,7 +131579,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1573@macro@MOSI_RF_GPIO",
+    "ID": "c:bat_brd.h@1572@macro@MOSI_RF_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MOSI_RF_GPIO",
@@ -131593,7 +131593,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1663@macro@SCK_RF_PIN",
+    "ID": "c:bat_brd.h@1662@macro@SCK_RF_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SCK_RF_PIN",
@@ -131607,7 +131607,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1703@macro@SCK_RF_GPIO",
+    "ID": "c:bat_brd.h@1702@macro@SCK_RF_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SCK_RF_GPIO",
@@ -131621,7 +131621,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1792@macro@NCS_RF_PIN",
+    "ID": "c:bat_brd.h@1791@macro@NCS_RF_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "NCS_RF_PIN",
@@ -131635,7 +131635,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1832@macro@NCS_RF_GPIO",
+    "ID": "c:bat_brd.h@1831@macro@NCS_RF_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "NCS_RF_GPIO",
@@ -131649,7 +131649,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1918@macro@KEY_PIN",
+    "ID": "c:bat_brd.h@1917@macro@KEY_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEY_PIN",
@@ -131663,7 +131663,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@1963@macro@KEY_GPIO",
+    "ID": "c:bat_brd.h@1962@macro@KEY_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEY_GPIO",
@@ -131677,7 +131677,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2053@macro@UART_PC_TX_PIN",
+    "ID": "c:bat_brd.h@2052@macro@UART_PC_TX_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_TX_PIN",
@@ -131691,7 +131691,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2095@macro@UART_PC_TX_GPIO",
+    "ID": "c:bat_brd.h@2094@macro@UART_PC_TX_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_TX_GPIO",
@@ -131705,7 +131705,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2196@macro@UART_PC_RX_PIN",
+    "ID": "c:bat_brd.h@2195@macro@UART_PC_RX_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_RX_PIN",
@@ -131719,7 +131719,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2239@macro@UART_PC_RX_GPIO",
+    "ID": "c:bat_brd.h@2238@macro@UART_PC_RX_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_RX_GPIO",
@@ -131733,7 +131733,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2279@macro@UART_PC",
+    "ID": "c:bat_brd.h@2278@macro@UART_PC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC",
@@ -131747,7 +131747,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2320@macro@UART_PC_irq_hnd",
+    "ID": "c:bat_brd.h@2319@macro@UART_PC_irq_hnd",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_irq_hnd",
@@ -131761,7 +131761,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2368@macro@UART_PC_IRQn",
+    "ID": "c:bat_brd.h@2367@macro@UART_PC_IRQn",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_IRQn",
@@ -131775,7 +131775,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2410@macro@UART_PC_PERIPH_CLOCK",
+    "ID": "c:bat_brd.h@2409@macro@UART_PC_PERIPH_CLOCK",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PC_PERIPH_CLOCK",
@@ -131789,7 +131789,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2578@macro@UART_DBG_TX_PIN",
+    "ID": "c:bat_brd.h@2577@macro@UART_DBG_TX_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_TX_PIN",
@@ -131803,7 +131803,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2620@macro@UART_DBG_TX_GPIO",
+    "ID": "c:bat_brd.h@2619@macro@UART_DBG_TX_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_TX_GPIO",
@@ -131817,7 +131817,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2715@macro@UART_DBG_RX_PIN",
+    "ID": "c:bat_brd.h@2714@macro@UART_DBG_RX_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_RX_PIN",
@@ -131831,7 +131831,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2757@macro@UART_DBG_RX_GPIO",
+    "ID": "c:bat_brd.h@2756@macro@UART_DBG_RX_GPIO",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_RX_GPIO",
@@ -131845,7 +131845,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2846@macro@UART_DBG",
+    "ID": "c:bat_brd.h@2845@macro@UART_DBG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG",
@@ -131859,7 +131859,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2886@macro@UART_DBG_irq_hnd",
+    "ID": "c:bat_brd.h@2885@macro@UART_DBG_irq_hnd",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_irq_hnd",
@@ -131873,7 +131873,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@2936@macro@UART_DBG_PERIPH_CLOCK",
+    "ID": "c:bat_brd.h@2935@macro@UART_DBG_PERIPH_CLOCK",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_DBG_PERIPH_CLOCK",
@@ -131887,7 +131887,7 @@
     "scope": null
   },
   {
-    "ID": "c:bat_brd.h@3019@macro@msleep",
+    "ID": "c:bat_brd.h@3018@macro@msleep",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "msleep",
@@ -204857,1683 +204857,299 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@331@macro@CC1101_H",
+    "ID": "c:cobs.h@24@macro@COBS_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "CC1101_H",
+    "display": "COBS_H",
     "location": {
       "column": "9",
-      "line": "6",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "line": "2",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_H",
+    "name": "COBS_H",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@399@macro@CC1101_CMD_SRES",
+    "ID": "c:cobs.h@190@macro@COBS_ENCODED_MAX",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "CC1101_CMD_SRES",
+    "display": "COBS_ENCODED_MAX",
     "location": {
       "column": "9",
-      "line": "9",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "line": "8",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_SRES",
+    "name": "COBS_ENCODED_MAX",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@434@macro@CC1101_CMD_SRX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_SRX",
+    "ID": "c:@F@cobs_encode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t cobs_encode(const uint8_t *, size_t, uint8_t *)",
     "location": {
-      "column": "9",
-      "line": "10",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_CMD_SRX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@469@macro@CC1101_CMD_STX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_STX",
-    "location": {
-      "column": "9",
+      "column": "8",
       "line": "11",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_STX",
+    "name": "cobs_encode",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@504@macro@CC1101_CMD_SIDLE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_SIDLE",
+    "ID": "c:@F@cobs_encode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t cobs_encode(const uint8_t *, size_t, uint8_t *)",
     "location": {
-      "column": "9",
-      "line": "12",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "column": "8",
+      "line": "11",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_SIDLE",
+    "name": "cobs_encode",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@539@macro@CC1101_CMD_SCAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_SCAL",
+    "ID": "c:@F@cobs_decode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t cobs_decode(const uint8_t *, size_t, uint8_t *)",
     "location": {
-      "column": "9",
-      "line": "13",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_CMD_SCAL",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@574@macro@CC1101_CMD_SFRX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_SFRX",
-    "location": {
-      "column": "9",
+      "column": "8",
       "line": "14",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_SFRX",
+    "name": "cobs_decode",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@609@macro@CC1101_CMD_SFTX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_CMD_SFTX",
+    "ID": "c:@F@cobs_decode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t cobs_decode(const uint8_t *, size_t, uint8_t *)",
     "location": {
-      "column": "9",
-      "line": "15",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "column": "8",
+      "line": "14",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_SFTX",
+    "name": "cobs_decode",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@644@macro@CC1101_CMD_SNOP",
-    "What": "MacroDef",
+    "ID": "c:cobs.h@T@cobs_frame_handler_t",
+    "What": "Typedef",
     "defdec": "Def",
-    "display": "CC1101_CMD_SNOP",
+    "display": "void (*)(const uint8_t *, size_t, void *)",
     "location": {
-      "column": "9",
+      "column": "16",
       "line": "16",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_CMD_SNOP",
+    "name": "cobs_frame_handler_t",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@710@macro@CC1101_REG_IOCFG2",
-    "What": "MacroDef",
+    "ID": "c:@SA@cobs_decoder_t",
+    "What": "Struct",
     "defdec": "Def",
-    "display": "CC1101_REG_IOCFG2",
+    "display": "",
     "location": {
       "column": "9",
       "line": "18",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_IOCFG2",
+    "members": [
+      {
+        "ID": "c:@SA@cobs_decoder_t@FI@buf",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "buf",
+        "location": {
+          "column": "15",
+          "line": "19",
+          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+        },
+        "name": "buf",
+        "origin": "user_include",
+        "scope": "_anonymous_cobs_h_18_9"
+      },
+      {
+        "ID": "c:@SA@cobs_decoder_t@FI@cap",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "cap",
+        "location": {
+          "column": "15",
+          "line": "20",
+          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+        },
+        "name": "cap",
+        "origin": "user_include",
+        "scope": "_anonymous_cobs_h_18_9"
+      },
+      {
+        "ID": "c:@SA@cobs_decoder_t@FI@len",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "len",
+        "location": {
+          "column": "15",
+          "line": "21",
+          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+        },
+        "name": "len",
+        "origin": "user_include",
+        "scope": "_anonymous_cobs_h_18_9"
+      },
+      {
+        "ID": "c:@SA@cobs_decoder_t@FI@handler",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "handler",
+        "location": {
+          "column": "26",
+          "line": "22",
+          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+        },
+        "name": "handler",
+        "origin": "user_include",
+        "scope": "_anonymous_cobs_h_18_9"
+      },
+      {
+        "ID": "c:@SA@cobs_decoder_t@FI@ctx",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ctx",
+        "location": {
+          "column": "15",
+          "line": "23",
+          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+        },
+        "name": "ctx",
+        "origin": "user_include",
+        "scope": "_anonymous_cobs_h_18_9"
+      }
+    ],
+    "name": "",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@745@macro@CC1101_REG_IOCFG1",
-    "What": "MacroDef",
+    "ID": "c:@T@cobs_decoder_t",
+    "What": "Typedef",
     "defdec": "Def",
-    "display": "CC1101_REG_IOCFG1",
+    "display": "struct cobs_decoder_t",
     "location": {
-      "column": "9",
-      "line": "19",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_IOCFG1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@780@macro@CC1101_REG_IOCFG0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_IOCFG0",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_IOCFG0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@815@macro@CC1101_REG_FIFOTHR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FIFOTHR",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FIFOTHR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@850@macro@CC1101_REG_SYNC1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_SYNC1",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_SYNC1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@885@macro@CC1101_REG_SYNC0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_SYNC0",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_SYNC0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@920@macro@CC1101_REG_PKTLEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PKTLEN",
-    "location": {
-      "column": "9",
+      "column": "3",
       "line": "24",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_PKTLEN",
+    "name": "cobs_decoder_t",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@955@macro@CC1101_REG_PKTCTRL1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PKTCTRL1",
+    "ID": "c:@F@cobs_decoder_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_init(cobs_decoder_t *, uint8_t *, size_t, cobs_frame_handler_t, void *)",
     "location": {
-      "column": "9",
-      "line": "25",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_PKTCTRL1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@990@macro@CC1101_REG_PKTCTRL0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PKTCTRL0",
-    "location": {
-      "column": "9",
+      "column": "6",
       "line": "26",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_PKTCTRL0",
+    "name": "cobs_decoder_init",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1025@macro@CC1101_REG_ADDR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_ADDR",
+    "ID": "c:@F@cobs_decoder_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_init(cobs_decoder_t *, uint8_t *, size_t, cobs_frame_handler_t, void *)",
     "location": {
-      "column": "9",
-      "line": "27",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "column": "6",
+      "line": "26",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_ADDR",
+    "name": "cobs_decoder_init",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1060@macro@CC1101_REG_CHANNR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_CHANNR",
+    "ID": "c:@F@cobs_decoder_feed",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_feed(cobs_decoder_t *, const uint8_t *, size_t)",
     "location": {
-      "column": "9",
-      "line": "28",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_CHANNR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1095@macro@CC1101_REG_FSCTRL1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCTRL1",
-    "location": {
-      "column": "9",
-      "line": "29",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSCTRL1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1130@macro@CC1101_REG_FSCTRL0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCTRL0",
-    "location": {
-      "column": "9",
+      "column": "6",
       "line": "30",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_FSCTRL0",
+    "name": "cobs_decoder_feed",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1165@macro@CC1101_REG_FREQ2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREQ2",
+    "ID": "c:@F@cobs_decoder_feed",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_feed(cobs_decoder_t *, const uint8_t *, size_t)",
     "location": {
-      "column": "9",
-      "line": "31",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "column": "6",
+      "line": "30",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_FREQ2",
+    "name": "cobs_decoder_feed",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1200@macro@CC1101_REG_FREQ1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREQ1",
+    "ID": "c:@F@cobs_decoder_reset",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_reset(cobs_decoder_t *)",
     "location": {
-      "column": "9",
+      "column": "6",
       "line": "32",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_FREQ1",
+    "name": "cobs_decoder_reset",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1235@macro@CC1101_REG_FREQ0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREQ0",
+    "ID": "c:@F@cobs_decoder_reset",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void cobs_decoder_reset(cobs_decoder_t *)",
     "location": {
-      "column": "9",
-      "line": "33",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "column": "6",
+      "line": "32",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
     },
-    "name": "CC1101_REG_FREQ0",
+    "name": "cobs_decoder_reset",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:cc1101.h@1270@macro@CC1101_REG_MDMCFG4",
-    "What": "MacroDef",
+    "ID": "c:@F@system_clock_config",
+    "What": "Function",
     "defdec": "Def",
-    "display": "CC1101_REG_MDMCFG4",
+    "display": "void system_clock_config(void)",
     "location": {
-      "column": "9",
-      "line": "34",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MDMCFG4",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1305@macro@CC1101_REG_MDMCFG3",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MDMCFG3",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MDMCFG3",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1340@macro@CC1101_REG_MDMCFG2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MDMCFG2",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MDMCFG2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1375@macro@CC1101_REG_MDMCFG1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MDMCFG1",
-    "location": {
-      "column": "9",
-      "line": "37",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MDMCFG1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1410@macro@CC1101_REG_MDMCFG0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MDMCFG0",
-    "location": {
-      "column": "9",
-      "line": "38",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MDMCFG0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1445@macro@CC1101_REG_DEVIATN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_DEVIATN",
-    "location": {
-      "column": "9",
-      "line": "39",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_DEVIATN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1480@macro@CC1101_REG_MCSM2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MCSM2",
-    "location": {
-      "column": "9",
-      "line": "40",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MCSM2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1515@macro@CC1101_REG_MCSM1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MCSM1",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MCSM1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1550@macro@CC1101_REG_MCSM0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MCSM0",
-    "location": {
-      "column": "9",
-      "line": "42",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MCSM0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1585@macro@CC1101_REG_FOCCFG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FOCCFG",
-    "location": {
-      "column": "9",
-      "line": "43",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FOCCFG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1620@macro@CC1101_REG_BSCFG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_BSCFG",
-    "location": {
-      "column": "9",
-      "line": "44",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_BSCFG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1655@macro@CC1101_REG_AGCCTRL2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_AGCCTRL2",
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_AGCCTRL2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1690@macro@CC1101_REG_AGCCTRL1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_AGCCTRL1",
-    "location": {
-      "column": "9",
-      "line": "46",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_AGCCTRL1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1725@macro@CC1101_REG_AGCCTRL0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_AGCCTRL0",
-    "location": {
-      "column": "9",
-      "line": "47",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_AGCCTRL0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1760@macro@CC1101_REG_WOREVT1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_WOREVT1",
-    "location": {
-      "column": "9",
+      "column": "6",
       "line": "48",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_clock.c"
     },
-    "name": "CC1101_REG_WOREVT1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1795@macro@CC1101_REG_WOREVT0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_WOREVT0",
-    "location": {
-      "column": "9",
-      "line": "49",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_WOREVT0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1830@macro@CC1101_REG_WORCTRL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_WORCTRL",
-    "location": {
-      "column": "9",
-      "line": "50",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_WORCTRL",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1865@macro@CC1101_REG_FREND1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREND1",
-    "location": {
-      "column": "9",
-      "line": "51",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FREND1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1900@macro@CC1101_REG_FREND0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREND0",
-    "location": {
-      "column": "9",
-      "line": "52",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FREND0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1935@macro@CC1101_REG_FSCAL3",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCAL3",
-    "location": {
-      "column": "9",
-      "line": "53",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSCAL3",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@1970@macro@CC1101_REG_FSCAL2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCAL2",
-    "location": {
-      "column": "9",
-      "line": "54",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSCAL2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2005@macro@CC1101_REG_FSCAL1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCAL1",
-    "location": {
-      "column": "9",
-      "line": "55",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSCAL1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2040@macro@CC1101_REG_FSCAL0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSCAL0",
-    "location": {
-      "column": "9",
-      "line": "56",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSCAL0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2075@macro@CC1101_REG_RCCTRL1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RCCTRL1",
-    "location": {
-      "column": "9",
-      "line": "57",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RCCTRL1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2110@macro@CC1101_REG_RCCTRL0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RCCTRL0",
-    "location": {
-      "column": "9",
-      "line": "58",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RCCTRL0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2145@macro@CC1101_REG_FSTEST",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FSTEST",
-    "location": {
-      "column": "9",
-      "line": "59",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FSTEST",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2180@macro@CC1101_REG_PTEST",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PTEST",
-    "location": {
-      "column": "9",
-      "line": "60",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_PTEST",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2215@macro@CC1101_REG_AGCTEST",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_AGCTEST",
-    "location": {
-      "column": "9",
-      "line": "61",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_AGCTEST",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2250@macro@CC1101_REG_TEST2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_TEST2",
-    "location": {
-      "column": "9",
-      "line": "62",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_TEST2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2285@macro@CC1101_REG_TEST1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_TEST1",
-    "location": {
-      "column": "9",
-      "line": "63",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_TEST1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2320@macro@CC1101_REG_TEST0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_TEST0",
-    "location": {
-      "column": "9",
-      "line": "64",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_TEST0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2355@macro@CC1101_REG_PARTNUM",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PARTNUM",
-    "location": {
-      "column": "9",
-      "line": "65",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_PARTNUM",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2390@macro@CC1101_REG_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_VERSION",
-    "location": {
-      "column": "9",
-      "line": "66",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2425@macro@CC1101_REG_FREQEST",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FREQEST",
-    "location": {
-      "column": "9",
-      "line": "67",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FREQEST",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2460@macro@CC1101_REG_LQI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_LQI",
-    "location": {
-      "column": "9",
-      "line": "68",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_LQI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2495@macro@CC1101_REG_RSSI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RSSI",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RSSI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2530@macro@CC1101_REG_MARCSTATE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_MARCSTATE",
-    "location": {
-      "column": "9",
-      "line": "70",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_MARCSTATE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2565@macro@CC1101_MARCSTATE_TX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_TX",
-    "location": {
-      "column": "9",
-      "line": "71",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_TX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2600@macro@CC1101_MARCSTATE_IDLE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_IDLE",
-    "location": {
-      "column": "9",
-      "line": "72",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_IDLE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2636@macro@CC1101_MARCSTATE_RX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_RX",
-    "location": {
-      "column": "9",
-      "line": "73",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_RX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2671@macro@CC1101_MARCSTATE_RX_END",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_RX_END",
-    "location": {
-      "column": "9",
-      "line": "74",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_RX_END",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2709@macro@CC1101_MARCSTATE_TXRX_SWITCH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_TXRX_SWITCH",
-    "location": {
-      "column": "9",
-      "line": "75",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_TXRX_SWITCH",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2752@macro@CC1101_MARCSTATE_RXFIFO_OVERFLOW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MARCSTATE_RXFIFO_OVERFLOW",
-    "location": {
-      "column": "9",
-      "line": "76",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MARCSTATE_RXFIFO_OVERFLOW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2799@macro@CC1101_RXBYTES_OVERFLOW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_RXBYTES_OVERFLOW",
-    "location": {
-      "column": "9",
-      "line": "77",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_RXBYTES_OVERFLOW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2838@macro@CC1101_LINK_PKTLEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_LINK_PKTLEN",
-    "location": {
-      "column": "9",
-      "line": "78",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_LINK_PKTLEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2871@macro@CC1101_MAX_PKTLEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_MAX_PKTLEN",
-    "location": {
-      "column": "9",
-      "line": "79",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_MAX_PKTLEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2905@macro@CC1101_PKTCTRL0_VAR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_PKTCTRL0_VAR",
-    "location": {
-      "column": "9",
-      "line": "80",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_PKTCTRL0_VAR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2941@macro@CC1101_REG_WORTIME1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_WORTIME1",
-    "location": {
-      "column": "9",
-      "line": "81",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_WORTIME1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@2976@macro@CC1101_REG_WORTIME0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_WORTIME0",
-    "location": {
-      "column": "9",
-      "line": "82",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_WORTIME0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3011@macro@CC1101_REG_PKTSTATUS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PKTSTATUS",
-    "location": {
-      "column": "9",
-      "line": "83",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_PKTSTATUS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3046@macro@CC1101_REG_VCO_VC_DAC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_VCO_VC_DAC",
-    "location": {
-      "column": "9",
-      "line": "84",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_VCO_VC_DAC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3082@macro@CC1101_REG_TXBYTES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_TXBYTES",
-    "location": {
-      "column": "9",
-      "line": "85",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_TXBYTES",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3117@macro@CC1101_REG_RXBYTES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RXBYTES",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RXBYTES",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3152@macro@CC1101_REG_RCCTRL1_STATUS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RCCTRL1_STATUS",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RCCTRL1_STATUS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3192@macro@CC1101_REG_RCCTRL0_STATUS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_RCCTRL0_STATUS",
-    "location": {
-      "column": "9",
-      "line": "88",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_RCCTRL0_STATUS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3232@macro@CC1101_REG_PATABLE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_PATABLE",
-    "location": {
-      "column": "9",
-      "line": "89",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_PATABLE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.h@3267@macro@CC1101_REG_FIFO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CC1101_REG_FIFO",
-    "location": {
-      "column": "9",
-      "line": "90",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_REG_FIFO",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_Init(void)",
-    "location": {
-      "column": "13",
-      "line": "92",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_Init(void)",
-    "location": {
-      "column": "13",
-      "line": "92",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_WriteReg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
-    "location": {
-      "column": "13",
-      "line": "93",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_WriteReg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_WriteReg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
-    "location": {
-      "column": "13",
-      "line": "93",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_WriteReg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReadReg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ReadReg(uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReadReg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReadReg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ReadReg(uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReadReg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_WriteBurst",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "95",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_WriteBurst",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_WriteBurst",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "95",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_WriteBurst",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReadBurst",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "96",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReadBurst",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReadBurst",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "96",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReadBurst",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SendCmd",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SendCmd(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "97",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SendCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SendCmd",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SendCmd(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "97",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SendCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SetFrequency",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SetFrequency(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "98",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SetFrequency",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SetFrequency",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SetFrequency(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "98",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SetFrequency",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SetPower",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SetPower(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "99",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SetPower",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SetPower",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SetPower(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "99",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SetPower",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_CheckConnection",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_CheckConnection(void)",
-    "location": {
-      "column": "9",
-      "line": "101",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_CheckConnection",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_CheckConnection",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_CheckConnection(void)",
-    "location": {
-      "column": "9",
-      "line": "101",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_CheckConnection",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_VerifySpi",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_VerifySpi(void)",
-    "location": {
-      "column": "9",
-      "line": "102",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_VerifySpi",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_VerifySpi",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_VerifySpi(void)",
-    "location": {
-      "column": "9",
-      "line": "102",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_VerifySpi",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ProbeSpi",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ProbeSpi(void)",
-    "location": {
-      "column": "9",
-      "line": "103",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ProbeSpi",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ProbeSpi",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ProbeSpi(void)",
-    "location": {
-      "column": "9",
-      "line": "103",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ProbeSpi",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReapplyRadio",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ReapplyRadio(void)",
-    "location": {
-      "column": "9",
-      "line": "104",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReapplyRadio",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ReapplyRadio",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_ReapplyRadio(void)",
-    "location": {
-      "column": "9",
-      "line": "104",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ReapplyRadio",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ApplyVariablePacketMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ApplyVariablePacketMode(void)",
-    "location": {
-      "column": "6",
-      "line": "105",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ApplyVariablePacketMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ApplyVariablePacketMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ApplyVariablePacketMode(void)",
-    "location": {
-      "column": "6",
-      "line": "105",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ApplyVariablePacketMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ApplyLinkPacketMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ApplyLinkPacketMode(void)",
-    "location": {
-      "column": "6",
-      "line": "106",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ApplyLinkPacketMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ApplyLinkPacketMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ApplyLinkPacketMode(void)",
-    "location": {
-      "column": "6",
-      "line": "106",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ApplyLinkPacketMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_FlushRxFifo",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_FlushRxFifo(void)",
-    "location": {
-      "column": "6",
-      "line": "107",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_FlushRxFifo",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_FlushRxFifo",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_FlushRxFifo(void)",
-    "location": {
-      "column": "6",
-      "line": "107",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_FlushRxFifo",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_EnterRx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_EnterRx(void)",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_EnterRx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_EnterRx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t CC1101_EnterRx(void)",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_EnterRx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_StrobeRx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_StrobeRx(void)",
-    "location": {
-      "column": "6",
-      "line": "109",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_StrobeRx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_StrobeRx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_StrobeRx(void)",
-    "location": {
-      "column": "6",
-      "line": "109",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_StrobeRx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ClearRxFifo",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ClearRxFifo(void)",
-    "location": {
-      "column": "6",
-      "line": "110",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ClearRxFifo",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ClearRxFifo",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ClearRxFifo(void)",
-    "location": {
-      "column": "6",
-      "line": "110",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ClearRxFifo",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ListenAfterTx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ListenAfterTx(void)",
-    "location": {
-      "column": "6",
-      "line": "111",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ListenAfterTx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ListenAfterTx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_ListenAfterTx(void)",
-    "location": {
-      "column": "6",
-      "line": "111",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_ListenAfterTx",
-    "origin": "user_include",
+    "name": "system_clock_config",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -208455,48 +207071,6 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@spi_rf_sel_msb",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "spi_rf_sel_msb",
-    "location": {
-      "column": "16",
-      "line": "14",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "spi_rf_sel_msb",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@spi_rf_sel_cpha2",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "spi_rf_sel_cpha2",
-    "location": {
-      "column": "16",
-      "line": "15",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "spi_rf_sel_cpha2",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@spi_rf_sel_div",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "spi_rf_sel_div",
-    "location": {
-      "column": "16",
-      "line": "16",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "spi_rf_sel_div",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:cc1101.c@F@SPI_RF_Transfer",
     "What": "Function",
     "defdec": "Def",
@@ -208511,7 +207085,7 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@698@F@SPI_RF_Transfer@rez",
+    "ID": "c:cc1101.c@702@F@SPI_RF_Transfer@rez",
     "What": "Variable",
     "defdec": "Def",
     "display": "rez",
@@ -208539,7 +207113,7 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@1014@F@CC1101_WaitReady@t",
+    "ID": "c:cc1101.c@1018@F@CC1101_WaitReady@t",
     "What": "Variable",
     "defdec": "Def",
     "display": "t",
@@ -208553,153 +207127,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@F@cc1101_spi_score",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int cc1101_spi_score(uint8_t *, uint8_t *, uint8_t *)",
-    "location": {
-      "column": "12",
-      "line": "43",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "cc1101_spi_score",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@1293@F@cc1101_spi_score@score",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "score",
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "score",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@1309@F@cc1101_spi_score@part",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "part",
-    "location": {
-      "column": "9",
-      "line": "46",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "part",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@1325@F@cc1101_spi_score@vers",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "vers",
-    "location": {
-      "column": "10",
-      "line": "47",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "vers",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@1340@F@cc1101_spi_score@_rb",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "_rb",
-    "location": {
-      "column": "9",
-      "line": "48",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "_rb",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_ProbeSpi",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t CC1101_ProbeSpi(void)",
-    "location": {
-      "column": "9",
-      "line": "75",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "CC1101_ProbeSpi",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@1981@F@CC1101_ProbeSpi@partnum",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "partnum",
-    "location": {
-      "column": "13",
-      "line": "77",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "partnum",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@2007@F@CC1101_ProbeSpi@version",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "version",
-    "location": {
-      "column": "13",
-      "line": "78",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "version",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@2033@F@CC1101_ProbeSpi@rb",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rb",
-    "location": {
-      "column": "13",
-      "line": "79",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "rb",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:cc1101.c@2054@F@CC1101_ProbeSpi@score",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "score",
-    "location": {
-      "column": "9",
-      "line": "80",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "score",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@CC1101_SendCmd",
     "What": "Function",
     "defdec": "Dec",
     "display": "void CC1101_SendCmd(uint8_t)",
     "location": {
       "column": "6",
-      "line": "98",
+      "line": "100",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SendCmd",
@@ -208713,7 +207147,7 @@
     "display": "void cc1101_write_radio_block(void)",
     "location": {
       "column": "13",
-      "line": "100",
+      "line": "102",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "cc1101_write_radio_block",
@@ -208721,13 +207155,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@2652@F@cc1101_write_radio_block@freqs",
+    "ID": "c:cc1101.c@2675@F@cc1101_write_radio_block@freqs",
     "What": "Variable",
     "defdec": "Def",
     "display": "freqs",
     "location": {
       "column": "13",
-      "line": "102",
+      "line": "104",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "freqs",
@@ -208741,7 +207175,7 @@
     "display": "uint8_t CC1101_ReapplyRadio(void)",
     "location": {
       "column": "9",
-      "line": "126",
+      "line": "128",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReapplyRadio",
@@ -208749,13 +207183,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3488@F@CC1101_ReapplyRadio@f2",
+    "ID": "c:cc1101.c@3511@F@CC1101_ReapplyRadio@f2",
     "What": "Variable",
     "defdec": "Def",
     "display": "f2",
     "location": {
       "column": "13",
-      "line": "128",
+      "line": "130",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f2",
@@ -208763,13 +207197,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3505@F@CC1101_ReapplyRadio@f1",
+    "ID": "c:cc1101.c@3528@F@CC1101_ReapplyRadio@f1",
     "What": "Variable",
     "defdec": "Def",
     "display": "f1",
     "location": {
       "column": "13",
-      "line": "129",
+      "line": "131",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f1",
@@ -208777,13 +207211,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3522@F@CC1101_ReapplyRadio@f0",
+    "ID": "c:cc1101.c@3545@F@CC1101_ReapplyRadio@f0",
     "What": "Variable",
     "defdec": "Def",
     "display": "f0",
     "location": {
       "column": "13",
-      "line": "130",
+      "line": "132",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f0",
@@ -208791,13 +207225,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3539@F@CC1101_ReapplyRadio@s1",
+    "ID": "c:cc1101.c@3562@F@CC1101_ReapplyRadio@s1",
     "What": "Variable",
     "defdec": "Def",
     "display": "s1",
     "location": {
       "column": "13",
-      "line": "131",
+      "line": "133",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "s1",
@@ -208811,7 +207245,7 @@
     "display": "void CC1101_ApplyVariablePacketMode(void)",
     "location": {
       "column": "6",
-      "line": "147",
+      "line": "149",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ApplyVariablePacketMode",
@@ -208825,7 +207259,7 @@
     "display": "void CC1101_ApplyLinkPacketMode(void)",
     "location": {
       "column": "6",
-      "line": "155",
+      "line": "157",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ApplyLinkPacketMode",
@@ -208839,7 +207273,7 @@
     "display": "void CC1101_ClearRxFifo(void)",
     "location": {
       "column": "6",
-      "line": "163",
+      "line": "165",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ClearRxFifo",
@@ -208847,13 +207281,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@4665@F@CC1101_ClearRxFifo@rxb",
+    "ID": "c:cc1101.c@4688@F@CC1101_ClearRxFifo@rxb",
     "What": "Variable",
     "defdec": "Def",
     "display": "rxb",
     "location": {
       "column": "13",
-      "line": "165",
+      "line": "167",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "rxb",
@@ -208867,7 +207301,7 @@
     "display": "void CC1101_ListenAfterTx(void)",
     "location": {
       "column": "6",
-      "line": "178",
+      "line": "180",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ListenAfterTx",
@@ -208881,7 +207315,7 @@
     "display": "void CC1101_StrobeRx(void)",
     "location": {
       "column": "6",
-      "line": "185",
+      "line": "187",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_StrobeRx",
@@ -208895,7 +207329,7 @@
     "display": "uint8_t CC1101_EnterRx(void)",
     "location": {
       "column": "9",
-      "line": "191",
+      "line": "193",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_EnterRx",
@@ -208909,7 +207343,7 @@
     "display": "void CC1101_FlushRxFifo(void)",
     "location": {
       "column": "6",
-      "line": "202",
+      "line": "204",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_FlushRxFifo",
@@ -208923,7 +207357,7 @@
     "display": "void CC1101_Init(void)",
     "location": {
       "column": "6",
-      "line": "211",
+      "line": "213",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_Init",
@@ -208937,7 +207371,7 @@
     "display": "uint8_t CC1101_VerifySpi(void)",
     "location": {
       "column": "9",
-      "line": "245",
+      "line": "247",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_VerifySpi",
@@ -208945,13 +207379,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@6957@F@CC1101_VerifySpi@partnum",
+    "ID": "c:cc1101.c@7104@F@CC1101_VerifySpi@partnum",
     "What": "Variable",
     "defdec": "Def",
     "display": "partnum",
     "location": {
       "column": "13",
-      "line": "247",
+      "line": "251",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "partnum",
@@ -208959,13 +207393,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7016@F@CC1101_VerifySpi@version",
+    "ID": "c:cc1101.c@7166@F@CC1101_VerifySpi@version",
     "What": "Variable",
     "defdec": "Def",
     "display": "version",
     "location": {
       "column": "13",
-      "line": "248",
+      "line": "252",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "version",
@@ -208973,13 +207407,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7075@F@CC1101_VerifySpi@rb",
+    "ID": "c:cc1101.c@7228@F@CC1101_VerifySpi@rb",
     "What": "Variable",
     "defdec": "Def",
     "display": "rb",
     "location": {
       "column": "13",
-      "line": "249",
+      "line": "253",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "rb",
@@ -208993,7 +207427,7 @@
     "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "261",
+      "line": "267",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_WriteReg",
@@ -209007,7 +207441,7 @@
     "display": "uint8_t CC1101_ReadReg(uint8_t)",
     "location": {
       "column": "9",
-      "line": "267",
+      "line": "273",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReadReg",
@@ -209015,13 +207449,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7536@F@CC1101_ReadReg@value",
+    "ID": "c:cc1101.c@7781@F@CC1101_ReadReg@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "268",
+      "line": "274",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "value",
@@ -209035,7 +207469,7 @@
     "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "275",
+      "line": "281",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_WriteBurst",
@@ -209043,13 +207477,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7879@F@CC1101_WriteBurst@i",
+    "ID": "c:cc1101.c@8124@F@CC1101_WriteBurst@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "278",
+      "line": "284",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "i",
@@ -209063,7 +207497,7 @@
     "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "283",
+      "line": "289",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReadBurst",
@@ -209071,13 +207505,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@8135@F@CC1101_ReadBurst@i",
+    "ID": "c:cc1101.c@8380@F@CC1101_ReadBurst@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "286",
+      "line": "292",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "i",
@@ -209091,7 +207525,7 @@
     "display": "void CC1101_SendCmd(uint8_t)",
     "location": {
       "column": "6",
-      "line": "291",
+      "line": "297",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SendCmd",
@@ -209105,7 +207539,7 @@
     "display": "void CC1101_SetFrequency(uint32_t)",
     "location": {
       "column": "6",
-      "line": "297",
+      "line": "303",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SetFrequency",
@@ -209119,24 +207553,10 @@
     "display": "void CC1101_SetPower(uint8_t)",
     "location": {
       "column": "6",
-      "line": "300",
+      "line": "306",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SetPower",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_CheckConnection",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t CC1101_CheckConnection(void)",
-    "location": {
-      "column": "9",
-      "line": "304",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
-    },
-    "name": "CC1101_CheckConnection",
     "origin": "project_file",
     "scope": null
   },
@@ -209309,45 +207729,2049 @@
     "scope": null
   },
   {
-    "ID": "c:@F@send_char_dbg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int send_char_dbg(int)",
+    "ID": "c:ux_utility_thread_resume.c@1542@macro@UX_SOURCE_CODE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UX_SOURCE_CODE",
     "location": {
-      "column": "12",
-      "line": "15",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
+      "column": "9",
+      "line": "26",
+      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
     },
-    "name": "send_char_dbg",
+    "name": "UX_SOURCE_CODE",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@tx_systick_config",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tx_systick_config(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
-    },
-    "name": "tx_systick_config",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main",
+    "ID": "c:@F@_ux_utility_thread_resume",
     "What": "Function",
     "defdec": "Def",
-    "display": "int main(void)",
+    "display": "UINT _ux_utility_thread_resume(TX_THREAD *)",
     "location": {
-      "column": "5",
-      "line": "18",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
+      "column": "7",
+      "line": "77",
+      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
     },
-    "name": "main",
+    "name": "_ux_utility_thread_resume",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:ux_utility_thread_resume.c@5213@F@_ux_utility_thread_resume@status",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "status",
+    "location": {
+      "column": "9",
+      "line": "80",
+      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
+    },
+    "name": "status",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@331@macro@CC1101_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_H",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@399@macro@CC1101_CMD_SRES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SRES",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SRES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@434@macro@CC1101_CMD_SRX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SRX",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SRX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@469@macro@CC1101_CMD_STX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_STX",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_STX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@504@macro@CC1101_CMD_SIDLE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SIDLE",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SIDLE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@539@macro@CC1101_CMD_SCAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SCAL",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SCAL",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@574@macro@CC1101_CMD_SFRX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SFRX",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SFRX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@609@macro@CC1101_CMD_SFTX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SFTX",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SFTX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@644@macro@CC1101_CMD_SNOP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_CMD_SNOP",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_CMD_SNOP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@710@macro@CC1101_REG_IOCFG2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_IOCFG2",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_IOCFG2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@745@macro@CC1101_REG_IOCFG1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_IOCFG1",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_IOCFG1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@780@macro@CC1101_REG_IOCFG0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_IOCFG0",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_IOCFG0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@815@macro@CC1101_REG_FIFOTHR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FIFOTHR",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FIFOTHR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@850@macro@CC1101_REG_SYNC1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_SYNC1",
+    "location": {
+      "column": "9",
+      "line": "22",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_SYNC1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@885@macro@CC1101_REG_SYNC0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_SYNC0",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_SYNC0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@920@macro@CC1101_REG_PKTLEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PKTLEN",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PKTLEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@955@macro@CC1101_REG_PKTCTRL1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PKTCTRL1",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PKTCTRL1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@990@macro@CC1101_REG_PKTCTRL0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PKTCTRL0",
+    "location": {
+      "column": "9",
+      "line": "26",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PKTCTRL0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1025@macro@CC1101_REG_ADDR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_ADDR",
+    "location": {
+      "column": "9",
+      "line": "27",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_ADDR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1060@macro@CC1101_REG_CHANNR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_CHANNR",
+    "location": {
+      "column": "9",
+      "line": "28",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_CHANNR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1095@macro@CC1101_REG_FSCTRL1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCTRL1",
+    "location": {
+      "column": "9",
+      "line": "29",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCTRL1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1130@macro@CC1101_REG_FSCTRL0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCTRL0",
+    "location": {
+      "column": "9",
+      "line": "30",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCTRL0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1165@macro@CC1101_REG_FREQ2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREQ2",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREQ2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1200@macro@CC1101_REG_FREQ1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREQ1",
+    "location": {
+      "column": "9",
+      "line": "32",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREQ1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1235@macro@CC1101_REG_FREQ0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREQ0",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREQ0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1270@macro@CC1101_REG_MDMCFG4",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MDMCFG4",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MDMCFG4",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1305@macro@CC1101_REG_MDMCFG3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MDMCFG3",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MDMCFG3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1340@macro@CC1101_REG_MDMCFG2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MDMCFG2",
+    "location": {
+      "column": "9",
+      "line": "36",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MDMCFG2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1375@macro@CC1101_REG_MDMCFG1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MDMCFG1",
+    "location": {
+      "column": "9",
+      "line": "37",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MDMCFG1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1410@macro@CC1101_REG_MDMCFG0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MDMCFG0",
+    "location": {
+      "column": "9",
+      "line": "38",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MDMCFG0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1445@macro@CC1101_REG_DEVIATN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_DEVIATN",
+    "location": {
+      "column": "9",
+      "line": "39",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_DEVIATN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1480@macro@CC1101_REG_MCSM2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MCSM2",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MCSM2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1515@macro@CC1101_REG_MCSM1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MCSM1",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MCSM1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1550@macro@CC1101_REG_MCSM0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MCSM0",
+    "location": {
+      "column": "9",
+      "line": "42",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MCSM0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1585@macro@CC1101_REG_FOCCFG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FOCCFG",
+    "location": {
+      "column": "9",
+      "line": "43",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FOCCFG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1620@macro@CC1101_REG_BSCFG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_BSCFG",
+    "location": {
+      "column": "9",
+      "line": "44",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_BSCFG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1655@macro@CC1101_REG_AGCCTRL2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_AGCCTRL2",
+    "location": {
+      "column": "9",
+      "line": "45",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_AGCCTRL2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1690@macro@CC1101_REG_AGCCTRL1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_AGCCTRL1",
+    "location": {
+      "column": "9",
+      "line": "46",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_AGCCTRL1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1725@macro@CC1101_REG_AGCCTRL0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_AGCCTRL0",
+    "location": {
+      "column": "9",
+      "line": "47",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_AGCCTRL0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1760@macro@CC1101_REG_WOREVT1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_WOREVT1",
+    "location": {
+      "column": "9",
+      "line": "48",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_WOREVT1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1795@macro@CC1101_REG_WOREVT0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_WOREVT0",
+    "location": {
+      "column": "9",
+      "line": "49",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_WOREVT0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1830@macro@CC1101_REG_WORCTRL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_WORCTRL",
+    "location": {
+      "column": "9",
+      "line": "50",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_WORCTRL",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1865@macro@CC1101_REG_FREND1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREND1",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREND1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1900@macro@CC1101_REG_FREND0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREND0",
+    "location": {
+      "column": "9",
+      "line": "52",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREND0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1935@macro@CC1101_REG_FSCAL3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCAL3",
+    "location": {
+      "column": "9",
+      "line": "53",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCAL3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@1970@macro@CC1101_REG_FSCAL2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCAL2",
+    "location": {
+      "column": "9",
+      "line": "54",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCAL2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2005@macro@CC1101_REG_FSCAL1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCAL1",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCAL1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2040@macro@CC1101_REG_FSCAL0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSCAL0",
+    "location": {
+      "column": "9",
+      "line": "56",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSCAL0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2075@macro@CC1101_REG_RCCTRL1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RCCTRL1",
+    "location": {
+      "column": "9",
+      "line": "57",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RCCTRL1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2110@macro@CC1101_REG_RCCTRL0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RCCTRL0",
+    "location": {
+      "column": "9",
+      "line": "58",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RCCTRL0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2145@macro@CC1101_REG_FSTEST",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FSTEST",
+    "location": {
+      "column": "9",
+      "line": "59",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FSTEST",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2180@macro@CC1101_REG_PTEST",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PTEST",
+    "location": {
+      "column": "9",
+      "line": "60",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PTEST",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2215@macro@CC1101_REG_AGCTEST",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_AGCTEST",
+    "location": {
+      "column": "9",
+      "line": "61",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_AGCTEST",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2250@macro@CC1101_REG_TEST2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_TEST2",
+    "location": {
+      "column": "9",
+      "line": "62",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_TEST2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2285@macro@CC1101_REG_TEST1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_TEST1",
+    "location": {
+      "column": "9",
+      "line": "63",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_TEST1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2320@macro@CC1101_REG_TEST0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_TEST0",
+    "location": {
+      "column": "9",
+      "line": "64",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_TEST0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2355@macro@CC1101_REG_PARTNUM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PARTNUM",
+    "location": {
+      "column": "9",
+      "line": "65",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PARTNUM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2390@macro@CC1101_REG_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_VERSION",
+    "location": {
+      "column": "9",
+      "line": "66",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2425@macro@CC1101_REG_FREQEST",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FREQEST",
+    "location": {
+      "column": "9",
+      "line": "67",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FREQEST",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2460@macro@CC1101_REG_LQI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_LQI",
+    "location": {
+      "column": "9",
+      "line": "68",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_LQI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2495@macro@CC1101_REG_RSSI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RSSI",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RSSI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2530@macro@CC1101_REG_MARCSTATE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_MARCSTATE",
+    "location": {
+      "column": "9",
+      "line": "70",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_MARCSTATE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2565@macro@CC1101_MARCSTATE_TX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_TX",
+    "location": {
+      "column": "9",
+      "line": "71",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_TX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2600@macro@CC1101_MARCSTATE_IDLE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_IDLE",
+    "location": {
+      "column": "9",
+      "line": "72",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_IDLE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2636@macro@CC1101_MARCSTATE_RX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_RX",
+    "location": {
+      "column": "9",
+      "line": "73",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_RX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2671@macro@CC1101_MARCSTATE_RX_END",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_RX_END",
+    "location": {
+      "column": "9",
+      "line": "74",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_RX_END",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2709@macro@CC1101_MARCSTATE_TXRX_SWITCH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_TXRX_SWITCH",
+    "location": {
+      "column": "9",
+      "line": "75",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_TXRX_SWITCH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2752@macro@CC1101_MARCSTATE_RXFIFO_OVERFLOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MARCSTATE_RXFIFO_OVERFLOW",
+    "location": {
+      "column": "9",
+      "line": "76",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MARCSTATE_RXFIFO_OVERFLOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2799@macro@CC1101_RXBYTES_OVERFLOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_RXBYTES_OVERFLOW",
+    "location": {
+      "column": "9",
+      "line": "77",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_RXBYTES_OVERFLOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2838@macro@CC1101_LINK_PKTLEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_LINK_PKTLEN",
+    "location": {
+      "column": "9",
+      "line": "78",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_LINK_PKTLEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2871@macro@CC1101_MAX_PKTLEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_MAX_PKTLEN",
+    "location": {
+      "column": "9",
+      "line": "79",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_MAX_PKTLEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2905@macro@CC1101_PKTCTRL0_VAR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_PKTCTRL0_VAR",
+    "location": {
+      "column": "9",
+      "line": "80",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_PKTCTRL0_VAR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2941@macro@CC1101_REG_WORTIME1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_WORTIME1",
+    "location": {
+      "column": "9",
+      "line": "81",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_WORTIME1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@2976@macro@CC1101_REG_WORTIME0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_WORTIME0",
+    "location": {
+      "column": "9",
+      "line": "82",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_WORTIME0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3011@macro@CC1101_REG_PKTSTATUS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PKTSTATUS",
+    "location": {
+      "column": "9",
+      "line": "83",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PKTSTATUS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3046@macro@CC1101_REG_VCO_VC_DAC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_VCO_VC_DAC",
+    "location": {
+      "column": "9",
+      "line": "84",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_VCO_VC_DAC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3082@macro@CC1101_REG_TXBYTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_TXBYTES",
+    "location": {
+      "column": "9",
+      "line": "85",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_TXBYTES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3117@macro@CC1101_REG_RXBYTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RXBYTES",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RXBYTES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3152@macro@CC1101_REG_RCCTRL1_STATUS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RCCTRL1_STATUS",
+    "location": {
+      "column": "9",
+      "line": "87",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RCCTRL1_STATUS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3192@macro@CC1101_REG_RCCTRL0_STATUS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_RCCTRL0_STATUS",
+    "location": {
+      "column": "9",
+      "line": "88",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_RCCTRL0_STATUS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3232@macro@CC1101_REG_PATABLE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_PATABLE",
+    "location": {
+      "column": "9",
+      "line": "89",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_PATABLE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3267@macro@CC1101_REG_FIFO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_REG_FIFO",
+    "location": {
+      "column": "9",
+      "line": "90",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_REG_FIFO",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3410@macro@CC1101_STATUS_PARTNUM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_PARTNUM",
+    "location": {
+      "column": "9",
+      "line": "92",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_PARTNUM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3449@macro@CC1101_STATUS_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_VERSION",
+    "location": {
+      "column": "9",
+      "line": "93",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3488@macro@CC1101_STATUS_FREQEST",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_FREQEST",
+    "location": {
+      "column": "9",
+      "line": "94",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_FREQEST",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3527@macro@CC1101_STATUS_LQI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_LQI",
+    "location": {
+      "column": "9",
+      "line": "95",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_LQI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3566@macro@CC1101_STATUS_RSSI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_RSSI",
+    "location": {
+      "column": "9",
+      "line": "96",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_RSSI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3605@macro@CC1101_STATUS_MARCSTATE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_MARCSTATE",
+    "location": {
+      "column": "9",
+      "line": "97",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_MARCSTATE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3644@macro@CC1101_STATUS_WORTIME1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_WORTIME1",
+    "location": {
+      "column": "9",
+      "line": "98",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_WORTIME1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3683@macro@CC1101_STATUS_WORTIME0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_WORTIME0",
+    "location": {
+      "column": "9",
+      "line": "99",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_WORTIME0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3722@macro@CC1101_STATUS_PKTSTATUS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_PKTSTATUS",
+    "location": {
+      "column": "9",
+      "line": "100",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_PKTSTATUS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3761@macro@CC1101_STATUS_VCO_VC_DAC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_VCO_VC_DAC",
+    "location": {
+      "column": "9",
+      "line": "101",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_VCO_VC_DAC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3800@macro@CC1101_STATUS_TXBYTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_TXBYTES",
+    "location": {
+      "column": "9",
+      "line": "102",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_TXBYTES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:cc1101.h@3839@macro@CC1101_STATUS_RXBYTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CC1101_STATUS_RXBYTES",
+    "location": {
+      "column": "9",
+      "line": "103",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_STATUS_RXBYTES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_Init(void)",
+    "location": {
+      "column": "13",
+      "line": "108",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_Init(void)",
+    "location": {
+      "column": "13",
+      "line": "108",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_WriteReg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "109",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_WriteReg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_WriteReg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "109",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_WriteReg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReadReg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_ReadReg(uint8_t)",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReadReg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReadReg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_ReadReg(uint8_t)",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReadReg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_WriteBurst",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "111",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_WriteBurst",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_WriteBurst",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "111",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_WriteBurst",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReadBurst",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "112",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReadBurst",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReadBurst",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "112",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReadBurst",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SendCmd",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SendCmd(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "113",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SendCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SendCmd",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SendCmd(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "113",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SendCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SetFrequency",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SetFrequency(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "114",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SetFrequency",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SetFrequency",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SetFrequency(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "114",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SetFrequency",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SetPower",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SetPower(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "115",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SetPower",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_SetPower",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_SetPower(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "115",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_SetPower",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_VerifySpi",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_VerifySpi(void)",
+    "location": {
+      "column": "9",
+      "line": "118",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_VerifySpi",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_VerifySpi",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_VerifySpi(void)",
+    "location": {
+      "column": "9",
+      "line": "118",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_VerifySpi",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReapplyRadio",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_ReapplyRadio(void)",
+    "location": {
+      "column": "9",
+      "line": "120",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReapplyRadio",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ReapplyRadio",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_ReapplyRadio(void)",
+    "location": {
+      "column": "9",
+      "line": "120",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ReapplyRadio",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ApplyVariablePacketMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ApplyVariablePacketMode(void)",
+    "location": {
+      "column": "6",
+      "line": "121",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ApplyVariablePacketMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ApplyVariablePacketMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ApplyVariablePacketMode(void)",
+    "location": {
+      "column": "6",
+      "line": "121",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ApplyVariablePacketMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ApplyLinkPacketMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ApplyLinkPacketMode(void)",
+    "location": {
+      "column": "6",
+      "line": "122",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ApplyLinkPacketMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ApplyLinkPacketMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ApplyLinkPacketMode(void)",
+    "location": {
+      "column": "6",
+      "line": "122",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ApplyLinkPacketMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_FlushRxFifo",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_FlushRxFifo(void)",
+    "location": {
+      "column": "6",
+      "line": "123",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_FlushRxFifo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_FlushRxFifo",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_FlushRxFifo(void)",
+    "location": {
+      "column": "6",
+      "line": "123",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_FlushRxFifo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_EnterRx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_EnterRx(void)",
+    "location": {
+      "column": "9",
+      "line": "124",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_EnterRx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_EnterRx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t CC1101_EnterRx(void)",
+    "location": {
+      "column": "9",
+      "line": "124",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_EnterRx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_StrobeRx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_StrobeRx(void)",
+    "location": {
+      "column": "6",
+      "line": "125",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_StrobeRx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_StrobeRx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_StrobeRx(void)",
+    "location": {
+      "column": "6",
+      "line": "125",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_StrobeRx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ClearRxFifo",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ClearRxFifo(void)",
+    "location": {
+      "column": "6",
+      "line": "126",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ClearRxFifo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ClearRxFifo",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ClearRxFifo(void)",
+    "location": {
+      "column": "6",
+      "line": "126",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ClearRxFifo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ListenAfterTx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ListenAfterTx(void)",
+    "location": {
+      "column": "6",
+      "line": "127",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ListenAfterTx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CC1101_ListenAfterTx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CC1101_ListenAfterTx(void)",
+    "location": {
+      "column": "6",
+      "line": "127",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
+    },
+    "name": "CC1101_ListenAfterTx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@100@macro@_STDDEF",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STDDEF",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_STDDEF",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@272@macro@NULL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "NULL",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "NULL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@324@macro@offsetof",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "offsetof",
+    "location": {
+      "column": "11",
+      "line": "20",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "offsetof",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@450@macro@_PTRDIFF_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_PTRDIFF_T",
+    "location": {
+      "column": "13",
+      "line": "25",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_PTRDIFF_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@474@macro@_STD_USING_PTRDIFF_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_PTRDIFF_T",
+    "location": {
+      "column": "13",
+      "line": "26",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_STD_USING_PTRDIFF_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@T@ptrdiff_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "int",
+    "location": {
+      "column": "32",
+      "line": "27",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "ptrdiff_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@578@macro@_WCHART",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WCHART",
+    "location": {
+      "column": "13",
+      "line": "31",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_WCHART",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@T@wchar_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Wchart",
+    "location": {
+      "column": "21",
+      "line": "32",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "wchar_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@813@macro@_MAX_ALIGN_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MAX_ALIGN_T",
+    "location": {
+      "column": "13",
+      "line": "41",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_MAX_ALIGN_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@UA@_Max_align_t",
+    "What": "Union",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "13",
+      "line": "42",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "members": [
+      {
+        "ID": "c:@UA@_Max_align_t@FI@_ll",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "_ll",
+        "location": {
+          "column": "17",
+          "line": "44",
+          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+        },
+        "name": "_ll",
+        "origin": "system_include",
+        "scope": "_anonymous_stddef_h_42_13"
+      },
+      {
+        "ID": "c:@UA@_Max_align_t@FI@_ld",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "_ld",
+        "location": {
+          "column": "19",
+          "line": "45",
+          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+        },
+        "name": "_ld",
+        "origin": "system_include",
+        "scope": "_anonymous_stddef_h_42_13"
+      },
+      {
+        "ID": "c:@UA@_Max_align_t@FI@_vp",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "_vp",
+        "location": {
+          "column": "13",
+          "line": "46",
+          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+        },
+        "name": "_vp",
+        "origin": "system_include",
+        "scope": "_anonymous_stddef_h_42_13"
+      }
+    ],
+    "name": "",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@_Max_align_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "union _Max_align_t",
+    "location": {
+      "column": "7",
+      "line": "47",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "_Max_align_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stddef.h@T@max_align_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Max_align_t",
+    "location": {
+      "column": "26",
+      "line": "48",
+      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
+    },
+    "name": "max_align_t",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -209561,285 +209985,115 @@
     "scope": null
   },
   {
-    "ID": "c:cobs.h@24@macro@COBS_H",
-    "What": "MacroDef",
+    "ID": "c:@F@NMI_Handler",
+    "What": "Function",
     "defdec": "Def",
-    "display": "COBS_H",
+    "display": "void NMI_Handler(void)",
     "location": {
-      "column": "9",
-      "line": "2",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "column": "6",
+      "line": "43",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "COBS_H",
-    "origin": "user_include",
+    "name": "NMI_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:cobs.h@190@macro@COBS_ENCODED_MAX",
-    "What": "MacroDef",
+    "ID": "c:@F@HardFault_Handler",
+    "What": "Function",
     "defdec": "Def",
-    "display": "COBS_ENCODED_MAX",
+    "display": "void HardFault_Handler(void)",
     "location": {
-      "column": "9",
-      "line": "8",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "column": "6",
+      "line": "52",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "COBS_ENCODED_MAX",
-    "origin": "user_include",
+    "name": "HardFault_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@cobs_encode",
+    "ID": "c:@F@MemManage_Handler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t cobs_encode(const uint8_t *, size_t, uint8_t *)",
-    "location": {
-      "column": "8",
-      "line": "11",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_encode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_encode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t cobs_encode(const uint8_t *, size_t, uint8_t *)",
-    "location": {
-      "column": "8",
-      "line": "11",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_encode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_decode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t cobs_decode(const uint8_t *, size_t, uint8_t *)",
-    "location": {
-      "column": "8",
-      "line": "14",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_decode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_decode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t cobs_decode(const uint8_t *, size_t, uint8_t *)",
-    "location": {
-      "column": "8",
-      "line": "14",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_decode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:cobs.h@T@cobs_frame_handler_t",
-    "What": "Typedef",
     "defdec": "Def",
-    "display": "void (*)(const uint8_t *, size_t, void *)",
+    "display": "void MemManage_Handler(void)",
     "location": {
-      "column": "16",
-      "line": "16",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "column": "6",
+      "line": "65",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "cobs_frame_handler_t",
-    "origin": "user_include",
+    "name": "MemManage_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@SA@cobs_decoder_t",
-    "What": "Struct",
+    "ID": "c:@F@BusFault_Handler",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
+    "display": "void BusFault_Handler(void)",
     "location": {
-      "column": "9",
-      "line": "18",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "column": "6",
+      "line": "78",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "members": [
-      {
-        "ID": "c:@SA@cobs_decoder_t@FI@buf",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "buf",
-        "location": {
-          "column": "15",
-          "line": "19",
-          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-        },
-        "name": "buf",
-        "origin": "user_include",
-        "scope": "_anonymous_cobs_h_18_9"
-      },
-      {
-        "ID": "c:@SA@cobs_decoder_t@FI@cap",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "cap",
-        "location": {
-          "column": "15",
-          "line": "20",
-          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-        },
-        "name": "cap",
-        "origin": "user_include",
-        "scope": "_anonymous_cobs_h_18_9"
-      },
-      {
-        "ID": "c:@SA@cobs_decoder_t@FI@len",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "len",
-        "location": {
-          "column": "15",
-          "line": "21",
-          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-        },
-        "name": "len",
-        "origin": "user_include",
-        "scope": "_anonymous_cobs_h_18_9"
-      },
-      {
-        "ID": "c:@SA@cobs_decoder_t@FI@handler",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "handler",
-        "location": {
-          "column": "26",
-          "line": "22",
-          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-        },
-        "name": "handler",
-        "origin": "user_include",
-        "scope": "_anonymous_cobs_h_18_9"
-      },
-      {
-        "ID": "c:@SA@cobs_decoder_t@FI@ctx",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ctx",
-        "location": {
-          "column": "15",
-          "line": "23",
-          "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-        },
-        "name": "ctx",
-        "origin": "user_include",
-        "scope": "_anonymous_cobs_h_18_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
+    "name": "BusFault_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@T@cobs_decoder_t",
-    "What": "Typedef",
+    "ID": "c:@F@UsageFault_Handler",
+    "What": "Function",
     "defdec": "Def",
-    "display": "struct cobs_decoder_t",
+    "display": "void UsageFault_Handler(void)",
     "location": {
-      "column": "3",
-      "line": "24",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "column": "6",
+      "line": "91",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "cobs_decoder_t",
-    "origin": "user_include",
+    "name": "UsageFault_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@cobs_decoder_init",
+    "ID": "c:@F@DebugMon_Handler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_init(cobs_decoder_t *, uint8_t *, size_t, cobs_frame_handler_t, void *)",
+    "defdec": "Def",
+    "display": "void DebugMon_Handler(void)",
     "location": {
       "column": "6",
-      "line": "26",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "line": "113",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "cobs_decoder_init",
-    "origin": "user_include",
+    "name": "DebugMon_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@cobs_decoder_init",
+    "ID": "c:@F@TMR4_GLOBAL_IRQHandler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_init(cobs_decoder_t *, uint8_t *, size_t, cobs_frame_handler_t, void *)",
+    "defdec": "Def",
+    "display": "void TMR4_GLOBAL_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "26",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "line": "118",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "cobs_decoder_init",
-    "origin": "user_include",
+    "name": "TMR4_GLOBAL_IRQHandler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@cobs_decoder_feed",
+    "ID": "c:@F@ADC1_IRQHandler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_feed(cobs_decoder_t *, const uint8_t *, size_t)",
+    "defdec": "Def",
+    "display": "void ADC1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "30",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
+      "line": "129",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
     },
-    "name": "cobs_decoder_feed",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_decoder_feed",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_feed(cobs_decoder_t *, const uint8_t *, size_t)",
-    "location": {
-      "column": "6",
-      "line": "30",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_decoder_feed",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_decoder_reset",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_reset(cobs_decoder_t *)",
-    "location": {
-      "column": "6",
-      "line": "32",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_decoder_reset",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@cobs_decoder_reset",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void cobs_decoder_reset(cobs_decoder_t *)",
-    "location": {
-      "column": "6",
-      "line": "32",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cobs.h"
-    },
-    "name": "cobs_decoder_reset",
-    "origin": "user_include",
+    "name": "ADC1_IRQHandler",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -210179,170 +210433,44 @@
     "scope": null
   },
   {
-    "ID": "c:ux_utility_thread_resume.c@1542@macro@UX_SOURCE_CODE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UX_SOURCE_CODE",
-    "location": {
-      "column": "9",
-      "line": "26",
-      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
-    },
-    "name": "UX_SOURCE_CODE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@_ux_utility_thread_resume",
+    "ID": "c:@F@send_char_dbg",
     "What": "Function",
-    "defdec": "Def",
-    "display": "UINT _ux_utility_thread_resume(TX_THREAD *)",
+    "defdec": "Dec",
+    "display": "int send_char_dbg(int)",
     "location": {
-      "column": "7",
-      "line": "77",
-      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
+      "column": "12",
+      "line": "15",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
     },
-    "name": "_ux_utility_thread_resume",
+    "name": "send_char_dbg",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:ux_utility_thread_resume.c@5213@F@_ux_utility_thread_resume@status",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "status",
-    "location": {
-      "column": "9",
-      "line": "80",
-      "path": "D:\\proj\\cc1101_prj\\common\\usbx\\common\\core\\src\\ux_utility_thread_resume.c"
-    },
-    "name": "status",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@system_clock_config",
+    "ID": "c:@F@tx_systick_config",
     "What": "Function",
-    "defdec": "Def",
-    "display": "void system_clock_config(void)",
+    "defdec": "Dec",
+    "display": "void tx_systick_config(void)",
     "location": {
       "column": "6",
-      "line": "48",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_clock.c"
+      "line": "16",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
     },
-    "name": "system_clock_config",
+    "name": "tx_systick_config",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@NMI_Handler",
+    "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
-    "display": "void NMI_Handler(void)",
+    "display": "int main(void)",
     "location": {
-      "column": "6",
-      "line": "43",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
+      "column": "5",
+      "line": "18",
+      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\main.c"
     },
-    "name": "NMI_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@HardFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void HardFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "52",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "HardFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@MemManage_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void MemManage_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "65",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "MemManage_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@BusFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void BusFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "78",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "BusFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UsageFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UsageFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "91",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "UsageFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DebugMon_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DebugMon_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "113",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "DebugMon_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TMR4_GLOBAL_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TMR4_GLOBAL_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "118",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "TMR4_GLOBAL_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@ADC1_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void ADC1_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "129",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\at32f415_int.c"
-    },
-    "name": "ADC1_IRQHandler",
+    "name": "main",
     "origin": "project_file",
     "scope": null
   },
@@ -210498,218 +210626,6 @@
     },
     "name": "SysTick_Handler",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@100@macro@_STDDEF",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STDDEF",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_STDDEF",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@272@macro@NULL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "NULL",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "NULL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@324@macro@offsetof",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "offsetof",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "offsetof",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@450@macro@_PTRDIFF_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_PTRDIFF_T",
-    "location": {
-      "column": "13",
-      "line": "25",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_PTRDIFF_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@474@macro@_STD_USING_PTRDIFF_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_PTRDIFF_T",
-    "location": {
-      "column": "13",
-      "line": "26",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_STD_USING_PTRDIFF_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@T@ptrdiff_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "int",
-    "location": {
-      "column": "32",
-      "line": "27",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "ptrdiff_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@578@macro@_WCHART",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_WCHART",
-    "location": {
-      "column": "13",
-      "line": "31",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_WCHART",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@T@wchar_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Wchart",
-    "location": {
-      "column": "21",
-      "line": "32",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "wchar_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@813@macro@_MAX_ALIGN_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_MAX_ALIGN_T",
-    "location": {
-      "column": "13",
-      "line": "41",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_MAX_ALIGN_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@UA@_Max_align_t",
-    "What": "Union",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "13",
-      "line": "42",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "members": [
-      {
-        "ID": "c:@UA@_Max_align_t@FI@_ll",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "_ll",
-        "location": {
-          "column": "17",
-          "line": "44",
-          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-        },
-        "name": "_ll",
-        "origin": "system_include",
-        "scope": "_anonymous_stddef_h_42_13"
-      },
-      {
-        "ID": "c:@UA@_Max_align_t@FI@_ld",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "_ld",
-        "location": {
-          "column": "19",
-          "line": "45",
-          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-        },
-        "name": "_ld",
-        "origin": "system_include",
-        "scope": "_anonymous_stddef_h_42_13"
-      },
-      {
-        "ID": "c:@UA@_Max_align_t@FI@_vp",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "_vp",
-        "location": {
-          "column": "13",
-          "line": "46",
-          "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-        },
-        "name": "_vp",
-        "origin": "system_include",
-        "scope": "_anonymous_stddef_h_42_13"
-      }
-    ],
-    "name": "",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@T@_Max_align_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "union _Max_align_t",
-    "location": {
-      "column": "7",
-      "line": "47",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "_Max_align_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stddef.h@T@max_align_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Max_align_t",
-    "location": {
-      "column": "26",
-      "line": "48",
-      "path": "C:\\iar\\ewarm-9.60.2\\arm\\inc\\c\\stddef.h"
-    },
-    "name": "max_align_t",
-    "origin": "system_include",
     "scope": null
   },
   {

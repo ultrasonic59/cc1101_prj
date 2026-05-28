@@ -19,13 +19,14 @@ int main(void)
 {
     nvic_priority_group_config(NVIC_PRIORITY_GROUP_4);
     hw_board_init();
-
+    printk("\n\r CC1101 prj");
+/*
     if (!CC1101_ProbeSpi()) {
         put_led(LED_RED);
         delay_ms(800);
         put_led(LED_OFF);
     }
-
+*/
     CC1101_Init();
 
     /* USB до USART1 на PA9 — как рабочий FreeRTOS (velograph) */
@@ -33,14 +34,18 @@ int main(void)
 
     CC1101_ReapplyRadio();
 
-    if (CC1101_CheckConnection()) {
+  ///  if (CC1101_CheckConnection()) {
+    if (CC1101_VerifySpi()) {
         put_led(LED_GREEN);
         delay_ms(300);
         put_led(LED_RED);
     } else {
         put_led(LED_RED);
-        delay_ms(800);
+    ///    delay_ms(300);
         printk("\n\r CC1101 verify FAIL (CHANNR readback)");
+            for (;;) {
+    }
+
     }
 
     tx_systick_config();

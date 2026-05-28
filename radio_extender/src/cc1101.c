@@ -10,11 +10,11 @@
 void CC1101_WriteReg(uint8_t addr, uint8_t value);
 uint8_t CC1101_ReadReg(uint8_t addr);
 void CC1101_SendCmd(uint8_t cmd);
-
+/*
 static uint8_t spi_rf_sel_msb = 1;
 static uint8_t spi_rf_sel_cpha2 = 0;
 static uint8_t spi_rf_sel_div = SPI_RF_MCLK_DIV;
-
+*/
 static uint8_t SPI_RF_Transfer(uint8_t data)
 {
     uint16_t rez;
@@ -40,6 +40,7 @@ static void CC1101_WaitReady(void)
     }
 }
 
+/*
 static int cc1101_spi_score(uint8_t *partnum, uint8_t *version, uint8_t *rb)
 {
     int score = 0;
@@ -71,7 +72,8 @@ uint8_t _rb;
    *rb=_rb;
     return score;
 }
-
+*/
+#if 0
 uint8_t CC1101_ProbeSpi(void)
 {
     uint8_t partnum = 0;
@@ -94,7 +96,7 @@ uint8_t CC1101_ProbeSpi(void)
            score, (unsigned)partnum, (unsigned)version, (unsigned)rb);
     return 0U;
 }
-
+#endif
 void CC1101_SendCmd(uint8_t cmd);
 
 static void cc1101_write_radio_block(void)
@@ -244,13 +246,17 @@ void CC1101_Init(void)
 
 uint8_t CC1101_VerifySpi(void)
 {
-    uint8_t partnum = CC1101_ReadReg(CC1101_REG_PARTNUM);
-    uint8_t version = CC1101_ReadReg(CC1101_REG_VERSION);
+ ///   uint8_t partnum = CC1101_ReadReg(CC1101_REG_PARTNUM);
+///    uint8_t version = CC1101_ReadReg(CC1101_REG_VERSION);
+    uint8_t partnum = CC1101_ReadReg(CC1101_STATUS_PARTNUM);
+    uint8_t version = CC1101_ReadReg(CC1101_STATUS_VERSION);
     uint8_t rb;
 
     CC1101_WriteReg(CC1101_REG_CHANNR, 0xA5U);
     rb = CC1101_ReadReg(CC1101_REG_CHANNR);
     CC1101_WriteReg(CC1101_REG_CHANNR, 0x00U);
+    
+   printf("[CC1101] PARTNUM: 0x%02X, VERSION: 0x%02X[%x]\r\n", partnum, version,rb);
 
     if (rb != 0xA5U) {
         return 0;
@@ -300,8 +306,9 @@ void CC1101_SetFrequency(uint32_t freq_hz){
 void CC1101_SetPower(uint8_t power){
   CC1101_WriteReg(CC1101_REG_PATABLE, power);
 }
-
+/*
 uint8_t CC1101_CheckConnection(void)
 {
     return CC1101_VerifySpi();
 }
+*/

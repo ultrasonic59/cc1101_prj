@@ -88,6 +88,22 @@
 #define CC1101_REG_RCCTRL0_STATUS 0x3D
 #define CC1101_REG_PATABLE   0x3E
 #define CC1101_REG_FIFO      0x3F
+// Альтернативные определения (если нужны прямые значения)
+#define CC1101_STATUS_PARTNUM    0xF0
+#define CC1101_STATUS_VERSION    0xF1
+#define CC1101_STATUS_FREQEST    0xF2
+#define CC1101_STATUS_LQI        0xF3
+#define CC1101_STATUS_RSSI       0xF4
+#define CC1101_STATUS_MARCSTATE  0xF5
+#define CC1101_STATUS_WORTIME1   0xF6
+#define CC1101_STATUS_WORTIME0   0xF7
+#define CC1101_STATUS_PKTSTATUS  0xF8
+#define CC1101_STATUS_VCO_VC_DAC 0xF9
+#define CC1101_STATUS_TXBYTES    0xFA
+#define CC1101_STATUS_RXBYTES    0xFB
+
+
+
 /* Функции */
 extern void CC1101_Init(void);
 extern void CC1101_WriteReg(uint8_t addr, uint8_t value);
@@ -98,9 +114,9 @@ void CC1101_SendCmd(uint8_t cmd);
 void CC1101_SetFrequency(uint32_t freq_hz);
 void CC1101_SetPower(uint8_t power);
 /* Добавить к списку функций */
-uint8_t CC1101_CheckConnection(void);
+///uint8_t CC1101_CheckConnection(void);
 uint8_t CC1101_VerifySpi(void);
-uint8_t CC1101_ProbeSpi(void);
+///uint8_t CC1101_ProbeSpi(void);
 uint8_t CC1101_ReapplyRadio(void);
 void CC1101_ApplyVariablePacketMode(void);
 void CC1101_ApplyLinkPacketMode(void);

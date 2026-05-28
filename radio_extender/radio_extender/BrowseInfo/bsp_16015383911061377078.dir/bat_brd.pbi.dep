@@ -1,17 +1,29 @@
-D:\proj\cc1101_prj\radio_extender\radio_extender\BrowseInfo\user_8514941877209965082.dir\cc1101.pbi: \
-  D:\proj\cc1101_prj\radio_extender\src\cc1101.c \
-  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\device_support\at32f415.h \
-  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\core_cm4.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\stdint.h \
+D:\proj\cc1101_prj\radio_extender\radio_extender\BrowseInfo\bsp_16015383911061377078.dir\bat_brd.pbi: \
+  D:\proj\cc1101_prj\radio_extender\board\bat_brd.c \
+  C:\iar\ewarm-9.60.2\arm\inc\c\string.h \
   C:\iar\ewarm-9.60.2\arm\inc\c\ycheck.h \
   C:\iar\ewarm-9.60.2\arm\inc\c\yvals.h \
   C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Defaults.h \
   C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Config_Full.h \
   C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Product.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\ysizet.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Product_string.h \
+  D:\proj\cc1101_prj\radio_extender\src\rtos.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\common\inc\tx_api.h \
+  D:\proj\cc1101_prj\radio_extender\..\common\threadx\ports\cortex_m3\iar\inc\tx_port.h \
+  D:\proj\cc1101_prj\radio_extender\src\tx_user.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\stdlib.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Product_stdlib.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\intrinsics.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\iar_intrinsics_common.h \
+  D:\proj\cc1101_prj\radio_extender\board\bat_brd.h \
+  C:\iar\ewarm-9.60.2\arm\inc\c\stdint.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\device_support\at32f415.h \
+  D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\core_cm4.h \
   D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_version.h \
   D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_compiler.h \
   D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\cmsis_iccarm.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\iccarm_builtin.h \
   D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\core_support\mpu_armv7.h \
   D:\proj\cc1101_prj\radio_extender\libraries\cmsis\cm4\device_support\system_at32f415.h \
   D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_def.h \
@@ -37,18 +49,7 @@ D:\proj\cc1101_prj\radio_extender\radio_extender\BrowseInfo\user_851494187720996
   D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_sdio.h \
   D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_misc.h \
   D:\proj\cc1101_prj\radio_extender\libraries\drivers\inc\at32f415_usb.h \
-  D:\proj\cc1101_prj\radio_extender\src\cc1101.h \
-  D:\proj\cc1101_prj\radio_extender\board\bat_brd.h \
   D:\proj\cc1101_prj\radio_extender\src\at32f415_clock.h \
-  D:\proj\cc1101_prj\radio_extender\..\common\threadx\common\inc\tx_api.h \
-  D:\proj\cc1101_prj\radio_extender\..\common\threadx\ports\cortex_m3\iar\inc\tx_port.h \
-  D:\proj\cc1101_prj\radio_extender\src\tx_user.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\stdlib.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\ysizet.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Product_stdlib.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\string.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\DLib_Product_string.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\intrinsics.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\aarch32\iar_intrinsics_common.h \
   D:\proj\cc1101_prj\radio_extender\src\printk.h \
-  C:\iar\ewarm-9.60.2\arm\inc\c\stdio.h
+  C:\iar\ewarm-9.60.2\arm\inc\c\stdio.h \
+  D:\proj\cc1101_prj\radio_extender\board\uart.h

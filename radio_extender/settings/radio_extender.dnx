@@ -42,21 +42,21 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <Jet>
+        <JetConnSerialNo>CMSIS-DAP-QYF:202108120001</JetConnSerialNo>
+        <JetConnFoundProbes />
+        <PrevWtdReset>Connect during reset</PrevWtdReset>
         <DisableInterrupts>0</DisableInterrupts>
         <LeaveRunning>0</LeaveRunning>
         <MultiCoreRunAll>0</MultiCoreRunAll>
         <CpuHaltOnBreakpointSet>0</CpuHaltOnBreakpointSet>
         <OnlineReset>Software</OnlineReset>
-        <JetConnSerialNo>CMSIS-DAP-QYF:202108120001</JetConnSerialNo>
-        <JetConnFoundProbes />
-        <PrevWtdReset>Connect during reset</PrevWtdReset>
     </Jet>
     <PlDriver>
-        <MemConfigValue>C:\iar\ewarm-9.60.2\arm\config\debugger\ArteryTek\AT32F415xC_v2.ddf</MemConfigValue>
         <FirstRun>0</FirstRun>
+        <MemConfigValue>C:\iar\ewarm-9.60.2\arm\config\debugger\ArteryTek\AT32F415xC_v2.ddf</MemConfigValue>
     </PlDriver>
     <DebugChecksum>
-        <Checksum>3916434291</Checksum>
+        <Checksum>1836365194</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -71,8 +71,8 @@
     <SWOManager>
         <SamplingDivider>8192</SamplingDivider>
         <OverrideClock>0</OverrideClock>
-        <CpuClock>172052037</CpuClock>
-        <SwoClock>1684104530</SwoClock>
+        <CpuClock>848822976775168</CpuClock>
+        <SwoClock>285873023222784</SwoClock>
         <DataLogMode>0</DataLogMode>
         <ItmPortsEnabled>63</ItmPortsEnabled>
         <ItmTermIOPorts>1</ItmTermIOPorts>
@@ -139,11 +139,7 @@
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\common\freertos\source\tasks.c}.2236.21" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\common\freertos\source\tasks.c}.2736.5" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\main.c}.23.10" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\main.c}.29.5" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\cc1101.c}.88.5" 0 0 1 "" 0 "" 0</Bp4>
-        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\cc1101.c}.63.5" 0 0 1 "" 0 "" 0</Bp5>
-        <Count>6</Count>
+        <Count>2</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>
