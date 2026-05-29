@@ -207175,7 +207175,7 @@
     "display": "uint8_t CC1101_ReapplyRadio(void)",
     "location": {
       "column": "9",
-      "line": "128",
+      "line": "129",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReapplyRadio",
@@ -207183,13 +207183,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3511@F@CC1101_ReapplyRadio@f2",
+    "ID": "c:cc1101.c@3517@F@CC1101_ReapplyRadio@f2",
     "What": "Variable",
     "defdec": "Def",
     "display": "f2",
     "location": {
       "column": "13",
-      "line": "130",
+      "line": "131",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f2",
@@ -207197,13 +207197,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3528@F@CC1101_ReapplyRadio@f1",
+    "ID": "c:cc1101.c@3534@F@CC1101_ReapplyRadio@f1",
     "What": "Variable",
     "defdec": "Def",
     "display": "f1",
     "location": {
       "column": "13",
-      "line": "131",
+      "line": "132",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f1",
@@ -207211,13 +207211,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3545@F@CC1101_ReapplyRadio@f0",
+    "ID": "c:cc1101.c@3551@F@CC1101_ReapplyRadio@f0",
     "What": "Variable",
     "defdec": "Def",
     "display": "f0",
     "location": {
       "column": "13",
-      "line": "132",
+      "line": "133",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "f0",
@@ -207225,13 +207225,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@3562@F@CC1101_ReapplyRadio@s1",
+    "ID": "c:cc1101.c@3568@F@CC1101_ReapplyRadio@s1",
     "What": "Variable",
     "defdec": "Def",
     "display": "s1",
     "location": {
       "column": "13",
-      "line": "133",
+      "line": "134",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "s1",
@@ -207245,7 +207245,7 @@
     "display": "void CC1101_ApplyVariablePacketMode(void)",
     "location": {
       "column": "6",
-      "line": "149",
+      "line": "150",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ApplyVariablePacketMode",
@@ -207259,7 +207259,7 @@
     "display": "void CC1101_ApplyLinkPacketMode(void)",
     "location": {
       "column": "6",
-      "line": "157",
+      "line": "158",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ApplyLinkPacketMode",
@@ -207273,7 +207273,7 @@
     "display": "void CC1101_ClearRxFifo(void)",
     "location": {
       "column": "6",
-      "line": "165",
+      "line": "166",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ClearRxFifo",
@@ -207281,13 +207281,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@4688@F@CC1101_ClearRxFifo@rxb",
+    "ID": "c:cc1101.c@4694@F@CC1101_ClearRxFifo@rxb",
     "What": "Variable",
     "defdec": "Def",
     "display": "rxb",
     "location": {
       "column": "13",
-      "line": "167",
+      "line": "168",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "rxb",
@@ -207301,7 +207301,7 @@
     "display": "void CC1101_ListenAfterTx(void)",
     "location": {
       "column": "6",
-      "line": "180",
+      "line": "181",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ListenAfterTx",
@@ -207315,7 +207315,7 @@
     "display": "void CC1101_StrobeRx(void)",
     "location": {
       "column": "6",
-      "line": "187",
+      "line": "188",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_StrobeRx",
@@ -207329,7 +207329,7 @@
     "display": "uint8_t CC1101_EnterRx(void)",
     "location": {
       "column": "9",
-      "line": "193",
+      "line": "194",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_EnterRx",
@@ -207343,7 +207343,7 @@
     "display": "void CC1101_FlushRxFifo(void)",
     "location": {
       "column": "6",
-      "line": "204",
+      "line": "205",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_FlushRxFifo",
@@ -207357,7 +207357,7 @@
     "display": "void CC1101_Init(void)",
     "location": {
       "column": "6",
-      "line": "213",
+      "line": "214",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_Init",
@@ -207371,7 +207371,7 @@
     "display": "uint8_t CC1101_VerifySpi(void)",
     "location": {
       "column": "9",
-      "line": "247",
+      "line": "250",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_VerifySpi",
@@ -207379,13 +207379,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7104@F@CC1101_VerifySpi@partnum",
+    "ID": "c:cc1101.c@7122@F@CC1101_VerifySpi@partnum",
     "What": "Variable",
     "defdec": "Def",
     "display": "partnum",
     "location": {
       "column": "13",
-      "line": "251",
+      "line": "254",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "partnum",
@@ -207393,13 +207393,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7166@F@CC1101_VerifySpi@version",
+    "ID": "c:cc1101.c@7184@F@CC1101_VerifySpi@version",
     "What": "Variable",
     "defdec": "Def",
     "display": "version",
     "location": {
       "column": "13",
-      "line": "252",
+      "line": "255",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "version",
@@ -207407,13 +207407,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7228@F@CC1101_VerifySpi@rb",
+    "ID": "c:cc1101.c@7246@F@CC1101_VerifySpi@rb",
     "What": "Variable",
     "defdec": "Def",
     "display": "rb",
     "location": {
       "column": "13",
-      "line": "253",
+      "line": "256",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "rb",
@@ -207427,7 +207427,7 @@
     "display": "void CC1101_WriteReg(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "267",
+      "line": "270",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_WriteReg",
@@ -207441,7 +207441,7 @@
     "display": "uint8_t CC1101_ReadReg(uint8_t)",
     "location": {
       "column": "9",
-      "line": "273",
+      "line": "276",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReadReg",
@@ -207449,13 +207449,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@7781@F@CC1101_ReadReg@value",
+    "ID": "c:cc1101.c@7799@F@CC1101_ReadReg@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "274",
+      "line": "277",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "value",
@@ -207469,7 +207469,7 @@
     "display": "void CC1101_WriteBurst(uint8_t, const uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "281",
+      "line": "284",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_WriteBurst",
@@ -207477,13 +207477,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@8124@F@CC1101_WriteBurst@i",
+    "ID": "c:cc1101.c@8142@F@CC1101_WriteBurst@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "284",
+      "line": "287",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "i",
@@ -207497,7 +207497,7 @@
     "display": "void CC1101_ReadBurst(uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "289",
+      "line": "292",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_ReadBurst",
@@ -207505,13 +207505,13 @@
     "scope": null
   },
   {
-    "ID": "c:cc1101.c@8380@F@CC1101_ReadBurst@i",
+    "ID": "c:cc1101.c@8398@F@CC1101_ReadBurst@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "292",
+      "line": "295",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "i",
@@ -207525,7 +207525,7 @@
     "display": "void CC1101_SendCmd(uint8_t)",
     "location": {
       "column": "6",
-      "line": "297",
+      "line": "300",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SendCmd",
@@ -207533,16 +207533,16 @@
     "scope": null
   },
   {
-    "ID": "c:@F@CC1101_SetFrequency",
+    "ID": "c:@F@_CC1101_SetFrequency",
     "What": "Function",
     "defdec": "Def",
-    "display": "void CC1101_SetFrequency(uint32_t)",
+    "display": "void _CC1101_SetFrequency(uint32_t)",
     "location": {
       "column": "6",
-      "line": "303",
+      "line": "307",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
-    "name": "CC1101_SetFrequency",
+    "name": "_CC1101_SetFrequency",
     "origin": "project_file",
     "scope": null
   },
@@ -207553,7 +207553,7 @@
     "display": "void CC1101_SetPower(uint8_t)",
     "location": {
       "column": "6",
-      "line": "306",
+      "line": "311",
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.c"
     },
     "name": "CC1101_SetPower",
@@ -209251,20 +209251,6 @@
       "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
     },
     "name": "CC1101_SendCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CC1101_SetFrequency",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CC1101_SetFrequency(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "114",
-      "path": "D:\\proj\\cc1101_prj\\radio_extender\\src\\cc1101.h"
-    },
-    "name": "CC1101_SetFrequency",
     "origin": "user_include",
     "scope": null
   },

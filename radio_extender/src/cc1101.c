@@ -110,6 +110,7 @@ static void cc1101_write_radio_block(void)
     CC1101_WriteReg(CC1101_REG_SYNC1, 0xD3);
     CC1101_WriteReg(CC1101_REG_SYNC0, 0x91);
     CC1101_WriteBurst(CC1101_REG_FREQ2, freqs, 3);
+    
     CC1101_WriteReg(CC1101_REG_MDMCFG4, 0xC8);
     CC1101_WriteReg(CC1101_REG_MDMCFG3, 0x93);
     CC1101_WriteReg(CC1101_REG_MDMCFG2, 0x13);
@@ -221,6 +222,8 @@ void CC1101_Init(void)
     CC1101_ApplyVariablePacketMode();
     CC1101_WriteReg(CC1101_REG_MCSM1, 0x0C);
     CC1101_WriteReg(CC1101_REG_MCSM2, 0x00);
+    
+    
 /* RX timeout off — постоянно в RX */
     CC1101_WriteReg(CC1101_REG_FSCTRL1, 0x06);
     CC1101_WriteReg(CC1101_REG_FSCTRL0, 0x00);
@@ -300,9 +303,11 @@ gpio_bits_reset(NCS_RF_GPIO, NCS_RF_PIN);
 gpio_bits_set(NCS_RF_GPIO, NCS_RF_PIN);
 
 }
-void CC1101_SetFrequency(uint32_t freq_hz){
+
+void _CC1101_SetFrequency(uint32_t freq_hz){
   (void)freq_hz;
 }
+
 void CC1101_SetPower(uint8_t power){
   CC1101_WriteReg(CC1101_REG_PATABLE, power);
 }
